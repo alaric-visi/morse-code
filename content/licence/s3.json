@@ -1,0 +1,183 @@
+{
+  "section": 3,
+  "title": "Transmitters and receivers",
+  "items": [
+    { "id": "3A1", "topic": "What a transmitter does", "levels": {
+      "F": { "note": "A transmitter sends information from one place to another by radio waves. Putting the information onto a radio-frequency carrier is called modulation.",
+        "q": [{ "text": "What is modulation?", "choices": ["Adding information to a radio-frequency carrier", "Removing noise from a signal", "Amplifying the audio", "Matching the antenna"], "why": "Modulation puts the information onto the carrier." }] } } },
+    { "id": "3A2", "topic": "Modes: AM, FM, SSB, CW, data", "levels": {
+      "F": { "note": "The modulator varies either the carrier's amplitude (AM) or its frequency (FM). SSB is a form of AM. CW (Morse) simply switches the carrier on and off. Data modes send digital information using the same basic methods.",
+        "q": [{ "text": "In FM, what is varied?", "choices": ["The carrier's frequency", "The carrier's amplitude", "The antenna length", "The supply voltage"], "why": "Frequency modulation varies the frequency." },
+              { "text": "How is a CW (Morse) signal produced?", "choices": ["By switching the carrier on and off", "By varying the frequency with audio", "By removing one sideband", "By varying the amplitude with speech"], "why": "CW is an interrupted continuous wave." }] },
+      "I": { "note": "Depth of modulation in AM is how far the audio varies the carrier's amplitude, as a percentage; beyond 100% it distorts. In FM, the deviation is how far the frequency swings; peak deviation is the maximum. Narrow-band FM (about ±2.5 kHz) is used on amateur VHF/UHF; wide-band FM for broadcasting.",
+        "q": [{ "text": "What is peak deviation in FM?", "choices": ["The maximum swing of the carrier frequency", "The carrier power", "The audio bandwidth", "The depth of AM"], "why": "Deviation is how far the frequency moves; peak is the most." }] },
+      "Full": { "note": "Modulation index = peak deviation ÷ modulating frequency. The higher the index, the more significant sidebands an FM signal has, and the wider it is.",
+        "q": [{ "text": "What's the modulation index with 3 kHz deviation and a 1 kHz tone?", "choices": ["3", "0.33", "4", "3000"], "why": "Index = deviation ÷ modulating frequency = 3." }] } } },
+    { "id": "3A3", "topic": "Sidebands", "levels": {
+      "F": { "note": "Modulating a carrier with audio creates new frequencies either side of it: the sidebands. An AM signal contains the carrier and two sidebands. An SSB signal contains only one sideband.",
+        "q": [{ "text": "What does an SSB signal contain?", "choices": ["One sideband only", "Two sidebands and the carrier", "The carrier only", "Two sidebands, no carrier"], "why": "SSB keeps one sideband and removes the carrier and the other." }] },
+      "I": { "note": "SSB is AM with the carrier and one sideband removed. It's more efficient, because no power goes into the carrier or the duplicate sideband, and it takes up half the bandwidth of AM.",
+        "q": [{ "text": "What's one advantage of SSB over AM?", "choices": ["It uses half the bandwidth", "It needs no receiver", "It's easier to tune", "It carries music better"], "why": "One sideband instead of two halves the bandwidth." }] } } },
+    { "id": "3A4", "topic": "Recognising waveforms", "levels": {
+      "F": { "note": "Be able to recognise: an audio wave; an unmodulated RF carrier; AM, where the carrier's height follows the audio; FM, where the waves bunch up and spread out but stay the same height; and CW, bursts of carrier switched on and off.",
+        "q": [{ "text": "A diagram shows a carrier of constant height whose cycles bunch together and spread apart. Which mode is it?", "choices": ["FM", "AM", "CW", "SSB"], "why": "FM keeps the amplitude constant and varies the frequency." }] } } },
+    { "id": "3B1", "topic": "Transmitter block diagrams", "levels": {
+      "F": { "note": "A simple transmitter in order: microphone, audio (microphone) amplifier, frequency generation (oscillator), modulator, RF power amplifier, feeder, antenna.",
+        "q": [{ "text": "Which stage comes immediately before the feeder in a simple transmitter?", "choices": ["The RF power amplifier", "The modulator", "The microphone amplifier", "The oscillator"], "why": "The PA drives the feeder and antenna." }] },
+      "I": { "note": "Know the block diagrams for CW (oscillator, keyed buffer, PA), AM, SSB (balanced modulator then sideband filter), and FM (oscillator modulated directly, often with a varicap) transmitters.",
+        "q": [{ "text": "In an SSB transmitter, what follows the balanced modulator?", "choices": ["The sideband filter", "The microphone", "The varicap", "The diode detector"], "why": "The balanced modulator makes two sidebands; the filter removes one." }] },
+      "Full": { "note": "Most SSB transmitters generate the signal at a fixed frequency and then use a mixer with a local oscillator to reach the final frequency. FM transmitters reach their final frequency with frequency multipliers or mixers; multiplying also multiplies the deviation.",
+        "q": [{ "text": "An FM signal is generated at 12 MHz with 1 kHz deviation and multiplied by 12 to 144 MHz. What's the final deviation?", "choices": ["12 kHz", "1 kHz", "144 kHz", "83 Hz"], "why": "Multiplying the frequency multiplies the deviation too." }] } } },
+    { "id": "3C1", "topic": "Oscillators and frequency", "levels": {
+      "F": { "note": "The oscillator sets the transmitter's frequency. Set it wrongly and you could transmit outside the amateur band and interfere with others.",
+        "q": [{ "text": "Which stage sets the frequency a simple transmitter operates on?", "choices": ["The oscillator", "The PA", "The microphone amplifier", "The feeder"], "why": "The oscillator generates the frequency." }] },
+      "I": { "note": "Crystal oscillators are stable and accurate but fixed; a VFO can be tuned but is more prone to drift. In a VFO the tuned circuit's resonant frequency sets the frequency.",
+        "q": [{ "text": "What determines the frequency of a VFO?", "choices": ["The resonant frequency of its tuned circuit", "The PA's power", "The antenna", "The crystal's cut"], "why": "The LC tuned circuit sets the VFO frequency." }] },
+      "Full": { "note": "Drift moves your signal off frequency during a contact, can take you out of band, and makes you hard to copy, especially on narrow modes like CW and data.",
+        "q": [{ "text": "Why does oscillator drift matter most on narrow modes?", "choices": ["The signal can drift out of the other station's narrow filter", "Narrow modes use more power", "Drift only affects FM", "It changes the polarisation"], "why": "With a narrow filter, a small drift loses the signal." }] } } },
+    { "id": "3C2", "topic": "Oscillator stability", "levels": {
+      "I": { "note": "Improve stability with rigid construction, screening, a regulated supply and a buffer amplifier straight after the oscillator so later stages don't pull it. Temperature changes cause drift too.",
+        "q": [{ "text": "Why is a buffer amplifier placed straight after a VFO?", "choices": ["To stop later stages pulling its frequency", "To add harmonics", "To change band", "To modulate it"], "why": "The buffer isolates the oscillator from load changes." }] } } },
+    { "id": "3C3", "topic": "DDS and PLL synthesisers", "levels": {
+      "I": { "note": "Direct Digital Synthesis (DDS) generates audio or RF by stepping through stored values of a sine wave in a lookup table and passing them through a DAC.",
+        "q": [{ "text": "Where does a DDS get the shape of its wave?", "choices": ["From values stored in a lookup table", "From a crystal's cut", "From a tuned circuit", "From the antenna"], "why": "DDS reads pre-set digital values from memory." }] },
+      "Full": { "note": "A phase-locked loop (PLL) synthesiser: a stable reference oscillator, a fixed divider, a phase detector, a low-pass loop filter, a voltage-controlled oscillator (VCO) and a programmable divider in the feedback path. Changing the divider steps the VCO's frequency. A DDS uses a phase accumulator, lookup table, DAC and filter.",
+        "q": [{ "text": "In a PLL, what does the phase detector compare?", "choices": ["The divided VCO output with the reference", "The audio with the RF", "Forward and reflected power", "Two antennas"], "why": "Its output steers the VCO until the two match." }] } } },
+    { "id": "3D1", "topic": "Frequency multipliers", "levels": {
+      "Full": { "note": "A frequency multiplier is deliberately non-linear to produce harmonics, then tuned to select one, for example to reach microwave frequencies from a lower oscillator.",
+        "q": [{ "text": "How does a frequency multiplier work?", "choices": ["It generates harmonics and selects the wanted one", "It mixes two crystals", "It divides the frequency", "It doubles the power"], "why": "Non-linearity creates harmonics; a tuned circuit picks one." }] } } },
+    { "id": "3E1", "topic": "Microphone amplifiers and modulators", "levels": {
+      "F": { "note": "The microphone amplifier raises the mic signal to the level needed by the modulator and limits the audio to the frequencies needed for speech. Set the mic gain correctly: too much causes distortion and splatter.",
+        "q": [{ "text": "What can happen if the microphone gain is set too high?", "choices": ["Distortion and interference to adjacent frequencies", "The signal becomes narrower", "Nothing at all", "The power output drops to zero"], "why": "Overdriving the modulator widens and distorts the signal." }] },
+      "I": { "note": "A balanced modulator produces both sidebands while suppressing the carrier.",
+        "q": [{ "text": "What does a balanced modulator output?", "choices": ["Two sidebands with the carrier suppressed", "Only the carrier", "One sideband with the carrier", "FM"], "why": "It cancels the carrier, leaving the sidebands." }] },
+      "Full": { "note": "Bandwidth: AM is twice the highest audio frequency; SSB is about the highest audio frequency; FM (Carson's rule) is about 2 × (deviation + highest audio frequency).",
+        "q": [{ "text": "What's the approximate bandwidth of an FM signal with 2.5 kHz deviation and 3 kHz audio?", "choices": ["11 kHz", "5.5 kHz", "3 kHz", "6 kHz"], "why": "2 × (2.5 + 3) = 11 kHz." },
+              { "text": "What bandwidth does AM speech up to 3 kHz occupy?", "choices": ["6 kHz", "3 kHz", "1.5 kHz", "12 kHz"], "why": "Two sidebands, each 3 kHz." }] } } },
+    { "id": "3E2", "topic": "Sideband filters", "levels": {
+      "I": { "note": "An SSB filter is a narrow band-pass filter that lets only one sideband through. In analogue rigs it's made from several quartz crystals (or similar resonators).",
+        "q": [{ "text": "What is an SSB filter usually made from in an analogue transmitter?", "choices": ["Several quartz crystals", "A single resistor", "An electrolytic capacitor", "A ferrite rod"], "why": "Crystal ladder filters give the steep sides needed." }] },
+      "Full": { "note": "With a 9 MHz filter and carrier, the upper sideband lies just above 9 MHz and the lower just below. Moving the carrier oscillator to the other side of the filter selects the other sideband.",
+        "q": [{ "text": "A filter passes 9.0003–9.0030 MHz with the carrier at 9.0000 MHz. Which sideband passes?", "choices": ["Upper", "Lower", "Both", "Neither"], "why": "The passband is above the carrier." }] } } },
+    { "id": "3E3", "topic": "FM with a varicap", "levels": {
+      "I": { "note": "Put a varicap diode in an oscillator's tuned circuit and feed it audio: the changing capacitance varies the frequency, producing FM.",
+        "q": [{ "text": "How can an oscillator be frequency-modulated?", "choices": ["Feeding audio to a varicap diode in its tuned circuit", "Switching it on and off", "Changing the PA supply", "Using a balanced modulator"], "why": "The varicap's capacitance follows the audio." }] } } },
+    { "id": "3F1", "topic": "RF power amplifiers", "levels": {
+      "F": { "note": "The RF power amplifier raises the modulated signal to the final output power.",
+        "q": [{ "text": "What does the RF power amplifier do?", "choices": ["Raises the signal to the final output power", "Sets the frequency", "Adds the audio", "Filters the mains"], "why": "It's the last stage before the feeder." }] },
+      "I": { "note": "Efficiency = RF power out ÷ DC power in. A PA at 50% efficiency taking 200 W from the supply gives 100 W of RF; the rest is heat.",
+        "q": [{ "text": "A PA draws 10 A at 13.8 V and is 50% efficient. Roughly what RF power comes out?", "choices": ["69 W", "138 W", "27.6 W", "6.9 W"], "why": "DC in = 138 W; 50% of that is 69 W." }] } } },
+    { "id": "3F2", "topic": "Linearity", "levels": {
+      "Full": { "note": "A linear amplifier's output is an exact scaled copy of its input. SSB and AM need linear amplification; FM and CW don't (class C is fine). Non-linearity distorts a single tone into harmonics, and two tones into intermodulation products close to the wanted signal.",
+        "q": [{ "text": "Which mode needs a linear amplifier?", "choices": ["SSB", "FM", "CW", "FSK"], "why": "SSB's amplitude carries information, so it must be reproduced exactly." }] } } },
+    { "id": "3F3", "topic": "Matching the PA's load", "levels": {
+      "F": { "note": "The PA must be connected to a correctly matched load (usually 50 Ω). The wrong antenna, or none, can damage the transmitter.",
+        "q": [{ "text": "Why must you never transmit without an antenna or dummy load connected?", "choices": ["The transmitter may be damaged", "It's against the band plan", "The signal becomes wider", "It uses more power"], "why": "A PA needs a matched load." }] },
+      "Full": { "note": "Main parts of a PA circuit: the bias network sets the working point; the input circuit matches the drive; the collector (or drain) load; and the output network, which matches to 50 Ω and filters out harmonics.",
+        "q": [{ "text": "Which part of a PA reduces harmonics reaching the antenna?", "choices": ["The output filter and matching network", "The bias resistor", "The input circuit", "The heat sink"], "why": "The output network both matches and low-pass filters." }] } } },
+    { "id": "3F4", "topic": "PA ratings and speech processing", "levels": {
+      "Full": { "note": "SSB speech has a high peak-to-average ratio. Speech processing raises the average power, so the PA runs hotter. Continuous-carrier modes like FM and many data modes need the PA rated for full continuous output; reduce the power if it's rated only for SSB.",
+        "q": [{ "text": "Why might you reduce power when running a data mode on a rig rated 100 W SSB?", "choices": ["Data modes run near full power continuously, heating the PA", "Data modes need less power to be legal", "SSB ratings are for receive only", "The band plan says so"], "why": "A high duty cycle means much higher average power." }] } } },
+    { "id": "3F5", "topic": "ALC and power control", "levels": {
+      "Full": { "note": "Automatic level control (ALC) senses the output and reduces the drive to stop the PA being overdriven. With an external amplifier, its ALC can be fed back to the transceiver. A manual RF power control sets the output level.",
+        "q": [{ "text": "What does ALC do in a transmitter?", "choices": ["Reduces drive to prevent overdriving the PA", "Sets the receive gain", "Tunes the antenna", "Controls the S-meter"], "why": "ALC limits output level automatically." }] } } },
+    { "id": "3G1", "topic": "Over-modulation and over-deviation", "levels": {
+      "F": { "note": "Too much amplitude modulation distorts the signal and spreads it onto adjacent channels. Too much FM deviation does the same.",
+        "q": [{ "text": "What can excessive FM deviation cause?", "choices": ["Interference to adjacent channels", "A narrower signal", "Lower power", "Better audio"], "why": "Over-deviation widens the signal." }] },
+      "Full": { "note": "Over-modulation clips the audio, producing audio harmonics that widen the transmitted bandwidth.",
+        "q": [{ "text": "Why does over-modulation widen a signal?", "choices": ["Distortion creates audio harmonics, making extra sidebands", "It raises the carrier frequency", "It adds a second carrier", "It changes the polarisation"], "why": "Clipped audio contains higher frequencies." }] } } },
+    { "id": "3G2", "topic": "Harmonics", "levels": {
+      "I": { "note": "Oscillators, mixers and amplifiers can produce harmonics: whole-number multiples of the fundamental. A 7 MHz signal has harmonics at 14, 21, 28 MHz and so on, and these can interfere with other bands and services.",
+        "q": [{ "text": "What is the third harmonic of 7.1 MHz?", "choices": ["21.3 MHz", "14.2 MHz", "10.1 MHz", "28.4 MHz"], "why": "3 × 7.1 = 21.3 MHz." }] },
+      "Full": { "note": "Overdriving the PA also widens the signal. When driving an external amplifier, use only the drive needed for full output; overdriving it generates harmonics and intermodulation products.",
+        "q": [{ "text": "How should you drive an external linear amplifier?", "choices": ["With the minimum power needed for full output", "At the transceiver's maximum", "With ALC disconnected", "With speech processing at maximum"], "why": "Overdriving causes splatter and harmonics." }] } } },
+    { "id": "3G3", "topic": "Filters against unwanted emissions", "levels": {
+      "I": { "note": "A filter passes some frequencies and blocks others. A low-pass filter after an HF transmitter removes harmonics; band-pass and notch filters can help too.",
+        "q": [{ "text": "Which filter would best stop a 14 MHz transmitter's harmonics?", "choices": ["Low-pass with a cut-off just above 14 MHz", "High-pass at 14 MHz", "Band-stop at 14 MHz", "No filter"], "why": "Harmonics are above the wanted frequency." }] },
+      "Full": { "note": "Avoid harmonics at source: push-pull amplifiers cancel even harmonics, and modest drive levels help. Transmitters can also radiate unwanted mixer products; good filtering at each stage and on the output removes them.",
+        "q": [{ "text": "Which harmonics does a push-pull amplifier tend to cancel?", "choices": ["Even harmonics", "Odd harmonics", "All harmonics", "None"], "why": "The symmetry cancels the even-order products." }] } } },
+    { "id": "3G4", "topic": "Key clicks and parasitics", "levels": {
+      "I": { "note": "If a CW signal's envelope rises and falls too sharply, it spreads out as key clicks either side of the frequency. A shaping (filter) network in the keying stage slows the edges (typically a few milliseconds) and cures it.",
+        "q": [{ "text": "What causes key clicks?", "choices": ["Too fast a rise and fall of the CW envelope", "Sending too slowly", "Too much deviation", "A low SWR"], "why": "Sharp edges contain many frequencies." }] },
+      "Full": { "note": "Parasitic oscillations and self-oscillation are unwanted oscillations in an amplifier, often at VHF. Remedies include parasitic stoppers (small resistors or ferrite beads), better layout and screening, and proper decoupling.",
+        "q": [{ "text": "What's a common cure for a VHF parasitic in an amplifier?", "choices": ["A parasitic stopper such as a ferrite bead", "A larger antenna", "More drive", "A higher SWR"], "why": "Stoppers damp the unwanted oscillation." }] } } },
+    { "id": "3G5", "topic": "Chirp and off-frequency synthesisers", "levels": {
+      "I": { "note": "Chirp is a change in frequency each time the key goes down, usually because the oscillator is pulled by load or supply changes. Cures: a buffer stage, a well-regulated supply, and keying a later stage rather than the oscillator.",
+        "q": [{ "text": "Which helps cure chirp on a CW transmitter?", "choices": ["A stable, regulated supply to the oscillator", "Faster keying edges", "A longer antenna", "More microphone gain"], "why": "Chirp comes from the oscillator being pulled when keyed." }] },
+      "Full": { "note": "A synthesiser can produce the wrong frequency if its loop loses lock or is mis-programmed. Make sure a transmitter can't transmit unless the synthesiser is locked, and check its output.",
+        "q": [{ "text": "How can you stop a PLL transmitter radiating off frequency?", "choices": ["Inhibit transmit when the loop isn't locked", "Use a bigger PA", "Remove the reference oscillator", "Increase the loop gain to maximum"], "why": "An out-of-lock indicator should mute the transmitter." }] } } },
+    { "id": "3H1", "topic": "What a receiver does", "levels": {
+      "F": { "note": "A receiver recovers the information sent by a transmitter. Getting it back from the modulated signal is called demodulation.",
+        "q": [{ "text": "What is demodulation?", "choices": ["Recovering the information from a modulated signal", "Adding audio to a carrier", "Matching the antenna", "Measuring SWR"], "why": "The detector or demodulator recovers the information." }] } } },
+    { "id": "3H2", "topic": "Receiver block diagrams", "levels": {
+      "F": { "note": "A simple receiver in order: antenna, feeder, signal selection and RF amplification, demodulator (detector), audio amplifier, loudspeaker or headphones.",
+        "q": [{ "text": "Which stage comes straight after the demodulator in a simple receiver?", "choices": ["The audio amplifier", "The RF amplifier", "The antenna", "The feeder"], "why": "The detected audio is amplified to drive the speaker." }] },
+      "I": { "note": "A crystal set is a tuned circuit, a diode detector and headphones. A direct-conversion receiver mixes the signal with a local oscillator close to its frequency, producing audio directly.",
+        "q": [{ "text": "In a direct-conversion receiver, what does mixing produce?", "choices": ["Audio directly", "An IF of 455 kHz", "A VHF signal", "DC only"], "why": "The oscillator is close to the signal, so the difference is audio." }] } } },
+    { "id": "3H3", "topic": "Sensitivity, overload and dynamic range", "levels": {
+      "I": { "note": "Sensitivity is how well a receiver detects weak signals. Very strong signals can overload it and distort the audio.",
+        "q": [{ "text": "What is a receiver's sensitivity?", "choices": ["Its ability to detect weak signals", "Its ability to reject other signals", "Its audio power", "Its frequency range"], "why": "Selectivity rejects; sensitivity detects." }] },
+      "Full": { "note": "Overload produces intermodulation products that can land on or near the wanted signal and mask weak signals. Dynamic range is the span between the weakest signal it can detect and the strongest it can handle without overloading.",
+        "q": [{ "text": "What is a receiver's dynamic range?", "choices": ["The range from the weakest detectable signal to the strongest handled without overload", "Its tuning range", "The width of its filters", "Its maximum audio output"], "why": "It's the usable range of signal levels." }] } } },
+    { "id": "3H4", "topic": "Selectivity", "levels": {
+      "I": { "note": "Selectivity is the receiver's ability to reject signals outside the wanted bandwidth. Simple tuned circuits can't be made selective enough at high frequencies, which is why the superhet was developed.",
+        "q": [{ "text": "Why can't a simple tuned circuit give enough selectivity at HF?", "choices": ["Its bandwidth is too wide at high frequencies for practical Q", "It's too selective", "It only works at VHF", "It has no resonance"], "why": "Bandwidth = f ÷ Q, so at high f it's wide." }] } } },
+    { "id": "3I1", "topic": "The superheterodyne", "levels": {
+      "I": { "note": "The superhet converts every incoming signal to one fixed intermediate frequency (IF), where good filtering and gain are easy to achieve. That gives good selectivity on every band.",
+        "q": [{ "text": "Why is the superhet design used?", "choices": ["Filtering and gain at one fixed IF give good selectivity", "It needs no oscillator", "It has no mixer", "It only works on one band"], "why": "A fixed IF can have excellent filters." }] },
+      "Full": { "note": "Single superhet: RF amplifier, mixer with local oscillator, IF filter and amplifier, detector (with BFO or carrier insertion for CW and SSB), AGC, audio. A double superhet converts twice: a high first IF for image rejection, a low second IF for selectivity.",
+        "q": [{ "text": "Why does a double superhet use a high first IF?", "choices": ["To keep the image frequency far away and easy to reject", "To make the audio louder", "To save an oscillator", "To reduce sensitivity"], "why": "The image is 2 × IF away from the wanted signal." }] } } },
+    { "id": "3I2", "topic": "Mixers and the IF", "levels": {
+      "I": { "note": "A mixer combines the incoming RF with the local oscillator and produces their sum and difference. One of these is selected as the IF.",
+        "q": [{ "text": "A 7.1 MHz signal is mixed with a 16.1 MHz oscillator. Which pair of frequencies appears?", "choices": ["9 MHz and 23.2 MHz", "7.1 and 16.1 MHz only", "2.3 MHz and 9 MHz", "1 MHz and 3 MHz"], "why": "16.1 − 7.1 = 9; 16.1 + 7.1 = 23.2." }] },
+      "Full": { "note": "Mixers also produce other products (harmonics of each input combining), which can cause spurious responses. Good design and filtering keep them out of the IF.",
+        "q": [{ "text": "Why can a mixer produce responses on unexpected frequencies?", "choices": ["Harmonics of the inputs also mix", "It only produces the difference", "Mixers are linear", "The IF filter creates them"], "why": "Non-linear mixing creates many products." }] } } },
+    { "id": "3I3", "topic": "Choosing the IF; image frequency", "levels": {
+      "I": { "note": "Because the IF is fixed, filtering is done once; changing the LO lets the same IF serve many bands. Tuned circuits in the RF and IF stages select the wanted signal.",
+        "q": [{ "text": "How does a superhet cover several bands with one IF?", "choices": ["By changing the local oscillator frequency", "By changing the IF filter each time", "By having no mixer", "By using a different speaker"], "why": "The LO moves so each band converts to the same IF." }] },
+      "Full": { "note": "For a given RF and IF there are two possible LOs: RF + IF or RF − IF. The image frequency is on the other side of the LO, 2 × IF away from the wanted signal, and must be removed by the RF filtering before the mixer. A high IF eases image rejection; a low IF eases narrow filtering.",
+        "q": [{ "text": "A receiver tuned to 14.2 MHz has a 9 MHz IF with the LO at 23.2 MHz. What's the image frequency?", "choices": ["32.2 MHz", "5.2 MHz", "9 MHz", "18.2 MHz"], "why": "Image = LO + IF = 32.2 MHz (2 × IF above the wanted signal)." }] } } },
+    { "id": "3I4", "topic": "IF amplifiers and coupling", "levels": {
+      "Full": { "note": "IF amplifiers use IF transformers: two tuned circuits coupled together. Loose coupling gives a peaked response; critical coupling gives the flattest top; over-coupling gives a double hump. IF gain is varied (by AGC) by changing the bias; too much signal causes distortion, which AGC limits.",
+        "q": [{ "text": "What response does an over-coupled IF transformer give?", "choices": ["A double-humped curve", "A single sharp peak", "A flat line", "No response"], "why": "Over-coupling splits the response into two peaks." }] } } },
+    { "id": "3I5", "topic": "Phase noise", "levels": {
+      "Full": { "note": "Phase noise is random jitter in an oscillator's phase, spreading noise either side of its frequency. In a receiver it lets strong nearby signals mix noise into the IF (reciprocal mixing); in a transmitter it radiates noise either side. It's measured in dBc/Hz.",
+        "q": [{ "text": "What unit is used for phase noise?", "choices": ["dBc/Hz", "dBm", "Volts per metre", "Ohms"], "why": "Phase noise is relative to the carrier, per hertz of bandwidth." }] } } },
+    { "id": "3J1", "topic": "RF amplifiers and preamps", "levels": {
+      "Full": { "note": "At HF, atmospheric noise is far higher than receiver noise, so a preamp mostly amplifies noise and reduces dynamic range. At VHF and above, a low-noise preamp at the masthead, before the feeder loss, makes a real difference.",
+        "q": [{ "text": "Where does a VHF low-noise preamp give most benefit?", "choices": ["At the antenna, before the feeder", "At the receiver end of the feeder", "After the IF filter", "In the audio stage"], "why": "Mounting it before feeder loss preserves the signal-to-noise ratio." }] } } },
+    { "id": "3K1", "topic": "Detectors and demodulators", "levels": {
+      "F": { "note": "The detector (demodulator) recovers the original information. The audio amplifier then makes it loud enough for headphones or a loudspeaker.",
+        "q": [{ "text": "What recovers the information from the received signal?", "choices": ["The detector (demodulator)", "The audio amplifier", "The feeder", "The RF amplifier"], "why": "The detector demodulates." }] },
+      "I": { "note": "AM uses a diode detector. CW needs a beat frequency oscillator (BFO) to make the carrier audible as a tone. SSB uses a carrier insertion oscillator (CIO) with a product detector. FM uses a frequency discriminator.",
+        "q": [{ "text": "What does a receiver need to make a CW signal audible?", "choices": ["A beat frequency oscillator", "A diode detector only", "A discriminator", "A limiter"], "why": "The BFO beats with the carrier to produce a tone." }] },
+      "Full": { "note": "Know how the basic AM, CW, SSB and FM demodulators work. FM receivers have a limiter before the discriminator to remove amplitude variations and noise.",
+        "q": [{ "text": "What does the limiter in an FM receiver do?", "choices": ["Removes amplitude variations before the discriminator", "Limits the frequency range", "Limits audio volume", "Inserts the carrier"], "why": "FM information is in the frequency, so amplitude noise can be clipped off." }] } } },
+    { "id": "3L1", "topic": "Automatic gain control (AGC)", "levels": {
+      "I": { "note": "AGC senses signal strength at the detector and turns down the IF (and sometimes RF) gain for strong signals, keeping the audio level fairly steady. The same AGC voltage can drive the S-meter.",
+        "q": [{ "text": "What often drives a receiver's S-meter?", "choices": ["The AGC voltage", "The audio volume", "The BFO", "The power supply"], "why": "AGC voltage rises with signal strength." }] },
+      "Full": { "note": "The AGC voltage comes from rectifying the IF signal. Its attack (how fast it reacts) and decay (how fast it recovers) can be adjusted: fast decay for CW, slower for SSB.",
+        "q": [{ "text": "Which AGC setting usually suits CW?", "choices": ["Fast decay", "AGC off always", "Very slow decay", "Fast attack and no decay"], "why": "Fast recovery between characters lets weak signals through." }] } } },
+    { "id": "3M1", "topic": "Software-defined radio", "levels": {
+      "F": { "note": "An SDR receiver digitises everything from the antenna and does the rest in software: a mathematical process separates the signals by frequency, a software filter selects the one you want, and software demodulates it.",
+        "q": [{ "text": "In an SDR, how is the wanted signal selected?", "choices": ["By a filter defined in software", "By a crystal filter only", "By turning the antenna", "By the speaker"], "why": "SDR filtering happens in software." }] },
+      "I": { "note": "SDR software uses a Fourier transform to split the signal into its component frequencies, which also gives a spectrum or waterfall display. Digital filters can be far more selective than analogue ones.",
+        "q": [{ "text": "Which mathematical operation gives an SDR its waterfall display?", "choices": ["A Fourier transform", "Ohm's law", "A square root", "Integration"], "why": "The FFT shows the spectrum over time." }] },
+      "Full": { "note": "Signals can be drawn on a phasor diagram as amplitude and phase. To capture both, an SDR samples the signal in two parts, 90° apart.",
+        "q": [{ "text": "Why does an SDR need two samples 90° apart?", "choices": ["To capture both amplitude and phase", "To double the volume", "To cover two bands", "To cancel the AGC"], "why": "Two quadrature components fully define the signal." }] } } },
+    { "id": "3M2", "topic": "Time and frequency domains; I/Q", "levels": {
+      "I": { "note": "The time domain shows a signal changing over time (as on an oscilloscope). The frequency domain shows how much of each frequency it contains (as on a spectrum display). A pure sine wave is one line in the frequency domain; two added together give two lines.",
+        "q": [{ "text": "A signal made of 1 kHz and 3 kHz sine waves is viewed in the frequency domain. What do you see?", "choices": ["Two lines, at 1 and 3 kHz", "One line at 2 kHz", "A flat line", "A square wave"], "why": "Each sine wave is a single line at its frequency." }] },
+      "Full": { "note": "Mixing with two local oscillators 90° apart gives the in-phase (I) and quadrature (Q) components. Digitised, these let software demodulate any mode.",
+        "q": [{ "text": "What are I and Q signals?", "choices": ["In-phase and quadrature components from LOs 90° apart", "Input and output", "Intermodulation and quality", "Two separate antennas"], "why": "I/Q sampling captures the full signal." }] } } },
+    { "id": "3M3", "topic": "SDR building blocks", "levels": {
+      "I": { "note": "An SDR typically has: antenna input and filtering, an ADC (sometimes after a mixer), digital processing (filtering, demodulation, display), and a DAC driving the audio. In transmit, it runs the other way.",
+        "q": [{ "text": "Which part of an SDR receiver turns the antenna signal into numbers?", "choices": ["The ADC", "The DAC", "The loudspeaker", "The PA"], "why": "Analogue-to-digital conversion." }] } } },
+    { "id": "3N1", "topic": "Transceivers and RIT", "levels": {
+      "Full": { "note": "Transceivers share oscillators, IF filters and changeover circuits between transmit and receive. Receiver incremental tuning (RIT, also called clarifier) shifts the receive frequency slightly without moving the transmit frequency.",
+        "q": [{ "text": "What does RIT let you do?", "choices": ["Shift the receive frequency without changing transmit", "Shift transmit only", "Change band", "Increase power"], "why": "Receiver incremental tuning." }] } } },
+    { "id": "3N2", "topic": "Transverters", "levels": {
+      "Full": { "note": "A transverter converts a transceiver's signals to and from another band. For example, a 28 MHz rig with a 116 MHz local oscillator works 144 MHz. It needs only low drive power, so take care not to overdrive it or leave the rig on full power, and make sure you stay in band.",
+        "q": [{ "text": "A 2 m transverter uses a 116 MHz LO. What does 28.2 MHz on the rig correspond to?", "choices": ["144.2 MHz", "87.8 MHz", "116 MHz", "172 MHz"], "why": "116 + 28.2 = 144.2 MHz." }] } } }
+  ]
+}

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #ffffff;
+            --ink: #111111;
+            --muted: #555555;
+            --line: #e5e5e5;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+            --warn: #dc2626;
+            --lamp: #f59e0b;
+            --lamp-off: #e5e5e5;
+            --lamp-glow: rgba(245, 158, 11, 0.4);
+            --current-bg: rgba(37, 99, 235, 0.1);
+            --done-code: #3b66d4;
+        }
+
+        :root.dark {
+            color-scheme: dark;
+            --bg: #000000;
+            --ink: #e4e7f1;
+            --muted: #8b92b0;
+            --line: #333333;
+            --accent: #4a7cff;
+            --accent-dark: #3d6ae6;
+            --warn: #ff6b6b;
+            --lamp: #ffd166;
+            --lamp-off: #1a1a1a;
+            --lamp-glow: rgba(255, 209, 102, 0.55);
+            --current-bg: rgba(74, 124, 255, 0.18);
+            --done-code: #7d9dff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not(.light) {
+                color-scheme: dark;
+                --bg: #000000;
+                --ink: #e4e7f1;
+                --muted: #8b92b0;
+                --line: #333333;
+                --accent: #4a7cff;
+                --accent-dark: #3d6ae6;
+                --warn: #ff6b6b;
+                --lamp: #ffd166;
+                --lamp-off: #1a1a1a;
+                --lamp-glow: rgba(255, 209, 102, 0.55);
+                --current-bg: rgba(74, 124, 255, 0.18);
+                --done-code: #7d9dff;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: 18px;
+        }
+
+        label, .field-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* Mode switch */
+        .mode {
+            display: inline-flex;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+            align-self: flex-start;
+        }
+        .mode button {
+            background: transparent;
+            color: var(--muted);
+            border: none;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .mode button[aria-pressed="true"] {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 120px;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.5;
+            transition: border-color 0.2s;
+        }
+        textarea.morse-in { font-family: 'Courier New', Courier, monospace; letter-spacing: 2px; }
+        textarea:focus { outline: none; border-color: var(--accent); }
+        textarea::placeholder { color: var(--muted); opacity: 0.75; }
+
+        /* Settings */
+        .settings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px 24px;
+            align-items: end;
+        }
+        .setting output {
+            color: var(--ink);
+            font-variant-numeric: tabular-nums;
+            margin-left: 6px;
+        }
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent);
+        }
+        .checks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+        .checks label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            cursor: pointer;
+        }
+        input[type="checkbox"] { accent-color: var(--accent); width: 16px; height: 16px; }
+
+        /* Actions */
+        .actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .actions button {
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--line);
+            background: transparent;
+            color: var(--ink);
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .actions button:hover { border-color: var(--muted); }
+        .actions button.primary {
+            flex: 1 1 200px;
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        .actions button.primary:hover { background: var(--accent-dark); }
+        .actions button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        .actions button:disabled:hover { border-color: var(--line); background: transparent; }
+        .actions button.primary:disabled:hover { background: var(--accent); }
+        .duration {
+            color: var(--muted);
+            font-size: 14px;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        /* Output */
+        .output-section { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+        .output-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .output-head .field-label { margin: 0; }
+        .lamp {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--lamp-off);
+            border: 1px solid var(--line);
+            transition: background 40ms, box-shadow 40ms;
+        }
+        .lamp.on {
+            background: var(--lamp);
+            box-shadow: 0 0 18px 4px var(--lamp-glow);
+        }
+        .output {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-height: 160px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 14px 6px;
+        }
+        .output.playing.flash-bg { transition: background 40ms; }
+        .output.playing.flash-bg.lit { background: rgba(255, 209, 102, 0.12); }
+        .output .empty { color: var(--muted); font-size: 16px; }
+        .word {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-right: 22px;
+        }
+        .cell {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px 6px;
+            border-radius: 6px;
+            min-width: 26px;
+        }
+        .cell .ch {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.3;
+        }
+        .cell .code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: var(--accent);
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+        .cell.unknown .ch, .cell.unknown .code { color: var(--warn); }
+        .cell.current { background: var(--current-bg); }
+        .cell.current .ch { color: var(--ink); }
+        .cell.current .code { color: var(--accent); font-weight: bold; }
+        .cell.done .code { color: var(--done-code); }
+
+        .status {
+            margin-top: 12px;
+            font-size: 14px;
+            color: var(--muted);
+            min-height: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .status .msg.playing { color: var(--accent); font-weight: 600; }
+        .status .msg.warn { color: var(--warn); }
+        .hint { color: var(--muted); }
+
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+        @media (min-width: 768px) {
+            .container { padding: 0; gap: 22px; }
+            textarea { min-height: 150px; font-size: 18px; padding: 20px 24px; }
+            .actions button { padding: 16px 26px; font-size: 18px; }
+            .cell .code { font-size: 20px; }
+        }
+        @media (min-width: 1200px) {
+            .container { padding: 60px; }
+            textarea { min-height: 180px; font-size: 20px; }
+            .cell .code { font-size: 22px; }
+            .cell .ch { font-size: 16px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 15px; }
+            textarea { min-height: 100px; font-size: 15px; padding: 12px 16px; }
+            .actions button { padding: 12px 16px; font-size: 15px; }
+            .cell .code { font-size: 16px; letter-spacing: 2px; }
+        }
+    </style>
+    <script>
+        // Sync theme with parent window if in an iframe
+        function syncTheme() {
+            try {
+                if (window.parent && window.parent !== window && window.parent.document) {
+                    const isDark = window.parent.document.documentElement.classList.contains('dark');
+                    document.documentElement.classList.toggle('dark', isDark);
+                    document.documentElement.classList.toggle('light', !isDark);
+                    document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+                    return;
+                }
+            } catch(e) {}
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.classList.toggle('dark', prefersDark);
+            document.documentElement.classList.toggle('light', !prefersDark);
+            document.documentElement.style.colorScheme = prefersDark ? 'dark' : 'light';
+        }
+
+        syncTheme();
+        window.addEventListener('DOMContentLoaded', syncTheme);
+        window.addEventListener('load', syncTheme);
+
+        // Setup observer to watch for theme changes in parent
+        try {
+            if (window.parent && window.parent !== window && window.parent.document) {
+                const observer = new MutationObserver(syncTheme);
+                observer.observe(window.parent.document.documentElement, {
+                    attributes: true,
+                    attributeFilter: ['class']
+                });
+            }
+        } catch(e) {}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mode" role="group" aria-label="Translation direction">
+            <button type="button" id="modeText" aria-pressed="true">Text → Morse</button>
+            <button type="button" id="modeMorse" aria-pressed="false">Morse → Text</button>
+        </div>
+
+        <div class="input-section">
+            <label for="textInput" id="inputLabel">Enter your message:</label>
+            <textarea id="textInput" placeholder="Type your message here..." spellcheck="false"></textarea>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label for="wpm">Speed<output id="wpmOut" for="wpm">15 WPM</output></label>
+                <input type="range" id="wpm" min="5" max="40" step="1" value="15">
+            </div>
+            <div class="setting">
+                <label for="pitch">Pitch<output id="pitchOut" for="pitch">600 Hz</output></label>
+                <input type="range" id="pitch" min="400" max="1000" step="10" value="600">
+            </div>
+            <div class="checks">
+                <label><input type="checkbox" id="farnsworth"> Farnsworth spacing</label>
+                <label><input type="checkbox" id="sound" checked> Sound</label>
+                <label><input type="checkbox" id="flash" checked> Flash</label>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button type="button" class="primary" id="playBtn">Play</button>
+            <button type="button" id="stopBtn" disabled>Stop</button>
+            <button type="button" id="copyBtn" disabled>Copy</button>
+            <span class="duration" id="duration"></span>
+        </div>
+
+        <div class="output-section">
+            <div class="output-head">
+                <span class="field-label" id="outputLabel">Morse code:</span>
+                <span class="lamp" id="lamp" aria-hidden="true"></span>
+            </div>
+            <div class="output" id="output" role="region" aria-labelledby="outputLabel">
+                <span class="empty">Your morse code will appear here as you type.</span>
+            </div>
+            <div class="status">
+                <span class="msg" id="status" role="status" aria-live="polite"></span>
+                <span class="hint">Ctrl/⌘+Enter plays · Esc stops</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const morseCode = {
+            'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
+            'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+            'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
+            'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
+            'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
+            'Z': '--..', '0': '-----', '1': '.----', '2': '..---', '3': '...--',
+            '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+            '9': '----.', '.': '.-.-.-', ',': '--..--', '?': '..--..',
+            "'": '.----.', '!': '-.-.--', '/': '-..-.', '(': '-.--.',
+            ')': '-.--.-', '&': '.-...', ':': '---...', ';': '-.-.-.',
+            '=': '-...-', '+': '.-.-.', '-': '-....-', '_': '..--.-',
+            '"': '.-..-.', '$': '...-..-', '@': '.--.-.'
+        };
+        const morseToChar = Object.fromEntries(Object.entries(morseCode).map(([c, m]) => [m, c]));
+
+        // ---------- DOM ----------
+        const $ = id => document.getElementById(id);
+        const input = $('textInput'), inputLabel = $('inputLabel'), outputLabel = $('outputLabel');
+        const output = $('output'), statusEl = $('status'), durationEl = $('duration'), lamp = $('lamp');
+        const playBtn = $('playBtn'), stopBtn = $('stopBtn'), copyBtn = $('copyBtn');
+        const wpmEl = $('wpm'), pitchEl = $('pitch'), farnsEl = $('farnsworth'), soundEl = $('sound'), flashEl = $('flash');
+        const modeTextBtn = $('modeText'), modeMorseBtn = $('modeMorse');
+
+        // ---------- State ----------
+        let mode = 'text';           // 'text' | 'morse'
+        let words = [];              // [[{ch, morse, known}]]
+        let unknownChars = [];
+        let cells = [];              // cells[wi][li] -> element
+        let audioCtx = null;
+        let playback = null;         // { osc, gain, start, events, total, raf }
+
+        // ---------- Encoding / decoding ----------
+        function encodeText(text) {
+            const unknown = new Set();
+            const ws = text.trim().toUpperCase().split(/\s+/).filter(Boolean).map(word =>
+                Array.from(word).map(ch => {
+                    const m = morseCode[ch];
+                    if (!m) unknown.add(ch);
+                    return { ch, morse: m || '', known: !!m };
+                })
+            );
+            return { words: ws, unknown: [...unknown] };
+        }
+
+        function decodeMorse(text) {
+            const unknown = new Set();
+            const clean = text.replace(/[_–—−]/g, '-').replace(/[•·]/g, '.').trim();
+            const ws = clean.split(/\s*[\/|]\s*|\s{3,}/).filter(Boolean).map(word =>
+                word.trim().split(/\s+/).filter(Boolean).map(code => {
+                    const valid = /^[.-]+$/.test(code);
+                    const ch = valid ? morseToChar[code] : undefined;
+                    if (!ch) unknown.add(code);
+                    return { ch: ch || '#', morse: valid ? code : '', known: !!ch };
+                })
+            );
+            return { words: ws, unknown: [...unknown] };
+        }
+
+        function plainOutput() {
+            if (mode === 'text') {
+                return words.map(w => w.map(l => l.known ? l.morse : '#').join(' ')).join(' / ');
+            }
+            return words.map(w => w.map(l => l.ch).join('')).join(' ');
+        }
+
+        // ---------- Timing ----------
+        // PARIS standard: one unit = 1.2 / WPM seconds.
+        // Farnsworth (ARRL): characters at >= 18 WPM, gaps stretched to hit the overall speed.
+        function timing() {
+            const wpm = +wpmEl.value;
+            if (farnsEl.checked && wpm < 18) {
+                const c = 18, s = wpm;
+                const unit = 1.2 / c;
+                const ta = (60 * c - 37.2 * s) / (s * c);
+                return { unit, letterGap: 3 * ta / 19, wordGap: 7 * ta / 19 };
+            }
+            const unit = 1.2 / wpm;
+            return { unit, letterGap: 3 * unit, wordGap: 7 * unit };
+        }
+
+        function buildSchedule() {
+            const { unit, letterGap, wordGap } = timing();
+            const events = [];
+            let t = 0;
+            words.forEach((word, wi) => {
+                word.forEach((letter, li) => {
+                    const m = letter.morse;
+                    for (let j = 0; j < m.length; j++) {
+                        const dur = m[j] === '.' ? unit : 3 * unit;
+                        events.push({ t0: t, t1: t + dur, wi, li });
+                        t += dur;
+                        if (j < m.length - 1) t += unit;
+                    }
+                    if (li < word.length - 1) t += letterGap;
+                });
+                if (wi < words.length - 1) t += wordGap;
+            });
+            return { events, total: t };
+        }
+
+        function fmtDuration(s) {
+            if (s < 60) return `${s < 10 ? s.toFixed(1) : Math.round(s)} s`;
+            return `${Math.floor(s / 60)} min ${Math.round(s % 60)} s`;
+        }
+
+        // ---------- Rendering ----------
+        function render() {
+            const parsed = mode === 'text' ? encodeText(input.value) : decodeMorse(input.value);
+            words = parsed.words;
+            unknownChars = parsed.unknown;
+            output.innerHTML = '';
+            cells = [];
+
+            if (!words.length) {
+                output.innerHTML = `<span class="empty">${mode === 'text'
+                    ? 'Your morse code will appear here as you type.'
+                    : 'Type dots and dashes. Use a space between letters and / between words.'}</span>`;
+            } else {
+                words.forEach(word => {
+                    const wEl = document.createElement('span');
+                    wEl.className = 'word';
+                    const row = [];
+                    word.forEach(letter => {
+                        const c = document.createElement('span');
+                        c.className = 'cell' + (letter.known ? '' : ' unknown');
+                        const chEl = document.createElement('span');
+                        chEl.className = 'ch';
+                        chEl.textContent = letter.ch;
+                        const codeEl = document.createElement('span');
+                        codeEl.className = 'code';
+                        codeEl.textContent = letter.known ? letter.morse : '#';
+                        c.append(chEl, codeEl);
+                        wEl.appendChild(c);
+                        row.push(c);
+                    });
+                    output.appendChild(wEl);
+                    cells.push(row);
+                });
+            }
+
+            const { total } = buildSchedule();
+            const hasTones = total > 0;
+            durationEl.textContent = hasTones ? `≈ ${fmtDuration(total)}` : '';
+            playBtn.disabled = !hasTones;
+            copyBtn.disabled = !words.length;
+
+            if (unknownChars.length) {
+                const n = unknownChars.length;
+                setStatus(mode === 'text'
+                    ? `${n} character${n > 1 ? 's' : ''} can't be sent in Morse and will be skipped: ${unknownChars.join(' ')}`
+                    : `${n} code${n > 1 ? 's' : ''} not recognised: ${unknownChars.join('  ')}`, 'warn');
+            } else if (!playback) {
+                setStatus('');
+            }
+        }
+
+        function setStatus(text, kind = '') {
+            statusEl.textContent = text;
+            statusEl.className = 'msg' + (kind ? ' ' + kind : '');
+        }
+
+        // ---------- Playback ----------
+        function getAudio() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            return audioCtx;
+        }
+
+        function play() {
+            if (playback) return;
+            const { events, total } = buildSchedule();
+            if (!events.length) return;
+
+            const ctx = getAudio();
+            const start = ctx.currentTime + 0.08;
+            const level = soundEl.checked ? 0.3 : 0;
+
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.value = +pitchEl.value;
+            gain.gain.setValueAtTime(0, start);
+            osc.connect(gain).connect(ctx.destination);
+
+            const edge = 0.004; // 4 ms attack/release removes clicks
+            events.forEach(e => {
+                const a = start + e.t0, b = start + e.t1;
+                gain.gain.setValueAtTime(0, a);
+                gain.gain.linearRampToValueAtTime(level, a + edge);
+                gain.gain.setValueAtTime(level, b - edge);
+                gain.gain.linearRampToValueAtTime(0, b);
+            });
+            osc.start(start);
+            osc.stop(start + total + 0.1);
+
+            playback = { osc, gain, start, events, total, raf: 0, idx: 0, lastCell: null };
+            playBtn.disabled = true;
+            stopBtn.disabled = false;
+            input.readOnly = true;
+            output.classList.add('playing');
+            if (flashEl.checked) output.classList.add('flash-bg');
+            setStatus('Playing…', 'playing');
+            tick();
+        }
+
+        function tick() {
+            const p = playback;
+            if (!p) return;
+            const ctx = audioCtx;
+            const now = ctx.currentTime - p.start;
+
+            if (now >= p.total + 0.05) { finish('Complete'); return; }
+
+            while (p.idx < p.events.length && p.events[p.idx].t1 <= now) p.idx++;
+            const e = p.events[p.idx];
+            const lit = e && now >= e.t0 && now < e.t1;
+            setLamp(lit);
+
+            if (e) {
+                const cell = cells[e.wi] && cells[e.wi][e.li];
+                if (cell !== p.lastCell) {
+                    if (p.lastCell) { p.lastCell.classList.remove('current'); p.lastCell.classList.add('done'); }
+                    if (cell) {
+                        cell.classList.add('current');
+                        cell.scrollIntoView({ block: 'nearest' });
+                    }
+                    p.lastCell = cell;
+                }
+            }
+            p.raf = requestAnimationFrame(tick);
+        }
+
+        function setLamp(on) {
+            if (!flashEl.checked) on = false;
+            lamp.classList.toggle('on', on);
+            output.classList.toggle('lit', on);
+        }
+
+        function stop() {
+            if (!playback) return;
+            const ctx = audioCtx, g = playback.gain.gain, t = ctx.currentTime;
+            g.cancelScheduledValues(t);
+            g.setValueAtTime(g.value, t);
+            g.linearRampToValueAtTime(0, t + 0.01);
+            try { playback.osc.stop(t + 0.02); } catch (_) {}
+            finish('Stopped');
+        }
+
+        function finish(message) {
+            const p = playback;
+            cancelAnimationFrame(p.raf);
+            playback = null;
+            setLamp(false);
+            if (p.lastCell) p.lastCell.classList.remove('current');
+            cells.flat().forEach(c => c.classList.remove('done'));
+            output.classList.remove('playing', 'flash-bg', 'lit');
+            input.readOnly = false;
+            playBtn.disabled = false;
+            stopBtn.disabled = true;
+            setStatus(message);
+        }
+
+        // ---------- Copy ----------
+        async function copyOutput() {
+            const text = plainOutput();
+            try {
+                await navigator.clipboard.writeText(text);
+            } catch (_) {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                ta.remove();
+            }
+            const prev = copyBtn.textContent;
+            copyBtn.textContent = 'Copied';
+            setTimeout(() => { copyBtn.textContent = prev; }, 1500);
+        }
+
+        // ---------- Mode ----------
+        function setMode(next) {
+            if (mode === next) return;
+            if (playback) stop();
+            const converted = plainOutput();
+            mode = next;
+            modeTextBtn.setAttribute('aria-pressed', mode === 'text');
+            modeMorseBtn.setAttribute('aria-pressed', mode === 'morse');
+            input.classList.toggle('morse-in', mode === 'morse');
+            if (mode === 'text') {
+                inputLabel.textContent = 'Enter your message:';
+                input.placeholder = 'Type your message here...';
+                outputLabel.textContent = 'Morse code:';
+            } else {
+                inputLabel.textContent = 'Enter Morse code:';
+                input.placeholder = '.... . .-.. .-.. --- / .-- --- .-. .-.. -..';
+                outputLabel.textContent = 'Decoded text:';
+            }
+            input.value = converted;   // carry the translation across so you can round-trip
+            render();
+        }
+
+        // ---------- Events ----------
+        input.addEventListener('input', render);
+        [wpmEl, farnsEl].forEach(el => el.addEventListener('input', () => {
+            $('wpmOut').textContent = `${wpmEl.value} WPM`;
+            render();
+        }));
+        pitchEl.addEventListener('input', () => { $('pitchOut').textContent = `${pitchEl.value} Hz`; });
+        flashEl.addEventListener('change', () => { if (!flashEl.checked) setLamp(false); });
+        playBtn.addEventListener('click', play);
+        stopBtn.addEventListener('click', stop);
+        copyBtn.addEventListener('click', copyOutput);
+        modeTextBtn.addEventListener('click', () => setMode('text'));
+        modeMorseBtn.addEventListener('click', () => setMode('morse'));
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                if (!playBtn.disabled) play();
+            } else if (e.key === 'Escape') {
+                stop();
+            }
+        });
+
+        render();
+    </script>
+</body>
+</html>

@@ -1,0 +1,926 @@
+{
+ "about": "Reference entries. Q-codes, prosigns and abbreviations are merged in from the word lists at build time.",
+ "entries": [
+  {
+   "term": "Koch method",
+   "cat": "Morse",
+   "short": "Learning Morse by hearing characters at full speed from the start, adding one new character each time you copy the current set at 90% accuracy.",
+   "more": "Named after the German psychologist Ludwig Koch, who described it in 1936. This course uses it.",
+   "phrase": true
+  },
+  {
+   "term": "Farnsworth",
+   "cat": "Morse",
+   "short": "Sending characters at a fast speed with extra space between them, so you learn the sound of each letter rather than counting dots and dashes.",
+   "more": "Named after Donald Farnsworth, W6TTB.",
+   "aka": [
+    "Farnsworth spacing",
+    "Farnsworth timing"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "WPM",
+   "cat": "Morse",
+   "short": "Words per minute: Morse speed measured with the standard word PARIS, 50 units long.",
+   "aka": [
+    "words per minute"
+   ]
+  },
+  {
+   "term": "PARIS",
+   "cat": "Morse",
+   "short": "The standard word for measuring Morse speed: exactly 50 units including the word space."
+  },
+  {
+   "term": "head copy",
+   "cat": "Morse",
+   "short": "Understanding Morse in your head without writing it down, as you would listen to speech.",
+   "phrase": true
+  },
+  {
+   "term": "fist",
+   "cat": "Morse",
+   "short": "An operator's individual sending style: their timing, weight and rhythm, recognisable like handwriting.",
+   "link": false
+  },
+  {
+   "term": "prosign",
+   "cat": "Morse",
+   "short": "A procedural signal: two letters sent run together as one character, such as AR (end of message) or SK (end of contact).",
+   "aka": [
+    "prosigns"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "International Morse",
+   "cat": "Morse",
+   "short": "The code standardised by the ITU and used on radio worldwide, derived from Friedrich Gerke's 1848 revision of the American code.",
+   "aka": [
+    "International Morse code",
+    "Continental code"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "American Morse",
+   "cat": "Morse",
+   "short": "The original landline code of Morse and Vail, with internal gaps in some letters and three dash lengths.",
+   "aka": [
+    "American Morse code",
+    "railroad Morse"
+   ],
+   "see": [
+    "International Morse"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "Wabun",
+   "cat": "Morse",
+   "short": "The Morse code for Japanese kana, switched to with the prosign DO and back with SN.",
+   "aka": [
+    "Wabun code"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "CQD",
+   "cat": "Morse",
+   "short": "The first maritime distress call, introduced by the Marconi company in 1904, replaced by SOS."
+  },
+  {
+   "term": "SOS",
+   "cat": "Morse",
+   "short": "The international distress signal, sent as one run-together character (...---...). Adopted internationally in 1906, in force from 1908."
+  },
+  {
+   "term": "GMDSS",
+   "cat": "Morse",
+   "short": "Global Maritime Distress and Safety System: the satellite and digital system that replaced Morse for distress at sea, fully in force from 1 February 1999."
+  },
+  {
+   "term": "straight key",
+   "cat": "Keys",
+   "short": "The simplest key: a lever you press for the whole of each dot and dash, so your hand forms all the timing.",
+   "aka": [
+    "straight keys",
+    "pump handle"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "bug",
+   "cat": "Keys",
+   "short": "A semi-automatic key: pushing the paddle one way sets a pendulum swinging that makes the dots; the other way you form each dash by hand.",
+   "aka": [
+    "semi-automatic key",
+    "Vibroplex"
+   ],
+   "link": false
+  },
+  {
+   "term": "cootie",
+   "cat": "Keys",
+   "short": "A sideswiper: a key moved side to side, each direction closing the circuit, so you alternate contacts by hand. Its rhythm is distinctive.",
+   "aka": [
+    "sideswiper",
+    "cootie key"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "paddle",
+   "cat": "Keys",
+   "short": "A key with one or two levers moved sideways, used with an electronic keyer that forms the dots and dashes.",
+   "aka": [
+    "paddles",
+    "single-lever paddle",
+    "dual-lever paddle"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "keyer",
+   "cat": "Keys",
+   "short": "An electronic circuit that makes perfectly timed dots and dashes from a paddle.",
+   "aka": [
+    "electronic keyer"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "iambic",
+   "cat": "Keys",
+   "short": "Squeezing both paddle levers to send alternating dots and dashes. Mode A stops when you release; Mode B adds one more opposite element.",
+   "aka": [
+    "iambic A",
+    "iambic B",
+    "Mode A",
+    "Mode B",
+    "squeeze keying"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "ultimatic",
+   "cat": "Keys",
+   "short": "A keyer mode where squeezing both levers sends repeats of whichever lever you pressed last, instead of alternating.",
+   "aka": [
+    "ultimatic mode"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "sidetone",
+   "cat": "Keys",
+   "short": "The tone you hear in your headphones while sending, so you can monitor your own keying.",
+   "phrase": true
+  },
+  {
+   "term": "QSK",
+   "cat": "Keys",
+   "short": "Full break-in: the receiver works between your dots and dashes, so the other station can interrupt you.",
+   "see": [
+    "semi break-in"
+   ]
+  },
+  {
+   "term": "semi break-in",
+   "cat": "Keys",
+   "short": "The transmitter switches on when you start sending and back to receive after a short pause, rather than between every element.",
+   "see": [
+    "QSK"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "dot memory",
+   "cat": "Keys",
+   "short": "A keyer feature that remembers a dot paddle tap made during a dash and sends it next.",
+   "aka": [
+    "dash memory",
+    "element memory"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "VFO",
+   "cat": "Radio",
+   "short": "Variable frequency oscillator: the tunable oscillator that sets the frequency you transmit and receive on."
+  },
+  {
+   "term": "BFO",
+   "cat": "Radio",
+   "short": "Beat frequency oscillator: mixes with a CW signal in the receiver to make it audible as a tone."
+  },
+  {
+   "term": "CIO",
+   "cat": "Radio",
+   "short": "Carrier insertion oscillator: replaces the missing carrier so an SSB signal can be demodulated."
+  },
+  {
+   "term": "RIT",
+   "cat": "Radio",
+   "short": "Receiver incremental tuning: shifts your receive frequency slightly without moving your transmit frequency.",
+   "aka": [
+    "clarifier"
+   ]
+  },
+  {
+   "term": "AGC",
+   "cat": "Radio",
+   "short": "Automatic gain control: turns the receiver gain down for strong signals so the volume stays even."
+  },
+  {
+   "term": "ALC",
+   "cat": "Radio",
+   "short": "Automatic level control: stops the transmitter overdriving its power amplifier."
+  },
+  {
+   "term": "IF",
+   "cat": "Radio",
+   "short": "Intermediate frequency: the fixed frequency a superhet converts every signal to for filtering and gain.",
+   "aka": [
+    "intermediate frequency"
+   ]
+  },
+  {
+   "term": "LO",
+   "cat": "Radio",
+   "short": "Local oscillator: the oscillator a mixer combines with the incoming signal.",
+   "aka": [
+    "local oscillator"
+   ]
+  },
+  {
+   "term": "superhet",
+   "cat": "Radio",
+   "short": "Superheterodyne: a receiver that converts signals to a fixed IF before filtering and detecting them.",
+   "aka": [
+    "superheterodyne",
+    "double superhet"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "SDR",
+   "cat": "Radio",
+   "short": "Software-defined radio: a radio that digitises the signal early and does filtering and demodulation in software."
+  },
+  {
+   "term": "ADC",
+   "cat": "Radio",
+   "short": "Analogue-to-digital converter."
+  },
+  {
+   "term": "DAC",
+   "cat": "Radio",
+   "short": "Digital-to-analogue converter."
+  },
+  {
+   "term": "DDS",
+   "cat": "Radio",
+   "short": "Direct digital synthesis: generating a signal by reading a stored sine wave through a DAC."
+  },
+  {
+   "term": "PLL",
+   "cat": "Radio",
+   "short": "Phase-locked loop: a synthesiser that locks a VCO to a stable reference through a programmable divider."
+  },
+  {
+   "term": "VCO",
+   "cat": "Radio",
+   "short": "Voltage-controlled oscillator."
+  },
+  {
+   "term": "FFT",
+   "cat": "Radio",
+   "short": "Fast Fourier transform: the calculation an SDR uses to turn a signal into its spectrum.",
+   "aka": [
+    "Fourier transform"
+   ]
+  },
+  {
+   "term": "PA",
+   "cat": "Radio",
+   "short": "Power amplifier: the transmitter stage that drives the antenna."
+  },
+  {
+   "term": "PEP",
+   "cat": "Radio",
+   "short": "Peak envelope power: the average power over one RF cycle at the highest peak of the modulation. Licence power limits are given in PEP."
+  },
+  {
+   "term": "RMS",
+   "cat": "Radio",
+   "short": "Root mean square: the AC value that gives the same heating as that much DC; 0.707 × peak for a sine wave."
+  },
+  {
+   "term": "CW",
+   "cat": "Radio",
+   "short": "Continuous wave: Morse sent by switching a carrier on and off."
+  },
+  {
+   "term": "SSB",
+   "cat": "Radio",
+   "short": "Single sideband: AM with the carrier and one sideband removed. LSB below 10 MHz, USB above.",
+   "see": [
+    "LSB",
+    "USB"
+   ]
+  },
+  {
+   "term": "LSB",
+   "cat": "Radio",
+   "short": "Lower sideband."
+  },
+  {
+   "term": "USB",
+   "cat": "Radio",
+   "short": "Upper sideband."
+  },
+  {
+   "term": "AM",
+   "cat": "Radio",
+   "short": "Amplitude modulation."
+  },
+  {
+   "term": "FM",
+   "cat": "Radio",
+   "short": "Frequency modulation."
+  },
+  {
+   "term": "DV",
+   "cat": "Radio",
+   "short": "Digital voice modes such as DMR, D-STAR and System Fusion."
+  },
+  {
+   "term": "FT8",
+   "cat": "Radio",
+   "short": "A popular weak-signal digital mode with 15-second timed overs."
+  },
+  {
+   "term": "HF",
+   "cat": "Radio",
+   "short": "High frequency: 3–30 MHz, the bands that travel worldwide via the ionosphere."
+  },
+  {
+   "term": "VHF",
+   "cat": "Radio",
+   "short": "Very high frequency: 30–300 MHz."
+  },
+  {
+   "term": "UHF",
+   "cat": "Radio",
+   "short": "Ultra high frequency: 300–3000 MHz."
+  },
+  {
+   "term": "RF",
+   "cat": "Radio",
+   "short": "Radio frequency."
+  },
+  {
+   "term": "AC",
+   "cat": "Radio",
+   "short": "Alternating current."
+  },
+  {
+   "term": "DC",
+   "cat": "Radio",
+   "short": "Direct current."
+  },
+  {
+   "term": "SWR",
+   "cat": "Radio",
+   "short": "Standing wave ratio: how well the antenna system matches the transmitter; 1:1 is perfect.",
+   "aka": [
+    "VSWR"
+   ]
+  },
+  {
+   "term": "AMU",
+   "cat": "Radio",
+   "short": "Antenna matching unit (often called an ATU): transforms the antenna system's impedance to 50 Ω for the transmitter.",
+   "aka": [
+    "ATU",
+    "antenna tuner"
+   ]
+  },
+  {
+   "term": "balun",
+   "cat": "Radio",
+   "short": "Balanced-to-unbalanced transformer, used where coax feeds a balanced antenna such as a dipole."
+  },
+  {
+   "term": "dummy load",
+   "cat": "Radio",
+   "short": "A screened resistor that absorbs the transmitter's power so you can test without radiating.",
+   "phrase": true
+  },
+  {
+   "term": "ERP",
+   "cat": "Radio",
+   "short": "Effective radiated power: the power into the antenna multiplied by its gain over a dipole."
+  },
+  {
+   "term": "EIRP",
+   "cat": "Radio",
+   "short": "Effective isotropic radiated power: power × gain relative to an isotropic radiator. It's 2.15 dB more than ERP."
+  },
+  {
+   "term": "dBd",
+   "cat": "Radio",
+   "short": "Antenna gain relative to a half-wave dipole."
+  },
+  {
+   "term": "dBi",
+   "cat": "Radio",
+   "short": "Antenna gain relative to an isotropic radiator. dBi = dBd + 2.15."
+  },
+  {
+   "term": "CTCSS",
+   "cat": "Radio",
+   "short": "Continuous tone-coded squelch system: a sub-audible tone that opens a repeater."
+  },
+  {
+   "term": "repeater",
+   "cat": "Radio",
+   "short": "A station, usually on a hilltop, that retransmits signals on another frequency to extend their range.",
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "transverter",
+   "cat": "Radio",
+   "short": "A converter that lets a transceiver work on another band."
+  },
+  {
+   "term": "zero beat",
+   "cat": "Radio",
+   "short": "Tuning so the other station's note matches your sidetone, which puts you on exactly their frequency.",
+   "aka": [
+    "zero-beat"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "PL259",
+   "cat": "Radio",
+   "short": "The screw-on coax plug used on most HF radios."
+  },
+  {
+   "term": "BNC",
+   "cat": "Radio",
+   "short": "A small bayonet coax connector."
+  },
+  {
+   "term": "SMA",
+   "cat": "Radio",
+   "short": "A tiny screw-on coax connector used on handhelds."
+  },
+  {
+   "term": "MUF",
+   "cat": "Propagation",
+   "short": "Maximum usable frequency: the highest frequency the ionosphere will return over a given path."
+  },
+  {
+   "term": "LUF",
+   "cat": "Propagation",
+   "short": "Lowest usable frequency: below it, D-layer absorption makes the path unusable."
+  },
+  {
+   "term": "NVIS",
+   "cat": "Propagation",
+   "short": "Near vertical incidence sky wave: high-angle signals that come back down nearby, for short HF contacts."
+  },
+  {
+   "term": "EME",
+   "cat": "Propagation",
+   "short": "Earth–Moon–Earth: bouncing signals off the moon.",
+   "aka": [
+    "moonbounce"
+   ]
+  },
+  {
+   "term": "sporadic E",
+   "cat": "Propagation",
+   "short": "Patches of intense E-layer ionisation, mostly in summer, that open 10 m and VHF for contacts up to about 2000 km per hop.",
+   "phrase": true
+  },
+  {
+   "term": "grey line",
+   "cat": "Propagation",
+   "short": "The band of twilight round the Earth, along which low HF bands often open to far places.",
+   "aka": [
+    "gray line"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "skip zone",
+   "cat": "Propagation",
+   "short": "The area between the end of the ground wave and where the sky wave returns, where nothing is heard.",
+   "aka": [
+    "skip distance",
+    "dead zone"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "solar flux",
+   "cat": "Propagation",
+   "short": "A measure of the sun's radio output at 10.7 cm, used as a guide to HF conditions; higher is better for the high bands.",
+   "aka": [
+    "SFI"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "K-index",
+   "cat": "Propagation",
+   "short": "A 0–9 measure of geomagnetic disturbance; high values mean poor HF conditions.",
+   "aka": [
+    "K index"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "QSB",
+   "cat": "Propagation",
+   "short": "Fading."
+  },
+  {
+   "term": "DX",
+   "cat": "Operating",
+   "short": "A distant station or contact; working DX means making long-distance contacts."
+  },
+  {
+   "term": "pileup",
+   "cat": "Operating",
+   "short": "Many stations calling one (usually rare) station at once.",
+   "aka": [
+    "pile-up",
+    "pileups"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "split",
+   "cat": "Operating",
+   "short": "Transmitting on one frequency and listening on another, used by DX stations to keep callers off their frequency.",
+   "aka": [
+    "working split"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "UP",
+   "cat": "Operating",
+   "short": "Sent by a DX station working split: call me higher up the band, as in UP 2."
+  },
+  {
+   "term": "RST",
+   "cat": "Operating",
+   "short": "The signal report: Readability 1–5, Strength 1–9, Tone 1–9. 599 is perfect."
+  },
+  {
+   "term": "5NN",
+   "cat": "Operating",
+   "short": "599 with the 9s cut to N, used in contests."
+  },
+  {
+   "term": "cut numbers",
+   "cat": "Operating",
+   "short": "Letters sent for digits to save time, such as N for 9 and T for 0.",
+   "phrase": true
+  },
+  {
+   "term": "UTC",
+   "cat": "Operating",
+   "short": "Coordinated Universal Time, used for all log times."
+  },
+  {
+   "term": "QSL card",
+   "cat": "Operating",
+   "short": "A postcard (or electronic record) confirming a contact.",
+   "aka": [
+    "QSL cards"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "ADIF",
+   "cat": "Operating",
+   "short": "Amateur Data Interchange Format: the standard file format for exchanging logs."
+  },
+  {
+   "term": "contest",
+   "cat": "Operating",
+   "short": "An on-air event to make as many contacts as possible in a set time, with a short fixed exchange.",
+   "aka": [
+    "contests",
+    "contesting"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "net",
+   "cat": "Operating",
+   "short": "A group of three or more stations meeting on air, run by a net control station.",
+   "aka": [
+    "nets",
+    "net control"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "radiogram",
+   "cat": "Operating",
+   "short": "A formal written message passed station to station in a standard format.",
+   "aka": [
+    "radiograms"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "rag-chew",
+   "cat": "Operating",
+   "short": "A long, relaxed contact for conversation.",
+   "aka": [
+    "ragchew",
+    "rag chew"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "band plan",
+   "cat": "Operating",
+   "short": "The agreed division of each band by mode and use.",
+   "aka": [
+    "band plans"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "calling frequency",
+   "cat": "Operating",
+   "short": "A frequency used to make contact before moving off to talk.",
+   "aka": [
+    "calling channel"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "centre of activity",
+   "cat": "Operating",
+   "short": "A frequency where a particular mode or activity tends to gather.",
+   "aka": [
+    "centre of activity"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "NDB",
+   "cat": "Operating",
+   "short": "Non-directional beacon: an aviation radio beacon on LF/MF that identifies itself in slow Morse."
+  },
+  {
+   "term": "VOR",
+   "cat": "Operating",
+   "short": "VHF omnidirectional range: an aviation navigation beacon that sends a three-letter Morse ident on a 1020 Hz tone."
+  },
+  {
+   "term": "Aldis lamp",
+   "cat": "Operating",
+   "short": "A signalling lamp with a shutter, used by ships to send Morse by light.",
+   "aka": [
+    "signal lamp"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "Maidenhead locator",
+   "cat": "Operating",
+   "short": "A grid system giving your position in a few characters, such as IO91.",
+   "aka": [
+    "locator square",
+    "QTH locator"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "phonetic alphabet",
+   "cat": "Operating",
+   "short": "Alfa, Bravo, Charlie…: words used to spell out letters clearly on voice.",
+   "phrase": true
+  },
+  {
+   "term": "Ofcom",
+   "cat": "Licensing",
+   "short": "The UK communications regulator, which issues amateur licences."
+  },
+  {
+   "term": "RSGB",
+   "cat": "Licensing",
+   "short": "The Radio Society of Great Britain, the UK national society, which runs the licence exams."
+  },
+  {
+   "term": "IARU",
+   "cat": "Licensing",
+   "short": "The International Amateur Radio Union, which coordinates band plans across its three regions."
+  },
+  {
+   "term": "ITU",
+   "cat": "Licensing",
+   "short": "The International Telecommunication Union, the UN agency that allocates spectrum."
+  },
+  {
+   "term": "CEPT",
+   "cat": "Licensing",
+   "short": "The European conference of telecoms administrations; its T/R 61-01 arrangement lets Full licensees operate temporarily in member countries."
+  },
+  {
+   "term": "HAREC",
+   "cat": "Licensing",
+   "short": "Harmonised Amateur Radio Examination Certificate: proof of passing an exam to the CEPT standard."
+  },
+  {
+   "term": "Foundation",
+   "cat": "Licensing",
+   "short": "The entry-level UK licence: 25 W PEP, call signs M7 and older 2E1/M3/M6.",
+   "aka": [
+    "Foundation licence"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "Intermediate",
+   "cat": "Licensing",
+   "short": "The middle UK licence: 100 W PEP, call signs M8, M9 or older 2E0/2E1-series.",
+   "aka": [
+    "Intermediate licence"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "Full licence",
+   "cat": "Licensing",
+   "short": "The top UK licence: up to 1 kW PEP in primary bands, recognised abroad under CEPT.",
+   "aka": [
+    "Full licensee"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "RSL",
+   "cat": "Licensing",
+   "short": "Regional Secondary Locator: the optional letter showing where you are, such as M for Scotland."
+  },
+  {
+   "term": "NoV",
+   "cat": "Licensing",
+   "short": "Notice of Variation: an Ofcom document that varies the terms of your licence, for example for higher power."
+  },
+  {
+   "term": "primary",
+   "cat": "Licensing",
+   "short": "Status meaning amateurs have priority in a band.",
+   "aka": [
+    "primary allocation",
+    "primary status"
+   ],
+   "see": [
+    "secondary"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "secondary",
+   "cat": "Licensing",
+   "short": "Status meaning amateurs must not interfere with, and must accept interference from, primary users.",
+   "aka": [
+    "secondary status"
+   ],
+   "phrase": true,
+   "link": false
+  },
+  {
+   "term": "User Service",
+   "cat": "Licensing",
+   "short": "A body such as an emergency service for which amateurs may pass messages.",
+   "aka": [
+    "User Services"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "UK",
+   "cat": "Licensing",
+   "short": "The United Kingdom: the area the UK licence covers also includes the Channel Islands and the Isle of Man.",
+   "link": false
+  },
+  {
+   "term": "EMC",
+   "cat": "Safety and EMC",
+   "short": "Electromagnetic compatibility: equipment working without interfering with each other."
+  },
+  {
+   "term": "EMF",
+   "cat": "Safety and EMC",
+   "short": "Electromagnetic field. An EMF assessment checks exposure to your station's RF fields."
+  },
+  {
+   "term": "ICNIRP",
+   "cat": "Safety and EMC",
+   "short": "International Commission on Non-Ionizing Radiation Protection, whose guidance sets RF exposure limits."
+  },
+  {
+   "term": "UKHSA",
+   "cat": "Safety and EMC",
+   "short": "UK Health Security Agency."
+  },
+  {
+   "term": "PME",
+   "cat": "Safety and EMC",
+   "short": "Protective multiple earthing: a supply system where the earth is joined to neutral, which needs care with RF earths."
+  },
+  {
+   "term": "RCBO",
+   "cat": "Safety and EMC",
+   "short": "Residual current breaker with overcurrent protection: trips on earth leakage as well as overload."
+  },
+  {
+   "term": "RCD",
+   "cat": "Safety and EMC",
+   "short": "Residual current device: trips when current leaks to earth."
+  },
+  {
+   "term": "common mode",
+   "cat": "Safety and EMC",
+   "short": "Current flowing the same way on both wires of a cable (or on the outside of coax), which a ferrite choke reduces.",
+   "aka": [
+    "common-mode"
+   ],
+   "phrase": true
+  },
+  {
+   "term": "DXCC",
+   "cat": "Operating",
+   "short": "The ARRL's DX Century Club award, for confirmed contacts with 100 DXCC 'entities' (countries and separate territories)."
+  },
+  {
+   "term": "WAS",
+   "cat": "Operating",
+   "short": "Worked All States: contacts with all 50 US states."
+  },
+  {
+   "term": "WAZ",
+   "cat": "Operating",
+   "short": "Worked All Zones: contacts with all 40 CQ zones."
+  },
+  {
+   "term": "WAC",
+   "cat": "Operating",
+   "short": "Worked All Continents: contacts with all six continents."
+  },
+  {
+   "term": "NCS",
+   "cat": "Operating",
+   "short": "Net control station: the station running a net, who calls stations in turn.",
+   "see": [
+    "net"
+   ]
+  },
+  {
+   "term": "QNI",
+   "cat": "Q-code",
+   "short": "Net Q-code: I check in to the net (or, in reply, net checking-in instructions)."
+  },
+  {
+   "term": "QST",
+   "cat": "Q-code",
+   "short": "A call to all amateurs, used to open a net or send a bulletin."
+  },
+  {
+   "term": "VVV",
+   "cat": "Morse",
+   "short": "Sent as a test signal when tuning up or checking a circuit."
+  },
+  {
+   "term": "CQ zone",
+   "cat": "Operating",
+   "short": "One of the 40 zones CQ magazine divides the world into, used in contests and for the WAZ award.",
+   "aka": [
+    "CQ zones"
+   ]
+  }
+ ]
+}

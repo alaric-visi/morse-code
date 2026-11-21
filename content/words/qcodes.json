@@ -1,0 +1,30 @@
+{
+  "about": "Q-codes in everyday amateur use. With ? they ask; without, they answer or state.",
+  "items": [
+    ["QRL", "Is this frequency in use? / This frequency is busy"],
+    ["QRM", "Interference from other stations"],
+    ["QRN", "Static, atmospheric noise"],
+    ["QRO", "Increase power / high power"],
+    ["QRP", "Reduce power / low power"],
+    ["QRQ", "Send faster"],
+    ["QRS", "Send more slowly"],
+    ["QRT", "Stop sending / closing down"],
+    ["QRU", "Have you anything for me? / I have nothing for you"],
+    ["QRV", "Are you ready? / I am ready"],
+    ["QRX", "Wait / stand by"],
+    ["QRZ", "Who is calling me?"],
+    ["QSB", "Your signal is fading"],
+    ["QSK", "Full break-in: I can hear you between my signals"],
+    ["QSL", "Can you acknowledge? / I acknowledge receipt (also: a confirmation card)"],
+    ["QSO", "A contact between stations"],
+    ["QSY", "Change frequency"],
+    ["QTH", "What is your location? / My location is"],
+    ["QTR", "What is the correct time?"],
+    ["QRG", "What is my exact frequency?"],
+    ["QRK", "How readable are my signals?"],
+    ["QSP", "Will you relay a message?"],
+    ["QSX", "I am listening on another frequency"],
+    ["QSZ", "Send each word twice"],
+    ["QTC", "Messages to send"]
+  ]
+}

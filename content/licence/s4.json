@@ -1,0 +1,674 @@
+{
+ "section": 4,
+ "title": "Feeders and antennas",
+ "items": [
+  {
+   "id": "4A1",
+   "topic": "Types of feeder",
+   "levels": {
+    "F": {
+     "note": "Use proper RF cable. Coaxial cable is the most widely used because its outer braid screens the signal. Twin feeder (ladder line) is balanced: equal and opposite signals in its two wires. Coax is unbalanced: the inner carries the signal and the braid is at earth potential.",
+     "q": [
+      {
+       "text": "Why is coaxial cable the most widely used feeder?",
+       "choices": [
+        "Its outer braid screens the signal",
+        "It's balanced",
+        "It has no loss",
+        "It radiates well"
+       ],
+       "why": "The screen keeps the RF inside the cable."
+      }
+     ]
+    },
+    "I": {
+     "note": "In balanced feeder the equal and opposite currents produce fields that cancel, so it doesn't radiate, unless nearby objects upset the balance. At microwaves, waveguides are used: a rectangular waveguide's larger dimension must be more than half a wavelength.",
+     "q": [
+      {
+       "text": "Why might balanced twin feeder radiate?",
+       "choices": [
+        "Nearby objects upset the balance of the two wires",
+        "It always radiates",
+        "It's unscreened coax",
+        "The braid is earthed"
+       ],
+       "why": "Unequal currents leave a field that doesn't cancel."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4A2",
+   "topic": "Feeder loss",
+   "levels": {
+    "F": {
+     "note": "Feeders turn some RF into heat, so signals are lost on both transmit and receive. The longer the cable, and the higher the frequency, the greater the loss. Use low-loss cable at VHF and UHF.",
+     "q": [
+      {
+       "text": "Feeder loss is greatest with…",
+       "choices": [
+        "A long cable at a high frequency",
+        "A short cable at a low frequency",
+        "A long cable at a low frequency",
+        "Twin feeder at HF"
+       ],
+       "why": "Loss increases with length and frequency."
+      }
+     ]
+    },
+    "I": {
+     "note": "Twin feeder usually has less loss than coax. Loss is measured in decibels: 3 dB loss halves the power, 10 dB loss leaves a tenth.",
+     "q": [
+      {
+       "text": "A transmitter gives 100 W into a feeder with 3 dB of loss. How much reaches the antenna?",
+       "choices": [
+        "50 W",
+        "97 W",
+        "33 W",
+        "10 W"
+       ],
+       "why": "3 dB is half the power."
+      },
+      {
+       "text": "With 10 dB of feeder loss, how much of 50 W reaches the antenna?",
+       "choices": [
+        "5 W",
+        "40 W",
+        "25 W",
+        "0.5 W"
+       ],
+       "why": "10 dB is a factor of 10."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4A3",
+   "topic": "Characteristic impedance; velocity factor",
+   "levels": {
+    "I": {
+     "note": "A feeder has a characteristic impedance set by its conductors' size and spacing (and the dielectric). Amateur coax is normally 50 Ω; TV coax is 75 Ω; twin feeder is often 300 or 450 Ω.",
+     "q": [
+      {
+       "text": "What characteristic impedance is normally used for amateur coax?",
+       "choices": [
+        "50 Ω",
+        "75 Ω",
+        "300 Ω",
+        "600 Ω"
+       ],
+       "why": "50 Ω is the standard for amateur equipment."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Radio waves travel more slowly in a feeder than in free space. The velocity factor is that ratio, always less than 1; solid polythene coax is about 0.67. A physical length is the electrical length × velocity factor.",
+     "q": [
+      {
+       "text": "How long is a quarter wavelength of solid-polythene coax at 145 MHz (roughly)?",
+       "choices": [
+        "34 cm",
+        "52 cm",
+        "2 m",
+        "1.4 m"
+       ],
+       "why": "λ ≈ 2.07 m; ¼ = 0.52 m; × 0.66 ≈ 0.34 m."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4B1",
+   "topic": "Baluns",
+   "levels": {
+    "F": {
+     "note": "A dipole is balanced; coax is unbalanced. Use a balun (balanced to unbalanced) where coax feeds a dipole.",
+     "q": [
+      {
+       "text": "What would you fit where coax feeds a dipole?",
+       "choices": [
+        "A balun",
+        "A dummy load",
+        "A low-pass filter",
+        "A preamp"
+       ],
+       "why": "The balun links the unbalanced coax to the balanced antenna."
+      }
+     ]
+    },
+    "I": {
+     "note": "A choke balun can be made by coiling the coax or threading it through ferrite rings, which blocks RF current on the outside of the braid.",
+     "q": [
+      {
+       "text": "How is a simple choke balun made?",
+       "choices": [
+        "Coiling the coax or threading it through ferrite rings",
+        "Adding a resistor",
+        "Cutting the braid",
+        "Using twin feeder"
+       ],
+       "why": "This chokes off current on the outer braid."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Baluns come as transformer types (1:1 or 4:1 impedance ratios), sleeve baluns (a quarter-wave sleeve over the coax) and choke baluns.",
+     "q": [
+      {
+       "text": "What does a 4:1 balun do?",
+       "choices": [
+        "Transforms impedance by four, balanced to unbalanced",
+        "Divides power by four",
+        "Combines four antennas",
+        "Gives 4 dB of gain"
+       ],
+       "why": "For example, 200 Ω balanced to 50 Ω unbalanced."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C1",
+   "topic": "What an antenna does; polarisation",
+   "levels": {
+    "F": {
+     "note": "An antenna converts electrical signals into radio waves and back. The waves are polarised according to the antenna's orientation: a horizontal antenna gives horizontal polarisation.",
+     "q": [
+      {
+       "text": "A vertical antenna radiates which polarisation?",
+       "choices": [
+        "Vertical",
+        "Horizontal",
+        "Circular",
+        "None"
+       ],
+       "why": "Polarisation follows the orientation of the antenna."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C2",
+   "topic": "Radiation patterns",
+   "levels": {
+    "F": {
+     "note": "A polar diagram shows how strongly an antenna radiates in each direction. A horizontal dipole radiates most broadside (at right angles to the wire) and least off the ends. A Yagi radiates mostly forwards. A vertical dipole, a quarter-wave ground plane and a 5/8 wave vertical are omnidirectional.",
+     "q": [
+      {
+       "text": "In which direction does a horizontal half-wave dipole radiate least?",
+       "choices": [
+        "Off its ends",
+        "Broadside to the wire",
+        "Upwards at 45°",
+        "Equally all round"
+       ],
+       "why": "Minimum radiation is along the line of the wire."
+      }
+     ]
+    },
+    "I": {
+     "note": "Front-to-back ratio compares forward radiation with that to the rear. Beamwidth is the angle between the half-power (−3 dB) points. Radiation patterns are three-dimensional.",
+     "q": [
+      {
+       "text": "How is beamwidth measured?",
+       "choices": [
+        "Between the half-power (−3 dB) points",
+        "Between the nulls",
+        "From front to back",
+        "In metres"
+       ],
+       "why": "Beamwidth is the angle between the −3 dB points."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C3",
+   "topic": "Gain and ERP",
+   "levels": {
+    "F": {
+     "note": "Antenna gain comes from focusing radiation in one direction, not from adding power. A Yagi has more gain than a dipole. Gain is usually given in dB relative to a half-wave dipole (dBd). ERP (effective radiated power) is the power into the antenna multiplied by its gain. To calculate ERP: 10 W into an antenna with 3 dBd gain (×2) gives 20 W ERP; with 10 dBd (×10), 100 W ERP.",
+     "q": [
+      {
+       "text": "Where does an antenna's gain come from?",
+       "choices": [
+        "Focusing radiation in a particular direction",
+        "An amplifier inside it",
+        "Using more feeder",
+        "Higher SWR"
+       ],
+       "why": "Gain is concentration, not amplification."
+      },
+      {
+       "text": "25 W goes into an antenna with 6 dBd gain (no feeder loss). What's the ERP?",
+       "choices": [
+        "100 W",
+        "31 W",
+        "150 W",
+        "50 W"
+       ],
+       "why": "6 dB is ×4."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C4",
+   "topic": "Isotropic radiators and EIRP",
+   "levels": {
+    "F": {
+     "note": "Gain can also be given relative to an isotropic radiator, an imaginary antenna radiating equally in all directions; that gives EIRP. 10 W EIRP is about 6.1 W ERP.",
+     "q": [
+      {
+       "text": "10 W EIRP is approximately equivalent to…",
+       "choices": [
+        "6.1 W ERP",
+        "10 W ERP",
+        "16.4 W ERP",
+        "2.15 W ERP"
+       ],
+       "why": "A dipole has 2.15 dB more gain than an isotropic, so ERP is lower."
+      }
+     ]
+    },
+    "I": {
+     "note": "Gain relative to isotropic is in dBi. A half-wave dipole has 2.15 dBi, so dBi = dBd + 2.15.",
+     "q": [
+      {
+       "text": "An antenna has 6 dBd gain. What is that in dBi?",
+       "choices": [
+        "8.15 dBi",
+        "3.85 dBi",
+        "6 dBi",
+        "12 dBi"
+       ],
+       "why": "Add 2.15 dB."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C5",
+   "topic": "Polarisation and angle of radiation",
+   "levels": {
+    "F": {
+     "note": "At VHF and UHF, signals are received best when both stations use the same polarisation (FM is mostly vertical, SSB and CW mostly horizontal). At HF it matters less, because the ionosphere changes the polarisation.",
+     "q": [
+      {
+       "text": "Why is matching polarisation less important on HF?",
+       "choices": [
+        "The ionosphere changes the polarisation",
+        "HF antennas are always vertical",
+        "HF signals have no polarisation",
+        "HF uses circular polarisation"
+       ],
+       "why": "Ionospheric refraction scrambles polarisation."
+      }
+     ]
+    },
+    "I": {
+     "note": "The angle of radiation is the angle above the horizon at which most of the signal leaves. Long-distance HF contacts need a low angle. Antenna height above ground strongly affects it: higher usually means lower.",
+     "q": [
+      {
+       "text": "For long-distance HF contacts you want…",
+       "choices": [
+        "A low angle of radiation",
+        "A high angle of radiation",
+        "Vertical radiation straight up",
+        "No ground"
+       ],
+       "why": "A low angle travels further per hop."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4C6",
+   "topic": "Feed point and feed impedance",
+   "levels": {
+    "F": {
+     "note": "The feed point is where the feeder connects. At the design frequency, its impedance should match the feeder and transmitter. It depends on the antenna's dimensions and the frequency.",
+     "q": [
+      {
+       "text": "What is an antenna's feed point?",
+       "choices": [
+        "Where the feeder connects to it",
+        "The tip of the antenna",
+        "The mast clamp",
+        "The radio's output"
+       ],
+       "why": "The feeder joins the antenna at the feed point."
+      }
+     ]
+    },
+    "I": {
+     "note": "An antenna only presents its correct feed impedance on its design frequency. A centre-fed half-wave dipole is about 73 Ω; a quarter-wave ground plane about 35 Ω (closer to 50 Ω with drooping radials).",
+     "q": [
+      {
+       "text": "What's the approximate feed impedance of a centre-fed half-wave dipole?",
+       "choices": [
+        "73 Ω",
+        "300 Ω",
+        "35 Ω",
+        "600 Ω"
+       ],
+       "why": "About 73 Ω in free space."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4D1",
+   "topic": "Common antennas",
+   "levels": {
+    "F": {
+     "note": "Recognise the half-wave dipole, quarter-wave ground plane, Yagi, end-fed wire and 5/8 wave vertical. HF antennas are much larger than VHF ones because they're sized to the wavelength. A half-wave dipole is two quarter-wave elements fed in the middle.",
+     "q": [
+      {
+       "text": "Why is a 7 MHz dipole much bigger than a 145 MHz dipole?",
+       "choices": [
+        "Antenna size depends on wavelength",
+        "HF needs more power",
+        "VHF antennas use thinner wire",
+        "HF antennas have gain"
+       ],
+       "why": "Lower frequency, longer wavelength, bigger antenna."
+      }
+     ]
+    },
+    "I": {
+     "note": "A three-element Yagi has a driven element (half-wave), a reflector slightly longer behind it and a director slightly shorter in front. More directors give more gain.",
+     "q": [
+      {
+       "text": "In a Yagi, the director is…",
+       "choices": [
+        "Slightly shorter than the driven element",
+        "Slightly longer than the driven element",
+        "The same length as the reflector",
+        "The element connected to the feeder"
+       ],
+       "why": "Reflector is longer, director shorter."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Wavelength = 300 ÷ f (MHz). A wire's physical half-wave is a little shorter than the free-space half-wave because of end effect: use about 0.95 of it.",
+     "q": [
+      {
+       "text": "Roughly how long is a 14.1 MHz half-wave dipole with a 0.95 end correction?",
+       "choices": [
+        "10.1 m",
+        "21.3 m",
+        "5.3 m",
+        "11.2 m"
+       ],
+       "why": "300 ÷ 14.1 = 21.3 m; half is 10.64 m; × 0.95 ≈ 10.1 m."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4D2",
+   "topic": "Traps; current and voltage on antennas",
+   "levels": {
+    "I": {
+     "note": "A trap is a parallel tuned circuit in the antenna wire. At its resonant frequency its high impedance cuts the antenna off there, so it resonates on that band; on lower bands the whole wire works. Traps can be used in Yagis too.",
+     "q": [
+      {
+       "text": "What is an antenna trap?",
+       "choices": [
+        "A parallel tuned circuit that makes an antenna work on more than one band",
+        "A lightning arrestor",
+        "A balun",
+        "A clamp"
+       ],
+       "why": "The trap's high impedance at resonance isolates the outer part."
+      }
+     ]
+    },
+    "Full": {
+     "note": "On a centre-fed dipole the current is greatest at the centre and the voltage greatest at the ends. Typical feed impedances: half-wave dipole about 73 Ω, folded dipole about 300 Ω, quarter-wave vertical about 35 Ω, full-wave loop about 100–120 Ω, end-fed half-wave very high (thousands of ohms). Close parasitic elements lower the driven element's impedance.",
+     "q": [
+      {
+       "text": "What's the approximate feed impedance of a folded dipole?",
+       "choices": [
+        "300 Ω",
+        "73 Ω",
+        "35 Ω",
+        "50 Ω"
+       ],
+       "why": "Folding with equal conductors multiplies by four: about 290 Ω."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4E1",
+   "topic": "Mismatch and standing waves",
+   "levels": {
+    "F": {
+     "note": "The antenna must suit the frequency. If it doesn't match the feeder, some power is reflected back towards the transmitter.",
+     "q": [
+      {
+       "text": "What happens if an antenna doesn't match its feeder?",
+       "choices": [
+        "Some power is reflected back down the feeder",
+        "The antenna gains power",
+        "The frequency changes",
+        "Nothing"
+       ],
+       "why": "A mismatch reflects part of the signal."
+      }
+     ]
+    },
+    "I": {
+     "note": "The reflected wave combines with the forward wave to form standing waves on the feeder. Both forward and reflected signals suffer feeder loss, and the reflection changes the impedance seen at the transmitter end.",
+     "q": [
+      {
+       "text": "What forms standing waves on a feeder?",
+       "choices": [
+        "Reflected waves combining with forward waves",
+        "Too little power",
+        "A matched load",
+        "Using coax"
+       ],
+       "why": "Interference between forward and reflected waves."
+      }
+     ]
+    },
+    "Full": {
+     "note": "SWR is the ratio of maximum to minimum voltage (or current) along the feeder. 1:1 is a perfect match. For a resistive load, SWR = Zload ÷ Z0 (or the inverse, whichever is above 1).",
+     "q": [
+      {
+       "text": "What's the SWR of a 100 Ω resistive load on 50 Ω coax?",
+       "choices": [
+        "2:1",
+        "1:1",
+        "1.5:1",
+        "4:1"
+       ],
+       "why": "100 ÷ 50 = 2."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4E2",
+   "topic": "SWR meters and return loss",
+   "levels": {
+    "F": {
+     "note": "An SWR meter shows whether the antenna matches the transmitter. A high SWR points to a fault in the antenna or feeder, not the transmitter, and can damage the transmitter.",
+     "q": [
+      {
+       "text": "Your SWR suddenly reads very high. Where is the fault most likely to be?",
+       "choices": [
+        "The antenna or feeder",
+        "The microphone",
+        "The power supply",
+        "The receiver"
+       ],
+       "why": "SWR measures the load the transmitter sees."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Return loss is forward power ÷ reflected power, in dB. A low SWR means a high return loss; a high SWR means a low return loss.",
+     "q": [
+      {
+       "text": "100 W forward and 1 W reflected. What's the return loss?",
+       "choices": [
+        "20 dB",
+        "1 dB",
+        "10 dB",
+        "99 dB"
+       ],
+       "why": "100 ÷ 1 = 100 = 20 dB."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4E3",
+   "topic": "Feeder loss and measured SWR",
+   "levels": {
+    "Full": {
+     "note": "Feeder loss attenuates the reflected wave twice (there and back), so the SWR measured at the transmitter looks better than at the antenna. Return loss at the transmitter = return loss at the antenna + 2 × feeder loss.",
+     "q": [
+      {
+       "text": "An antenna has 10 dB return loss through feeder with 3 dB loss. What return loss is measured at the transmitter?",
+       "choices": [
+        "16 dB",
+        "10 dB",
+        "13 dB",
+        "7 dB"
+       ],
+       "why": "10 + 2 × 3 = 16 dB."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4F1",
+   "topic": "Antenna matching units",
+   "levels": {
+    "F": {
+     "note": "If an antenna isn't designed for the frequency, its impedance changes and it won't match. An antenna matching unit (AMU, often called an ATU) corrects the mismatch so the transmitter can deliver its power safely.",
+     "q": [
+      {
+       "text": "What does an AMU do?",
+       "choices": [
+        "Matches the antenna system to the transmitter",
+        "Amplifies the signal",
+        "Filters the mains",
+        "Measures frequency"
+       ],
+       "why": "It transforms the impedance so the transmitter sees a good match."
+      }
+     ]
+    },
+    "I": {
+     "note": "An AMU changes the impedance the transmitter sees; it doesn't make the antenna or feeder resonant. An AMU at the transmitter does nothing about the SWR on the feeder between it and the antenna.",
+     "q": [
+      {
+       "text": "An AMU at the transmitter end gives 1:1. What about the SWR on the feeder to the antenna?",
+       "choices": [
+        "It's unchanged",
+        "It's also 1:1",
+        "It's zero",
+        "It doubles"
+       ],
+       "why": "The AMU only matches what the transmitter sees."
+      }
+     ]
+    },
+    "Full": {
+     "note": "AMUs cancel reactance and transform the resistance to 50 Ω. Common circuits are the L, Pi and T networks.",
+     "q": [
+      {
+       "text": "Which of these is a common AMU circuit?",
+       "choices": [
+        "T network",
+        "Bridge rectifier",
+        "Colpitts",
+        "Push-pull"
+       ],
+       "why": "L, Pi and T networks are typical."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4F2",
+   "topic": "Quarter-wave transformers",
+   "levels": {
+    "Full": {
+     "note": "A quarter-wave length of feeder of impedance Z0 transforms one impedance into another: Z0² = Zin × Zout.",
+     "q": [
+      {
+       "text": "What feeder impedance is needed for a quarter-wave section matching 100 Ω to 50 Ω?",
+       "choices": [
+        "About 71 Ω",
+        "75 Ω exactly",
+        "150 Ω",
+        "25 Ω"
+       ],
+       "why": "√(100 × 50) ≈ 70.7 Ω."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "4G1",
+   "topic": "Plugs and sockets",
+   "levels": {
+    "F": {
+     "note": "Use the right RF connector and connect the braid properly so RF doesn't leak in or out. Common types: BNC (bayonet, small), N (screw, good at UHF), SMA (tiny, screw) and PL259 (the UHF plug used on HF rigs).",
+     "q": [
+      {
+       "text": "Which connector has a bayonet fitting?",
+       "choices": [
+        "BNC",
+        "PL259",
+        "N type",
+        "SMA"
+       ],
+       "why": "BNC push-and-twist bayonet."
+      }
+     ]
+    },
+    "I": {
+     "note": "In a correctly connected and terminated coax cable, the RF field is entirely inside it and isn't affected by objects outside. That needs continuity of both screen and inner through every plug and socket.",
+     "q": [
+      {
+       "text": "Why is a well-made coax run unaffected by nearby objects?",
+       "choices": [
+        "The RF field is entirely inside the cable",
+        "It radiates evenly",
+        "The braid carries no current",
+        "Coax has no field"
+       ],
+       "why": "The screen contains the field."
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

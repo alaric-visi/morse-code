@@ -1,0 +1,816 @@
+{
+ "about": "The CW parts of the HF band plans: where CW lives on each band, the QRP and QRS (slow) calling centres, the beacon segments and the contest-free bands. CW is accepted anywhere in the bands except the beacon segments, but these are the places to look.",
+ "regions": [
+  {
+   "id": "uk",
+   "name": "United Kingdom (RSGB)",
+   "source": "RSGB band plan, January 2026 edition, which follows the IARU Region 1 plan on HF.",
+   "contests": "No contests on 60, 30, 17 or 12 m. Non-contesters are encouraged to use 30, 17 and 12 m during the biggest contests.",
+   "bands": [
+    {
+     "band": "160m",
+     "edges": [
+      1810,
+      2000
+     ],
+     "cw": [
+      [
+       1810,
+       1838,
+       "CW"
+      ]
+     ],
+     "qrp": 1836,
+     "note": "UK allocation 1810–2000 kHz; 1850–2000 kHz is secondary, at reduced power."
+    },
+    {
+     "band": "80m",
+     "edges": [
+      3500,
+      3800
+     ],
+     "cw": [
+      [
+       3500,
+       3510,
+       "CW, priority for intercontinental (DX) contacts"
+      ],
+      [
+       3510,
+       3560,
+       "CW, contest preferred"
+      ],
+      [
+       3560,
+       3570,
+       "CW"
+      ]
+     ],
+     "qrp": 3560,
+     "qrs": 3555,
+     "note": "UK allocation 3500–3800 kHz. 3555 kHz is the QRS (slow CW) centre: a good place for your first contacts."
+    },
+    {
+     "band": "60m",
+     "edges": [
+      5258.5,
+      5406.5
+     ],
+     "cw": [],
+     "note": "UK 5 MHz is a set of channels for Full licensees only, from 5258.5 to 5406.5 kHz (no transmitting between 5358 and 5362 kHz). The CW QRP centre is 5262 kHz; beacons use 5290 kHz.",
+     "noContests": true,
+     "qrp": 5262
+    },
+    {
+     "band": "40m",
+     "edges": [
+      7000,
+      7200
+     ],
+     "cw": [
+      [
+       7000,
+       7040,
+       "CW"
+      ]
+     ],
+     "qrp": 7030,
+     "note": "The old 7000–7025 kHz contest segment has been withdrawn: contest organisers set their own limits."
+    },
+    {
+     "band": "30m",
+     "edges": [
+      10100,
+      10150
+     ],
+     "cw": [
+      [
+       10100,
+       10130,
+       "CW"
+      ]
+     ],
+     "qrp": 10116,
+     "noContests": true
+    },
+    {
+     "band": "20m",
+     "edges": [
+      14000,
+      14350
+     ],
+     "cw": [
+      [
+       14000,
+       14060,
+       "CW, contest preferred"
+      ],
+      [
+       14060,
+       14070,
+       "CW"
+      ]
+     ],
+     "qrp": 14060,
+     "qrs": 14055,
+     "beacons": [
+      14099,
+      14101
+     ]
+    },
+    {
+     "band": "17m",
+     "edges": [
+      18068,
+      18168
+     ],
+     "cw": [
+      [
+       18068,
+       18095,
+       "CW"
+      ]
+     ],
+     "qrp": 18086,
+     "beacons": [
+      18109,
+      18111
+     ],
+     "noContests": true
+    },
+    {
+     "band": "15m",
+     "edges": [
+      21000,
+      21450
+     ],
+     "cw": [
+      [
+       21000,
+       21070,
+       "CW"
+      ]
+     ],
+     "qrp": 21060,
+     "qrs": 21055,
+     "beacons": [
+      21149,
+      21151
+     ]
+    },
+    {
+     "band": "12m",
+     "edges": [
+      24890,
+      24990
+     ],
+     "cw": [
+      [
+       24890,
+       24915,
+       "CW"
+      ]
+     ],
+     "qrp": 24906,
+     "beacons": [
+      24929,
+      24931
+     ],
+     "noContests": true
+    },
+    {
+     "band": "10m",
+     "edges": [
+      28000,
+      29700
+     ],
+     "cw": [
+      [
+       28000,
+       28070,
+       "CW"
+      ]
+     ],
+     "qrp": 28060,
+     "qrs": 28055,
+     "beacons": [
+      28190,
+      28225
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r1",
+   "name": "IARU Region 1 (Europe, Africa, Middle East, northern Asia)",
+   "source": "IARU Region 1 HF band plan, effective 16 October 2020.",
+   "contests": "No contests on 60, 30, 17 or 12 m.",
+   "bands": [
+    {
+     "band": "160m",
+     "edges": [
+      1810,
+      2000
+     ],
+     "cw": [
+      [
+       1810,
+       1838,
+       "CW"
+      ]
+     ],
+     "qrp": 1836
+    },
+    {
+     "band": "80m",
+     "edges": [
+      3500,
+      3800
+     ],
+     "cw": [
+      [
+       3500,
+       3510,
+       "CW, priority for intercontinental (DX) contacts"
+      ],
+      [
+       3510,
+       3560,
+       "CW, contest preferred"
+      ],
+      [
+       3560,
+       3570,
+       "CW"
+      ]
+     ],
+     "qrp": 3560,
+     "qrs": 3555
+    },
+    {
+     "band": "60m",
+     "edges": [
+      5351.5,
+      5366.5
+     ],
+     "cw": [
+      [
+       5351.5,
+       5354,
+       "CW and narrow-band modes"
+      ]
+     ],
+     "note": "The worldwide WRC-15 allocation. The plan asks you to use it only when domestic 5 MHz frequencies aren’t available.",
+     "noContests": true
+    },
+    {
+     "band": "40m",
+     "edges": [
+      7000,
+      7200
+     ],
+     "cw": [
+      [
+       7000,
+       7040,
+       "CW"
+      ]
+     ],
+     "qrp": 7030,
+     "note": "The old 7000–7025 kHz contest segment has been withdrawn: contest organisers set their own limits."
+    },
+    {
+     "band": "30m",
+     "edges": [
+      10100,
+      10150
+     ],
+     "cw": [
+      [
+       10100,
+       10130,
+       "CW"
+      ]
+     ],
+     "qrp": 10116,
+     "noContests": true
+    },
+    {
+     "band": "20m",
+     "edges": [
+      14000,
+      14350
+     ],
+     "cw": [
+      [
+       14000,
+       14060,
+       "CW, contest preferred"
+      ],
+      [
+       14060,
+       14070,
+       "CW"
+      ]
+     ],
+     "qrp": 14060,
+     "qrs": 14055,
+     "beacons": [
+      14099,
+      14101
+     ]
+    },
+    {
+     "band": "17m",
+     "edges": [
+      18068,
+      18168
+     ],
+     "cw": [
+      [
+       18068,
+       18095,
+       "CW"
+      ]
+     ],
+     "qrp": 18086,
+     "beacons": [
+      18109,
+      18111
+     ],
+     "noContests": true
+    },
+    {
+     "band": "15m",
+     "edges": [
+      21000,
+      21450
+     ],
+     "cw": [
+      [
+       21000,
+       21070,
+       "CW"
+      ]
+     ],
+     "qrp": 21060,
+     "qrs": 21055,
+     "beacons": [
+      21149,
+      21151
+     ]
+    },
+    {
+     "band": "12m",
+     "edges": [
+      24890,
+      24990
+     ],
+     "cw": [
+      [
+       24890,
+       24915,
+       "CW"
+      ]
+     ],
+     "qrp": 24906,
+     "beacons": [
+      24929,
+      24931
+     ],
+     "noContests": true
+    },
+    {
+     "band": "10m",
+     "edges": [
+      28000,
+      29700
+     ],
+     "cw": [
+      [
+       28000,
+       28070,
+       "CW"
+      ]
+     ],
+     "qrp": 28060,
+     "qrs": 28055,
+     "beacons": [
+      28190,
+      28225
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r2",
+   "name": "IARU Region 2 (the Americas)",
+   "source": "IARU Region 2 band plan, September 2020.",
+   "contests": "No contests on 60, 30, 17 or 12 m.",
+   "bands": [
+    {
+     "band": "160m",
+     "edges": [
+      1800,
+      2000
+     ],
+     "cw": [
+      [
+       1810,
+       1830,
+       "CW"
+      ],
+      [
+       1830,
+       1840,
+       "CW, priority for intercontinental (DX) contacts"
+      ]
+     ],
+     "qrp": 1812
+    },
+    {
+     "band": "80m",
+     "edges": [
+      3500,
+      4000
+     ],
+     "cw": [
+      [
+       3500,
+       3510,
+       "CW, DX window"
+      ],
+      [
+       3510,
+       3560,
+       "CW, contest preferred"
+      ],
+      [
+       3560,
+       3570,
+       "CW"
+      ]
+     ],
+     "qrp": 3560,
+     "qrs": 3555
+    },
+    {
+     "band": "60m",
+     "edges": [
+      5351.5,
+      5366.5
+     ],
+     "cw": [
+      [
+       5351.5,
+       5354,
+       "CW and narrow-band data"
+      ]
+     ],
+     "note": "Avoid local nets on this allocation.",
+     "noContests": true
+    },
+    {
+     "band": "40m",
+     "edges": [
+      7000,
+      7300
+     ],
+     "cw": [
+      [
+       7000,
+       7025,
+       "CW, DX window"
+      ],
+      [
+       7025,
+       7040,
+       "CW"
+      ]
+     ],
+     "qrp": 7030
+    },
+    {
+     "band": "30m",
+     "edges": [
+      10100,
+      10150
+     ],
+     "cw": [
+      [
+       10100,
+       10130,
+       "CW"
+      ]
+     ],
+     "qrp": 10116,
+     "noContests": true
+    },
+    {
+     "band": "20m",
+     "edges": [
+      14000,
+      14350
+     ],
+     "cw": [
+      [
+       14000,
+       14025,
+       "CW, DX window"
+      ],
+      [
+       14025,
+       14060,
+       "CW, contest preferred"
+      ],
+      [
+       14060,
+       14070,
+       "CW"
+      ]
+     ],
+     "qrp": 14060,
+     "qrs": 14055,
+     "beacons": [
+      14099,
+      14101
+     ]
+    },
+    {
+     "band": "17m",
+     "edges": [
+      18068,
+      18168
+     ],
+     "cw": [
+      [
+       18068,
+       18095,
+       "CW"
+      ]
+     ],
+     "qrp": 18086,
+     "beacons": [
+      18109,
+      18111
+     ],
+     "noContests": true
+    },
+    {
+     "band": "15m",
+     "edges": [
+      21000,
+      21450
+     ],
+     "cw": [
+      [
+       21000,
+       21070,
+       "CW"
+      ]
+     ],
+     "qrp": 21060,
+     "beacons": [
+      21149,
+      21151
+     ]
+    },
+    {
+     "band": "12m",
+     "edges": [
+      24890,
+      24990
+     ],
+     "cw": [
+      [
+       24890,
+       24915,
+       "CW"
+      ]
+     ],
+     "qrp": 24906,
+     "beacons": [
+      24929,
+      24931
+     ],
+     "noContests": true
+    },
+    {
+     "band": "10m",
+     "edges": [
+      28000,
+      29700
+     ],
+     "cw": [
+      [
+       28000,
+       28070,
+       "CW"
+      ]
+     ],
+     "qrp": 28060,
+     "qrs": 28055,
+     "beacons": [
+      28190,
+      28225
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "name": "IARU Region 3 (Asia–Pacific)",
+   "source": "IARU Region 3 band plan (document R3-004), revised 3 September 2019.",
+   "contests": "Contests below 30 MHz only on 160, 80, 40, 20, 15 and 10 m.",
+   "bands": [
+    {
+     "band": "160m",
+     "edges": [
+      1800,
+      2000
+     ],
+     "cw": [
+      [
+       1800,
+       1830,
+       "CW"
+      ],
+      [
+       1830,
+       1840,
+       "CW and narrow-band modes"
+      ]
+     ],
+     "qrp": 1836
+    },
+    {
+     "band": "80m",
+     "edges": [
+      3500,
+      3900
+     ],
+     "cw": [
+      [
+       3500,
+       3510,
+       "CW, DX"
+      ],
+      [
+       3510,
+       3535,
+       "CW"
+      ]
+     ],
+     "qrp": 3560,
+     "note": "The QRP centre (3560 kHz) falls in the mixed CW, phone and data segment 3535–3600 kHz."
+    },
+    {
+     "band": "60m",
+     "edges": [
+      5351.5,
+      5366.5
+     ],
+     "cw": [
+      [
+       5351.5,
+       5354,
+       "CW and narrow-band modes"
+      ]
+     ],
+     "noContests": true
+    },
+    {
+     "band": "40m",
+     "edges": [
+      7000,
+      7200
+     ],
+     "cw": [
+      [
+       7000,
+       7030,
+       "CW"
+      ]
+     ],
+     "qrp": 7030
+    },
+    {
+     "band": "30m",
+     "edges": [
+      10100,
+      10150
+     ],
+     "cw": [
+      [
+       10110,
+       10130,
+       "CW"
+      ]
+     ],
+     "qrp": 10116,
+     "note": "The Region 3 plan prints the CW segment as 10110–10130 kHz. Some administrations allow phone at 10115–10140 kHz.",
+     "noContests": true
+    },
+    {
+     "band": "20m",
+     "edges": [
+      14000,
+      14350
+     ],
+     "cw": [
+      [
+       14000,
+       14070,
+       "CW"
+      ]
+     ],
+     "qrp": 14060,
+     "qrs": 14055,
+     "beacons": [
+      14100,
+      14100
+     ]
+    },
+    {
+     "band": "17m",
+     "edges": [
+      18068,
+      18168
+     ],
+     "cw": [
+      [
+       18068,
+       18095,
+       "CW"
+      ]
+     ],
+     "qrp": 18086,
+     "beacons": [
+      18110,
+      18110
+     ],
+     "noContests": true
+    },
+    {
+     "band": "15m",
+     "edges": [
+      21000,
+      21450
+     ],
+     "cw": [
+      [
+       21000,
+       21070,
+       "CW"
+      ]
+     ],
+     "qrp": 21060,
+     "qrs": 21055,
+     "beacons": [
+      21150,
+      21150
+     ]
+    },
+    {
+     "band": "12m",
+     "edges": [
+      24890,
+      24990
+     ],
+     "cw": [
+      [
+       24890,
+       24915,
+       "CW"
+      ]
+     ],
+     "qrp": 24906,
+     "beacons": [
+      24930,
+      24930
+     ],
+     "noContests": true
+    },
+    {
+     "band": "10m",
+     "edges": [
+      28000,
+      29700
+     ],
+     "cw": [
+      [
+       28000,
+       28070,
+       "CW"
+      ]
+     ],
+     "qrs": 28055,
+     "beacons": [
+      28200,
+      28200
+     ]
+    }
+   ]
+  }
+ ]
+}

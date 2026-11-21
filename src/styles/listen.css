@@ -1,0 +1,121 @@
+/* Listen and QSO screens. Tokens only. */
+
+.mc-listen {
+  display: grid;
+  gap: var(--mc-space-4);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'nav' 'main' 'side';
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.mc-qso { grid-template-areas: 'main' 'side'; }
+.mc-drill-nav { grid-area: nav; display: flex; flex-wrap: wrap; gap: var(--mc-space-1); }
+.mc-root .mc-drill-nav button {
+  min-height: 40px;
+  padding: 0 var(--mc-space-3);
+  border: 1px solid var(--mc-line);
+  border-radius: var(--mc-radius-pill);
+  background: var(--mc-surface);
+  color: var(--mc-ink-2);
+  font-weight: 700;
+  font-size: var(--mc-text-sm);
+  cursor: pointer;
+}
+.mc-root .mc-drill-nav button:hover { color: var(--mc-ink); border-color: var(--mc-brass); }
+.mc-root .mc-drill-nav button[aria-pressed='true'] { background: var(--mc-brass); border-color: var(--mc-brass); color: var(--mc-on-brass); }
+.mc-listen-main { grid-area: main; display: flex; flex-direction: column; gap: var(--mc-space-3); min-width: 0; }
+.mc-listen-title { font-size: var(--mc-text-2xl); }
+.mc-listen-side { grid-area: side; display: flex; flex-direction: column; gap: var(--mc-space-3); min-width: 0; }
+.mc-side-note { padding: var(--mc-space-3); border-radius: var(--mc-radius); background: var(--mc-current-bg); }
+
+@media (min-width: 1000px) {
+  .mc-listen {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    grid-template-areas: 'nav nav' 'main side';
+    align-items: start;
+  }
+  .mc-qso { grid-template-areas: 'main side'; }
+}
+
+/* Radio panel (compact = one column for the sidebar) */
+.mc-radio { display: grid; gap: var(--mc-space-5); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.mc-radio.compact { grid-template-columns: minmax(0, 1fr); }
+.mc-fine summary { cursor: pointer; font-weight: 700; font-size: var(--mc-text-sm); color: var(--mc-ink-2); }
+.mc-fine[open] summary { margin-bottom: var(--mc-space-3); }
+.mc-fine-grid { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-field-label-plain { font-size: var(--mc-text-sm); font-weight: 700; }
+.mc-radio .mc-seg { flex-wrap: wrap; }
+
+/* Drill bodies */
+.mc-drill-body { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-drill-body > .mc-btn.ghost { align-self: flex-start; }
+.mc-drill-controls { display: grid; gap: var(--mc-space-3); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: end; }
+.mc-copytask { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-copy-sent { padding: var(--mc-space-3); border-radius: var(--mc-radius); background: var(--mc-well); letter-spacing: 0.06em; word-break: break-word; }
+.mc-printer {
+  min-height: 3.4em;
+  padding: var(--mc-space-3);
+  border-radius: var(--mc-radius);
+  background: var(--mc-tape);
+  color: var(--mc-tape-text);
+  box-shadow: var(--mc-shadow-inset);
+  letter-spacing: 0.08em;
+  word-break: break-word;
+}
+.mc-printer-caret { display: inline-block; width: 0.6em; height: 1em; margin-left: 2px; vertical-align: -0.15em; background: var(--mc-tape-pen); opacity: 0.6; }
+.mc-push { margin-left: auto; }
+
+.mc-head,
+.mc-zerobeat,
+.mc-qrq,
+.mc-speedtest { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-head-stage { display: flex; align-items: center; gap: var(--mc-space-4); min-height: 96px; flex-wrap: wrap; }
+.mc-head-stage .mc-field { flex: 1 1 260px; }
+.mc-head-reveal { font-size: var(--mc-text-xl); color: var(--mc-ink-3); }
+.mc-head-reveal.shown { color: var(--mc-ink); font-size: var(--mc-text-2xl); }
+.mc-qrq-ladder { font-size: var(--mc-text-md); color: var(--mc-ink-2); }
+.mc-qrq-ladder .mc-display { font-size: var(--mc-text-2xl); color: var(--mc-brass); }
+.mc-qrq-form { display: flex; flex-wrap: wrap; gap: var(--mc-space-2); }
+.mc-root .mc-qrq-input {
+  flex: 1 1 160px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 var(--mc-space-3);
+  border: 1px solid var(--mc-line-strong);
+  border-radius: var(--mc-radius);
+  background: var(--mc-input-bg);
+  font-size: var(--mc-text-xl);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.mc-root .mc-qrq-input:focus { outline: none; border-color: var(--mc-brass); }
+.mc-qrq-summary { font-weight: 700; }
+
+.mc-cert-earned { display: flex; align-items: center; gap: var(--mc-space-4); flex-wrap: wrap; padding: var(--mc-space-4); border-radius: var(--mc-radius); background: var(--mc-current-bg); }
+.mc-cert-title { font-size: var(--mc-text-xl); color: var(--mc-brass); }
+.mc-certs ul { list-style: none; display: flex; flex-direction: column; gap: var(--mc-space-1); margin-top: var(--mc-space-2); }
+.mc-certs li { display: flex; align-items: center; justify-content: space-between; gap: var(--mc-space-3); padding: var(--mc-space-2) 0; border-bottom: 1px solid var(--mc-line); }
+.mc-operator-name .mc-text { max-width: 240px; }
+
+/* QSO */
+.mc-qso-setup { display: flex; flex-direction: column; gap: var(--mc-space-4); }
+.mc-op-fields { display: grid; gap: var(--mc-space-3); grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.mc-op-fields .mc-field span { font-size: var(--mc-text-sm); font-weight: 700; }
+.mc-style-cards { display: grid; gap: var(--mc-space-2); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.mc-root .mc-style-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mc-space-1);
+  padding: var(--mc-space-3);
+  border: 1px solid var(--mc-line-strong);
+  border-radius: var(--mc-radius);
+  background: var(--mc-surface);
+  text-align: left;
+  cursor: pointer;
+}
+.mc-root .mc-style-card[aria-checked='true'] { border-color: var(--mc-brass); box-shadow: inset 0 0 0 1px var(--mc-brass), var(--mc-shadow-1); }
+.mc-qso-run { display: flex; flex-direction: column; gap: var(--mc-space-4); }
+.mc-qso-turn,
+.mc-qso-you { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-qso-text { padding: var(--mc-space-3); border-radius: var(--mc-radius); background: var(--mc-well); letter-spacing: 0.06em; word-break: break-word; }
+.mc-qso-sending { display: flex; align-items: flex-start; gap: var(--mc-space-3); }

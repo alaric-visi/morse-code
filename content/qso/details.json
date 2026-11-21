@@ -1,0 +1,10 @@
+{
+  "about": "Details the simulated stations draw on, written for this app.",
+  "names": ["JOHN", "BOB", "ALAN", "PETE", "DAVE", "MIKE", "TOM", "ANNE", "SUE", "MARY", "JAN", "HANS", "ERIK", "LUC", "PIET", "JOSE", "KEN", "RAY", "IAN", "JIM", "LIZ", "KATE", "NICK", "PAUL", "OLE"],
+  "rigs": ["IC 7300", "K3", "FT 991", "TS 590", "KX2", "QCX", "HOMEBREW", "FT 817", "K2"],
+  "powers": ["5", "10", "50", "100", "400"],
+  "antennas": ["DIPOLE", "VERTICAL", "END FED WIRE", "YAGI", "LOOP", "G5RV", "LONG WIRE"],
+  "weather": ["SUNNY", "CLOUDY", "RAIN", "SNOW", "FOG", "WINDY", "FINE", "COLD"],
+  "jobs": ["RETIRED", "TEACHER", "ENGINEER", "NURSE", "FARMER", "STUDENT", "DRIVER"],
+  "hobbies": ["WALKING", "GARDENING", "SAILING", "READING", "FISHING", "CYCLING"]
+}

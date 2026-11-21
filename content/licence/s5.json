@@ -1,0 +1,67 @@
+{
+  "section": 5,
+  "title": "Propagation",
+  "items": [
+    { "id": "5A1", "topic": "How radio waves travel", "levels": {
+      "F": { "note": "Radio waves normally travel in straight lines. They can be refracted (bent), diffracted (around edges) and reflected. They get weaker as they spread out.",
+        "q": [{ "text": "What happens to a radio wave as it spreads out from the antenna?", "choices": ["It gets weaker", "It gets stronger", "It changes frequency", "It speeds up"], "why": "The same power spreads over a larger area." }] },
+      "Full": { "note": "In free space power density falls with the square of distance (inverse square law), while field strength (V/m) falls in proportion to distance.",
+        "q": [{ "text": "Doubling the distance in free space reduces the field strength to…", "choices": ["Half", "A quarter", "An eighth", "No change"], "why": "Field strength ∝ 1/d; power density ∝ 1/d²." }] } } },
+    { "id": "5A2", "topic": "VHF and the troposphere; wave types", "levels": {
+      "F": { "note": "VHF and UHF signals normally pass straight through the ionosphere, so they travel in the troposphere, the lowest part of the atmosphere.",
+        "q": [{ "text": "Where do VHF signals normally travel?", "choices": ["In the troposphere", "By refraction in the F2 layer", "Through the ground", "In the D layer"], "why": "VHF usually passes through the ionosphere." }] },
+      "I": { "note": "Ground wave follows the Earth's surface but is absorbed by the ground, more at higher frequencies, so its range is limited. Sky wave is refracted back from the ionosphere. Skip distance is the distance from the transmitter to where the sky wave first returns. The skip (dead) zone is between the end of the ground wave and that point, where nothing is heard.",
+        "q": [{ "text": "What is the skip zone?", "choices": ["The area between ground-wave range and where the sky wave returns", "The area right next to the antenna", "The far side of the Earth", "The ionosphere itself"], "why": "Neither ground nor sky wave reaches there." }] } } },
+    { "id": "5A3", "topic": "Electromagnetic waves", "levels": {
+      "I": { "note": "A radio wave has an electric and a magnetic field at right angles to each other, with the direction of travel at right angles to both. Its polarisation is the plane of the electric field.",
+        "q": [{ "text": "What defines a wave's polarisation?", "choices": ["The plane of its electric field", "The plane of its magnetic field", "Its direction of travel", "Its frequency"], "why": "Polarisation is that of the E field." }] },
+      "Full": { "note": "The E and H fields are in phase, at right angles, and power flux density (W/m²) = E × H. In circular polarisation the plane rotates as the wave travels; it's often used for satellites.",
+        "q": [{ "text": "Why is circular polarisation often used for satellites?", "choices": ["The satellite's orientation keeps changing", "It doubles the range", "It's cheaper", "It avoids Doppler shift"], "why": "Circular polarisation copes with tumbling spacecraft." }] } } },
+    { "id": "5B1", "topic": "The ionosphere", "levels": {
+      "F": { "note": "The ionosphere is layers of ionised gas between about 70 and 400 km up, ionised mainly by ultraviolet light from the sun.",
+        "q": [{ "text": "What mainly causes ionisation of the ionosphere?", "choices": ["Ultraviolet radiation from the sun", "Lightning", "Radio transmissions", "The Earth's magnetic field"], "why": "Solar UV ionises the upper atmosphere." }] },
+      "I": { "note": "Layers: D (about 60–90 km), E (about 100–120 km), F1 (about 200 km) and F2 (about 300–400 km). Ionisation comes from solar UV and charged particles.",
+        "q": [{ "text": "Which is the highest ionospheric layer?", "choices": ["F2", "D", "E", "F1"], "why": "F2 is about 300–400 km up." }] },
+      "Full": { "note": "Solar flares can cause sudden ionospheric disturbances, blacking out HF on the sunlit side. Sunspots go with high solar activity and better HF propagation.",
+        "q": [{ "text": "What effect can a major solar flare have on HF?", "choices": ["A sudden blackout on the sunlit side", "Better conditions everywhere", "No effect", "It opens VHF to the moon"], "why": "Intense X-rays boost D-layer absorption." }] } } },
+    { "id": "5B2", "topic": "HF propagation; MUF", "levels": {
+      "F": { "note": "On HF most long-distance contact depends on refraction in the ionosphere, which can give worldwide range. It varies with frequency, time of day, season and solar activity.",
+        "q": [{ "text": "Which of these affects HF propagation?", "choices": ["Time of day and solar activity", "The colour of the antenna", "Your call sign", "The mains voltage"], "why": "Ionisation varies with the sun." }] },
+      "I": { "note": "Ionisation changes with time of day, season and the roughly 11-year sunspot cycle. More sunspots mean more ionisation and better HF propagation, especially on the higher bands.",
+        "q": [{ "text": "How long is the sunspot cycle, approximately?", "choices": ["11 years", "1 year", "27 days", "50 years"], "why": "Solar activity peaks roughly every 11 years." }] },
+      "Full": { "note": "The critical frequency is the highest frequency reflected straight back down when sent vertically. The maximum usable frequency (MUF) for a path is higher, because the wave arrives at a glancing angle. The MUF rises during the day and falls at night.",
+        "q": [{ "text": "How does the MUF compare with the critical frequency?", "choices": ["The MUF is higher", "The MUF is lower", "They're always equal", "There's no relationship"], "why": "Oblique paths can use higher frequencies." }] } } },
+    { "id": "5B3", "topic": "Hops, fading and NVIS", "levels": {
+      "I": { "note": "The F2 layer gives the longest single hop, about 4000 km; at night F1 and F2 merge. Multiple hops give worldwide range. Fading comes from changes in the ionosphere and from signals arriving by different paths. Short-path is the direct great-circle route; long-path goes the other way round the Earth.",
+        "q": [{ "text": "About how far can a single F2 hop reach?", "choices": ["4000 km", "400 km", "40,000 km", "40 km"], "why": "About 4000 km." }] },
+      "Full": { "note": "Near vertical incidence sky wave (NVIS) sends signals almost straight up so they come back down nearby, covering short distances on low bands such as 5 MHz.",
+        "q": [{ "text": "What is NVIS used for?", "choices": ["Short-range contacts on low HF bands", "Moonbounce", "Satellite contacts", "Long-path DX"], "why": "High-angle radiation returns close to the transmitter." }] } } },
+    { "id": "5B4", "topic": "D-layer absorption and LUF", "levels": {
+      "I": { "note": "By day the D layer absorbs lower frequencies; it largely disappears at night, which is why 160 m and 80 m open up after dark. The lowest usable frequency (LUF) is the lowest that gets through the D layer without too much absorption.",
+        "q": [{ "text": "Why do 160 m and 80 m work better at night?", "choices": ["The D layer, which absorbs them, disappears", "The MUF rises at night", "Sporadic E occurs", "There's less noise from the sun"], "why": "D-layer absorption is a daytime effect." }] },
+      "Full": { "note": "The ionosphere can change a wave's polarisation.",
+        "q": [{ "text": "What can the ionosphere do to a wave's polarisation?", "choices": ["Change it", "Nothing", "Make it always vertical", "Remove it entirely"], "why": "Ionospheric propagation rotates polarisation." }] } } },
+    { "id": "5B5", "topic": "Sporadic E", "levels": {
+      "I": { "note": "Patches of intense ionisation in the E layer (sporadic E) can reflect VHF and upper HF (24 and 28 MHz), mostly in summer. One hop reaches up to about 2000 km; more hops reach further.",
+        "q": [{ "text": "About how far can a single sporadic-E hop reach?", "choices": ["2000 km", "200 km", "4000 km", "20,000 km"], "why": "The E layer is lower, so hops are shorter than F2." }] } } },
+    { "id": "5C1", "topic": "VHF/UHF range and enhancements", "levels": {
+      "F": { "note": "Hills cause radio shadows and buildings weaken signals. At VHF/UHF, range falls as frequency rises and is not much beyond line of sight. Sporadic E and tropospheric ducting (often in settled high-pressure weather) can greatly extend it.",
+        "q": [{ "text": "Which weather can extend VHF/UHF range by tropospheric ducting?", "choices": ["Settled high pressure", "A thunderstorm", "Strong wind", "Heavy rain"], "why": "Temperature inversions in high pressure create ducts." }] } } },
+    { "id": "5C2", "topic": "Weather and UHF", "levels": {
+      "F": { "note": "Falling snow, hail and heavy rain can weaken signals at UHF and above.",
+        "q": [{ "text": "Which frequencies are most affected by heavy rain?", "choices": ["UHF and above", "LF", "HF", "160 m"], "why": "Rain absorbs and scatters short wavelengths." }] } } },
+    { "id": "5C3", "topic": "Height, power and paths at VHF", "levels": {
+      "F": { "note": "VHF/UHF range depends on antenna height, antenna gain, a clear path and power. A higher antenna is better than more power because it helps both transmit and receive. Outdoor antennas beat indoor ones.",
+        "q": [{ "text": "Why is raising your VHF antenna better than adding power?", "choices": ["It improves both transmit and receive", "It's legally required", "Power doesn't affect range", "It reduces the frequency"], "why": "Height helps in both directions." }] },
+      "I": { "note": "At VHF and above, signals can bounce off buildings or aircraft and arrive along with the direct signal: multipath. The two can add or cancel, causing 'flutter' or dead spots.",
+        "q": [{ "text": "What causes 'flutter' on a mobile VHF signal?", "choices": ["Multipath reflections adding and cancelling", "D-layer absorption", "Sunspots", "Key clicks"], "why": "Reflected and direct signals interfere." }] },
+      "Full": { "note": "Earth–Moon–Earth (EME) bounces signals off the moon. The moon is a poor reflector a long way away, so EME needs high power, high-gain antennas and sensitive receivers, often with special digital modes.",
+        "q": [{ "text": "Why does EME need high power and big antennas?", "choices": ["The moon is distant and a poor reflector", "The moon absorbs only VHF", "It's legally required", "The ionosphere blocks it"], "why": "Huge path loss." }] } } },
+    { "id": "5D1", "topic": "Galactic noise", "levels": {
+      "Full": { "note": "Galactic noise is random noise from outside the Earth's atmosphere, from the Milky Way and beyond. It sets a lower limit on noise at VHF.",
+        "q": [{ "text": "Where does galactic noise come from?", "choices": ["Outside the Earth's atmosphere", "Lightning", "Power lines", "Your own receiver"], "why": "It's cosmic in origin." }] } } },
+    { "id": "5D2", "topic": "Link budgets", "levels": {
+      "Full": { "note": "A link budget adds up everything between transmitter and receiver: power, feeder losses, antenna gains and path loss (spreading plus obstructions) to see whether the received signal will be strong enough.",
+        "q": [{ "text": "Which is part of a link budget?", "choices": ["Path loss", "The operator's age", "The mode of the band plan", "Your log"], "why": "Power, losses, gains and path loss." }] } } }
+  ]
+}

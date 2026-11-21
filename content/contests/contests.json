@@ -1,0 +1,25 @@
+{
+  "about": "Contest styles to practise, each modelled on a common real format. Summaries are written for this app; check each event's own rules before entering for real.",
+  "contests": [
+    { "id": "ukclub", "name": "UK club sprint", "kind": "contest", "exchange": ["rst", "serial"], "callers": "uk", "mult": "none", "points": "one",
+      "summary": "Short weekday-evening sessions on 80 m between UK club members, in the style of the RSGB club championships. Send a report and a serial number; every contact scores a point." },
+    { "id": "wpx", "name": "Serial and prefix", "kind": "contest", "exchange": ["rst", "serial"], "callers": "world", "mult": "prefix", "points": "continent",
+      "summary": "Report plus serial number, worldwide. Each new callsign prefix (G4, DL1, K9…) is a multiplier, so unusual prefixes are worth chasing." },
+    { "id": "zones", "name": "CQ zones", "kind": "contest", "exchange": ["rst", "zone"], "callers": "world", "mult": "zone", "points": "continent",
+      "summary": "Report plus your CQ zone (the UK is zone 14). Zones worked are multipliers, and contacts with other continents score more." },
+    { "id": "states", "name": "Work the Americas", "kind": "contest", "exchange": ["rst", "state"], "callers": "na", "mult": "state", "points": "three",
+      "summary": "Stations in the USA and Canada send their state or province; you send a report and your power. Each state or province is a multiplier." },
+    { "id": "fieldday", "name": "Field day", "kind": "contest", "exchange": ["class", "section"], "callers": "na", "mult": "none", "points": "two",
+      "summary": "Portable stations out in the field. The exchange is the station class (number of transmitters plus a letter for the kind of station) and the operating section." },
+    { "id": "sweepstakes", "name": "Sweepstakes", "kind": "contest", "exchange": ["serial", "prec", "call", "check", "section"], "callers": "na", "mult": "section", "points": "two",
+      "summary": "The long exchange: serial number, precedence letter, callsign, check (the year first licensed, two digits) and section. Good practice for copying a lot at once." },
+    { "id": "sprint", "name": "Weekly sprint", "kind": "contest", "exchange": ["name", "number"], "callers": "world", "mult": "call", "points": "one",
+      "summary": "An hour-long weekly sprint in the style of the CWops tests: name and member number (or state or country). Each new call is a multiplier, and it moves fast." },
+    { "id": "pota", "name": "Park activation", "kind": "activation", "exchange": ["rst", "location"], "callers": "world", "mult": "none", "points": "one", "goal": 10,
+      "summary": "You're portable in a park and the hunters find you. Ten contacts makes a valid activation in the most popular park scheme. Send a report and your park reference; they send a report and where they are." },
+    { "id": "sota", "name": "Summit activation", "kind": "activation", "exchange": ["rst"], "callers": "world", "mult": "none", "points": "one", "goal": 4,
+      "summary": "You've carried a small rig up a hill. Four contacts qualify the summit. Exchanges are short: calls and reports. Batteries are limited, so keep it brisk." },
+    { "id": "dxpileup", "name": "DX pileup", "kind": "pileup", "exchange": ["rst"], "callers": "world", "mult": "none", "points": "one",
+      "summary": "You're the rare one. Everybody calls at once; pick out a callsign (or part of one), give a 5NN, and move on. Turn on split to spread the callers out above your frequency." }
+  ]
+}

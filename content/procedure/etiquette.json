@@ -1,0 +1,29 @@
+{
+  "about": "Operating scenarios with good practice explained, written for this app.",
+  "scenarios": [
+    { "id": "qrl", "situation": "You've found a quiet spot and want to call CQ.",
+      "choices": ["Call CQ straight away", "Send QRL? first and listen", "Send your callsign a few times to test"],
+      "answer": 1, "why": "A frequency can sound empty when one side of a contact is too weak for you to hear. Send QRL? (is this frequency in use?), listen, and try once more before calling CQ." },
+    { "id": "split", "situation": "A rare station sends 'TU UP 2' and you can't hear any callers.",
+      "choices": ["Call on their frequency", "Transmit 2 kHz higher and keep listening on theirs", "Ask them to QSY"],
+      "answer": 1, "why": "UP 2 means they're listening about 2 kHz above their own frequency. Call there, and keep your receiver on them. Calling on their frequency drowns them out for everyone." },
+    { "id": "partial", "situation": "The DX station sends 'K1?' and your call is G4ABC.",
+      "choices": ["Call anyway: they might hear you", "Stay quiet until they finish with K1", "Send 'G4ABC G4ABC G4ABC'"],
+      "answer": 1, "why": "They've picked out part of a call starting K1 and are asking only for it. Calling over them slows everything down and is the quickest way to annoy a pileup." },
+    { "id": "qrs", "situation": "Someone answers your CQ much faster than you can copy.",
+      "choices": ["Give up and say nothing", "Send QRS (please send more slowly)", "Pretend you copied and send 73"],
+      "answer": 1, "why": "QRS is a normal, polite request, and most operators are happy to slow down. It's better than a contact where neither side got anything." },
+    { "id": "zerobeat", "situation": "You want to answer a station calling CQ.",
+      "choices": ["Answer wherever your dial happens to be", "Zero-beat them first so you reply on their frequency", "Answer 1 kHz off to be heard clearly"],
+      "answer": 1, "why": "Many operators use narrow filters. If you reply off-frequency they may not hear you at all. Match their note to your sidetone first." },
+    { "id": "callsign", "situation": "You've finished a contact and want to sign off properly.",
+      "choices": ["Just stop sending", "Send your call and SK", "Send 73 three times"],
+      "answer": 1, "why": "Identify with your callsign (most licences require it at the end of each contact) and send SK to show the contact is over." },
+    { "id": "tune", "situation": "You need to tune your antenna tuner on the air.",
+      "choices": ["Tune on the DX station's frequency so you're ready", "Find a clear frequency, check it's free, use low power and keep it short", "Tune at full power while calling CQ"],
+      "answer": 1, "why": "Tuning on top of others causes interference. Pick a clear spot, check it's free, keep the power low and the carrier brief." },
+    { "id": "listen", "situation": "A DX station has a huge pileup and you're not getting through.",
+      "choices": ["Call continuously", "Listen to their pattern (where they're listening, how fast) and call at the right moment", "Increase speed so you stand out"],
+      "answer": 1, "why": "Good DXers listen more than they send. Learn where the DX is listening and when they come back, then call once or twice at the right moment." }
+  ]
+}

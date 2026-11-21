@@ -1,0 +1,883 @@
+{
+ "section": 6,
+ "title": "Electromagnetic compatibility",
+ "items": [
+  {
+   "id": "6A1",
+   "topic": "What EMC means",
+   "levels": {
+    "F": {
+     "note": "Electromagnetic compatibility (EMC) means different pieces of electronic equipment working without interfering with each other.",
+     "q": [
+      {
+       "text": "What is electromagnetic compatibility?",
+       "choices": [
+        "Equipment working together without interfering",
+        "A type of antenna",
+        "A licence condition on power",
+        "A measure of SWR"
+       ],
+       "why": "EMC is the avoidance of mutual interference."
+      }
+     ]
+    },
+    "I": {
+     "note": "All electronic equipment can radiate and pick up RF. The principle of EMC is that equipment should work properly in its electromagnetic environment without causing undue disturbance to anything else.",
+     "q": [
+      {
+       "text": "Which equipment can radiate or pick up RF?",
+       "choices": [
+        "All electronic equipment",
+        "Only radio transmitters",
+        "Only TVs",
+        "Only computers"
+       ],
+       "why": "Any electronic device can do both."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6A2",
+   "topic": "Immunity",
+   "levels": {
+    "F": {
+     "note": "Immunity is a device's ability to work correctly in the presence of strong RF signals.",
+     "q": [
+      {
+       "text": "What is a device's immunity?",
+       "choices": [
+        "Its ability to work correctly near strong RF",
+        "Its resistance to water",
+        "Its power rating",
+        "Its frequency range"
+       ],
+       "why": "Immunity is resistance to RF interference."
+      }
+     ]
+    },
+    "I": {
+     "note": "Immunity can often be improved by screening, and by filtering power, signal and control leads.",
+     "q": [
+      {
+       "text": "How can a device's immunity often be improved?",
+       "choices": [
+        "Filtering its leads and screening it",
+        "Turning up its volume",
+        "Moving it closer to the antenna",
+        "Using a longer mains lead"
+       ],
+       "why": "Leads often carry the RF in."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Installation matters: a good piece of equipment, badly installed (long unscreened leads, poor earthing), can lose its immunity and fail to comply.",
+     "q": [
+      {
+       "text": "Why can a well-designed device still suffer from RF?",
+       "choices": [
+        "Poor installation can compromise its immunity",
+        "Good design guarantees immunity",
+        "RF can't affect it",
+        "Its warranty has expired"
+       ],
+       "why": "Long or unscreened leads pick up RF."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6A3",
+   "topic": "Transmitters cause interference",
+   "levels": {
+    "F": {
+     "note": "A radio transmitter can interfere with nearby electronic and radio equipment.",
+     "q": [
+      {
+       "text": "Which nearby equipment might your transmitter interfere with?",
+       "choices": [
+        "TVs, radios and telephones",
+        "Only other transmitters",
+        "Nothing indoors",
+        "Only satellites"
+       ],
+       "why": "Strong local RF can affect many devices."
+      }
+     ]
+    },
+    "I": {
+     "note": "An amateur transmitter in a home can create RF fields stronger than the immunity limits equipment is tested to. That's not a normal situation, so special measures may be needed.",
+     "q": [
+      {
+       "text": "Why might immunity standards not protect a neighbour's TV from your station?",
+       "choices": [
+        "Your field may exceed the levels it was tested to",
+        "Standards don't cover TVs",
+        "Amateur signals are exempt",
+        "TVs are always immune"
+       ],
+       "why": "Domestic transmitters can exceed test limits."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6A4",
+   "topic": "Interference to your receiver; standards",
+   "levels": {
+    "F": {
+     "note": "Your receiver can suffer interference too, from local electrical equipment and other sources.",
+     "q": [
+      {
+       "text": "Can your own receiver suffer interference from household devices?",
+       "choices": [
+        "Yes",
+        "No, receivers are immune",
+        "Only on VHF",
+        "Only when transmitting"
+       ],
+       "why": "Many devices generate RF noise."
+      }
+     ]
+    },
+    "I": {
+     "note": "New equipment should meet British Standards immunity requirements, but older or badly installed equipment may not.",
+     "q": [
+      {
+       "text": "Which equipment is most likely to fail to meet immunity standards?",
+       "choices": [
+        "Old or badly installed equipment",
+        "New equipment from a reputable maker",
+        "Equipment with a CE or UKCA mark",
+        "Shielded equipment"
+       ],
+       "why": "Standards apply to new kit; installation matters."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Amateurs needn't prove that equipment they put into service meets EMC standards, but they are still responsible for complying with the licence conditions on interference.",
+     "q": [
+      {
+       "text": "Must an amateur prove that home-built equipment meets EMC standards?",
+       "choices": [
+        "No, but they must still not cause undue interference",
+        "Yes, before every contact",
+        "Only above 100 W",
+        "Only on HF"
+       ],
+       "why": "The licence conditions still apply."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6B1",
+   "topic": "Which transmissions interfere",
+   "levels": {
+    "F": {
+     "note": "The more power you run, the more likely you are to cause interference. AM and SSB cause the most problems; FM and some HF data modes cause fewer; CW is somewhere between.",
+     "q": [
+      {
+       "text": "Which modes are most likely to cause interference to audio equipment?",
+       "choices": [
+        "AM and SSB",
+        "FM",
+        "FT8 at low power",
+        "CW at 1 W"
+       ],
+       "why": "Varying amplitude is easily rectified into audio."
+      }
+     ]
+    },
+    "I": {
+     "note": "AM and SSB can produce speech-like sounds in radios, audio systems and phones. FM tends instead to mute or reduce the wanted sound.",
+     "q": [
+      {
+       "text": "A neighbour hears garbled speech on their hi-fi when you transmit. Which mode are you probably using?",
+       "choices": [
+        "SSB",
+        "FM",
+        "CW",
+        "None, it can't happen"
+       ],
+       "why": "SSB's amplitude variations are rectified as speech-like sounds."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Some imported or home-built equipment doesn't meet EMC standards. Mobile phones, cordless phones and IT equipment can themselves produce strong enough signals to cause interference.",
+     "q": [
+      {
+       "text": "Which household items can themselves produce interfering signals?",
+       "choices": [
+        "Cordless phones and Wi-Fi equipment",
+        "Only amateur radios",
+        "Batteries",
+        "Coaxial cable"
+       ],
+       "why": "They contain transmitters."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6B2",
+   "topic": "Non-radio interference sources; blocking",
+   "levels": {
+    "I": {
+     "note": "Common non-radio sources: arcing thermostats, car ignition, electric motors, computers, switched-mode power supplies, plasma TVs, VDSL broadband, LED lighting and solar-panel inverters. Many produce wideband noise that raises your noise floor.",
+     "q": [
+      {
+       "text": "Which is a common source of HF interference in homes?",
+       "choices": [
+        "Switched-mode power supplies",
+        "Coaxial cable",
+        "Batteries",
+        "Dummy loads"
+       ],
+       "why": "Their fast switching produces broadband noise."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Blocking (desensitisation) is when a strong constant signal swamps the wanted one or drives the receiver out of its normal operating range, so the wanted audio or data is badly reduced or lost.",
+     "q": [
+      {
+       "text": "What is blocking?",
+       "choices": [
+        "A strong signal desensitising a receiver",
+        "A trap in an antenna",
+        "An encrypted signal",
+        "A failed fuse"
+       ],
+       "why": "The strong signal overloads the front end."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6B3",
+   "topic": "Digital receivers; passive intermodulation",
+   "levels": {
+    "I": {
+     "note": "Interference to DAB radio may show as muting or loss of signal. Digital TV pictures may freeze, break into blocks (pixelate), go jerky or vanish.",
+     "q": [
+      {
+       "text": "What does interference to a digital TV typically look like?",
+       "choices": [
+        "Freezing or blocky pictures",
+        "Herringbone patterns only",
+        "A clear picture with buzzing",
+        "Colour changes"
+       ],
+       "why": "Digital systems fail abruptly into blocks or freezes."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Corroded metal joints (in antennas, masts, guttering) can act as diodes and create intermodulation products: passive intermodulation, the 'rusty bolt' effect.",
+     "q": [
+      {
+       "text": "What causes the 'rusty bolt' effect?",
+       "choices": [
+        "Corroded metal joints mixing signals",
+        "Wet coax",
+        "A loose plug",
+        "Ice on the antenna"
+       ],
+       "why": "Corroded junctions rectify and mix."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6C1",
+   "topic": "How interference gets in",
+   "levels": {
+    "F": {
+     "note": "Interference reaches equipment through house wiring, TV aerial cables and phone lines, and (especially at VHF/UHF) by direct pick-up inside the equipment.",
+     "q": [
+      {
+       "text": "Which is a common route for RF into a neighbour's equipment?",
+       "choices": [
+        "The TV aerial down-lead",
+        "The window glass",
+        "Water pipes only",
+        "Its plastic case"
+       ],
+       "why": "Leads act as antennas."
+      }
+     ]
+    },
+    "I": {
+     "note": "Direct pick-up doesn't depend much on the exact frequency within a band, though different bands may behave differently. It's especially a problem at VHF/UHF.",
+     "q": [
+      {
+       "text": "Direct pick-up inside affected equipment is especially a problem on…",
+       "choices": [
+        "VHF/UHF",
+        "160 m",
+        "LF",
+        "Audio frequencies"
+       ],
+       "why": "Short wavelengths couple into internal wiring."
+      }
+     ]
+    },
+    "Full": {
+     "note": "RF can enter audio stages via long speaker leads or other connecting cables. Any semiconductor junction in a device can rectify RF.",
+     "q": [
+      {
+       "text": "Why do long speaker leads cause problems?",
+       "choices": [
+        "They pick up RF which audio stages rectify",
+        "They're too heavy",
+        "They change the speaker's impedance",
+        "They don't"
+       ],
+       "why": "The leads act as antennas."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6C2",
+   "topic": "TV masthead amplifiers",
+   "levels": {
+    "I": {
+     "note": "Many TV masthead and down-lead amplifiers are broadband, so they amplify amateur signals too. That can overload the amplifier or the TV.",
+     "q": [
+      {
+       "text": "Why can a TV masthead amplifier make interference worse?",
+       "choices": [
+        "It's broadband and amplifies amateur signals too",
+        "It's tuned only to amateur bands",
+        "It filters out TV",
+        "It's battery powered"
+       ],
+       "why": "Broadband amplifiers pass everything."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Wideband masthead amplifiers can suffer cross-modulation and overload, producing intermodulation and blocking, and may overload the TV as well.",
+     "q": [
+      {
+       "text": "Which problem can a wideband masthead amplifier suffer?",
+       "choices": [
+        "Cross-modulation and intermodulation",
+        "Key clicks",
+        "Chirp",
+        "Low SWR"
+       ],
+       "why": "Strong signals overload it."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6C3",
+   "topic": "IF breakthrough and image interference",
+   "levels": {
+    "I": {
+     "note": "Amateur signals can be picked up directly by the IF stages of TVs and broadcast receivers, and can cause image-frequency interference to analogue and digital radio, because most broadcast receivers are superhets. Typical frequencies: medium wave 526–1606 kHz; FM broadcast 87.5–108 MHz; DAB 174–230 MHz; TV 470–694 MHz; radio IFs about 455–500 kHz and 10.7 MHz; digital TV IFs between about 4 and 39 MHz.",
+     "q": [
+      {
+       "text": "A 10 m (28 MHz) transmitter could cause image interference to an FM broadcast receiver because…",
+       "choices": [
+        "The receiver's image lies 2 × 10.7 MHz from its tuned frequency",
+        "28 MHz is inside the FM band",
+        "It uses a 455 kHz IF",
+        "FM receivers have no IF"
+       ],
+       "why": "Images fall 21.4 MHz away from the tuned frequency."
+      },
+      {
+       "text": "Which band is used for UK TV broadcasting?",
+       "choices": [
+        "470–694 MHz",
+        "87.5–108 MHz",
+        "174–230 MHz",
+        "526–1606 kHz"
+       ],
+       "why": "FM radio is 87.5–108 MHz, DAB 174–230 MHz, medium wave 526–1606 kHz."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6D1",
+   "topic": "Filters and chokes",
+   "levels": {
+    "F": {
+     "note": "You can often improve immunity by fitting chokes and filters in mains or antenna leads, as close to the affected device as possible.",
+     "q": [
+      {
+       "text": "Where should a filter be fitted to an affected TV?",
+       "choices": [
+        "As close to the TV as possible",
+        "At the transmitter",
+        "Halfway along the lead",
+        "On the roof"
+       ],
+       "why": "Close to the device stops pick-up on the lead reaching it."
+      }
+     ]
+    },
+    "I": {
+     "note": "Filters in the transmitter's supply leads stop RF reaching the mains wiring. Ferrite rings on antenna down-leads and mains leads reduce RF reaching affected equipment. A high-pass filter in a TV down-lead blocks HF signals.",
+     "q": [
+      {
+       "text": "Which filter helps stop HF signals reaching a TV through its aerial lead?",
+       "choices": [
+        "High-pass",
+        "Low-pass",
+        "Notch at TV frequencies",
+        "Band-pass at HF"
+       ],
+       "why": "TV is above HF, so pass high, block low."
+      }
+     ]
+    },
+    "Full": {
+     "note": "High-pass, low-pass, band-pass and band-stop filters come in L, T and π forms. A coax stub can act as a notch or trap. Ferrite beads and rings filter both inside and outside equipment.",
+     "q": [
+      {
+       "text": "How can a length of coax be used as a filter?",
+       "choices": [
+        "As a stub forming a notch at one frequency",
+        "As a mains filter",
+        "As a dummy load",
+        "As a fuse"
+       ],
+       "why": "A quarter-wave stub is a trap at its frequency."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6D2",
+   "topic": "Common mode and differential mode",
+   "levels": {
+    "I": {
+     "note": "Differential-mode signals flow out on one wire and back on the other (the wanted signal). Common-mode currents flow the same way on both wires, or on the outside of coax braid. A ferrite ring or choke reduces common-mode currents.",
+     "q": [
+      {
+       "text": "What does a ferrite ring on a cable mainly attenuate?",
+       "choices": [
+        "Common-mode currents",
+        "The wanted differential signal",
+        "DC",
+        "Mains voltage"
+       ],
+       "why": "Common-mode currents see the ferrite's impedance."
+      }
+     ]
+    },
+    "Full": {
+     "note": "A mains filter uses series chokes and capacitors to earth and between the lines. A braid-breaking filter isolates the coax braid with capacitors (often combined with a high-pass filter). A ferrite ring attenuates common-mode currents because their fields add in the core, while the differential fields cancel.",
+     "q": [
+      {
+       "text": "Why doesn't a ferrite ring affect the wanted signal on a cable?",
+       "choices": [
+        "Differential currents' fields cancel in the core",
+        "Ferrite only works on DC",
+        "The wanted signal is too weak",
+        "It does block it"
+       ],
+       "why": "Only common-mode currents magnetise the core."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6D3",
+   "topic": "Checking for spurious emissions",
+   "levels": {
+    "I": {
+     "note": "Use a general-coverage receiver to listen for your harmonics and spurious emissions: transmit into a dummy load and tune to multiples of your frequency.",
+     "q": [
+      {
+       "text": "How can you check your 7 MHz transmitter for a second harmonic?",
+       "choices": [
+        "Listen on 14 MHz with a separate receiver while transmitting into a dummy load",
+        "Look at the SWR meter",
+        "Use a multimeter",
+        "Listen on 3.5 MHz"
+       ],
+       "why": "The second harmonic is at twice the frequency."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6D4",
+   "topic": "Dummy loads",
+   "levels": {
+    "F": {
+     "note": "Transmitting into a dummy load is a good test for RF escaping along power or interface leads into the mains. A dummy load is a screened resistor of the right value (50 Ω) and power rating.",
+     "q": [
+      {
+       "text": "What is a dummy load?",
+       "choices": [
+        "A screened resistor that absorbs the transmitter's power",
+        "A weak antenna",
+        "A spare battery",
+        "A filter"
+       ],
+       "why": "It lets you transmit without radiating."
+      }
+     ]
+    },
+    "I": {
+     "note": "A dummy load must be non-reactive and rated for the power. If interference continues while transmitting into a dummy load, it's getting out through the wiring, not from the antenna.",
+     "q": [
+      {
+       "text": "Interference to a neighbour stops when you switch to a dummy load. What does that suggest?",
+       "choices": [
+        "It's caused by radiation from the antenna",
+        "It's getting into the mains",
+        "Your dummy load is faulty",
+        "Their TV is broken"
+       ],
+       "why": "No antenna, no radiation, no interference."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6E1",
+   "topic": "Antenna siting and field strength",
+   "levels": {
+    "F": {
+     "note": "Minimise EMC problems by siting antennas as far from houses and as high as possible, and using balanced antennas on HF. Horizontal dipoles are less likely to cause trouble; end-fed wires can cause significant problems.",
+     "q": [
+      {
+       "text": "Which HF antenna is least likely to cause EMC problems?",
+       "choices": [
+        "A high horizontal dipole away from the house",
+        "An end-fed wire to the shack window",
+        "A loft antenna",
+        "An indoor loop beside the TV"
+       ],
+       "why": "Balanced, high and away from wiring."
+      }
+     ]
+    },
+    "I": {
+     "note": "Connect transmitter, microphone, power supply, SWR meter and filters with suitable short, screened cables, with the low-pass filter right at the transmitter output.",
+     "q": [
+      {
+       "text": "Where should a low-pass filter go?",
+       "choices": [
+        "Right at the transmitter output",
+        "At the top of the mast",
+        "After the antenna",
+        "In the microphone lead"
+       ],
+       "why": "Filter harmonics before they reach the feeder."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Use only the field strength needed. Field strength E (V/m) ≈ 7 × √ERP ÷ d (d in metres).",
+     "q": [
+      {
+       "text": "What's the field strength 10 m from an antenna radiating 100 W ERP?",
+       "choices": [
+        "7 V/m",
+        "70 V/m",
+        "0.7 V/m",
+        "10 V/m"
+       ],
+       "why": "7 × √100 ÷ 10 = 7 V/m."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6E2",
+   "topic": "RF earth",
+   "levels": {
+    "F": {
+     "note": "A station's RF earth gives a path to ground for RF currents, keeping them out of the mains earth where they could cause interference.",
+     "q": [
+      {
+       "text": "What is the purpose of a station RF earth?",
+       "choices": [
+        "To keep RF currents out of the mains earth",
+        "To protect against electric shock",
+        "To improve SWR",
+        "To power the station"
+       ],
+       "why": "It gives RF a direct path to ground."
+      }
+     ]
+    },
+    "I": {
+     "note": "A good RF earth uses short, thick connections to earth rods (or a radial system) near where the feeder enters the house.",
+     "q": [
+      {
+       "text": "Which makes a good RF earth?",
+       "choices": [
+        "Short, thick leads to earth rods near the shack",
+        "A long thin wire to the garden",
+        "The mains earth pin",
+        "A water pipe indoors"
+       ],
+       "why": "Low-impedance and short."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Bond the station equipment together and to the RF earth. Inadequate RF earthing leaves RF on equipment cases, mains and audio leads, causing interference and 'RF in the shack'.",
+     "q": [
+      {
+       "text": "What's a symptom of poor RF earthing?",
+       "choices": [
+        "RF on equipment cases and microphones",
+        "A low SWR",
+        "Better reception",
+        "Quieter mains"
+       ],
+       "why": "RF finds other paths to ground."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6E3",
+   "topic": "Loft antennas; balanced systems",
+   "levels": {
+    "I": {
+     "note": "A transmitting antenna close to mains wiring, TV antennas and their down-leads invites problems. Loft and indoor antennas make this worse.",
+     "q": [
+      {
+       "text": "Why are loft transmitting antennas prone to EMC problems?",
+       "choices": [
+        "They're close to house wiring and TV down-leads",
+        "They're too high",
+        "They're always balanced",
+        "They can't be used on HF"
+       ],
+       "why": "Close coupling into the wiring."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Balanced antenna systems tend to cause fewer problems than unbalanced ones. Feeders should leave the antenna at right angles to it, to reduce coupling.",
+     "q": [
+      {
+       "text": "How should a feeder leave a dipole?",
+       "choices": [
+        "At right angles to the antenna",
+        "Parallel to one leg",
+        "Along the house wall",
+        "Any way at all"
+       ],
+       "why": "Perpendicular minimises coupling between them."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6F1",
+   "topic": "Mobile installations",
+   "levels": {
+    "F": {
+     "note": "In a vehicle, it's the owner's responsibility to make sure the radio doesn't affect the car's electrical and management systems or safety. You may need to tell your insurer. Professional installation is advisable, and the vehicle maker may give advice.",
+     "q": [
+      {
+       "text": "Who must make sure a mobile radio installation doesn't affect a car's safety?",
+       "choices": [
+        "The vehicle owner",
+        "The car manufacturer",
+        "Ofcom",
+        "The RSGB"
+       ],
+       "why": "The owner is responsible."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Advice on installing mobile radio equipment in vehicles is given in the Federation of Communication Services (FCS) UK Code of Practice.",
+     "q": [
+      {
+       "text": "Which code of practice covers mobile radio installation in vehicles?",
+       "choices": [
+        "The FCS UK Code of Practice",
+        "The IARU band plan",
+        "The Highway Code",
+        "ICNIRP guidelines"
+       ],
+       "why": "FCS publishes the vehicle installation code."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6F2",
+   "topic": "Testing and routing in vehicles",
+   "levels": {
+    "F": {
+     "note": "Test a mobile installation with the vehicle stationary and all its electronics running before any road test.",
+     "q": [
+      {
+       "text": "How should you first test a new mobile installation?",
+       "choices": [
+        "With the vehicle stationary and all its systems on",
+        "While driving on a motorway",
+        "With the engine off and battery disconnected",
+        "It needs no testing"
+       ],
+       "why": "Check for any effect on vehicle systems safely first."
+      }
+     ]
+    },
+    "I": {
+     "note": "Don't run RF or power cables alongside the vehicle's wiring loom or near electronic control units. RF can affect vehicle electronics, including airbags and engine management.",
+     "q": [
+      {
+       "text": "Where should you avoid running a mobile radio's coax?",
+       "choices": [
+        "Alongside the wiring loom and near control units",
+        "Under the carpet",
+        "Along the roof lining",
+        "Through a grommet"
+       ],
+       "why": "RF can couple into vehicle electronics."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Minimise stray RF in the vehicle: a well-matched antenna with a good ground plane (roof mount), coax braid bonded at the antenna base, power taken directly from the battery, and ferrite on cables where needed.",
+     "q": [
+      {
+       "text": "Which best minimises stray RF in a car?",
+       "choices": [
+        "A well-matched roof-mounted antenna with good bonding",
+        "A boot-mounted antenna with a long thin earth wire",
+        "Power taken from the cigarette lighter",
+        "A high SWR"
+       ],
+       "why": "Good ground plane and bonding keep RF on the antenna."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6F3",
+   "topic": "Vehicle noise and antenna position",
+   "levels": {
+    "F": {
+     "note": "A vehicle's ignition and charging systems can cause interference to your mobile reception.",
+     "q": [
+      {
+       "text": "Which vehicle system commonly causes interference to mobile reception?",
+       "choices": [
+        "The ignition",
+        "The windscreen wipers' rubber",
+        "The seats",
+        "The paintwork"
+       ],
+       "why": "Ignition and alternators generate electrical noise."
+      }
+     ]
+    },
+    "I": {
+     "note": "Antenna position affects the field inside the vehicle: wing or boot mounts tend to give higher exposure to occupants than a roof mount.",
+     "q": [
+      {
+       "text": "Which antenna position gives the lowest RF exposure inside a car?",
+       "choices": [
+        "The centre of the roof",
+        "The boot lid",
+        "The front wing",
+        "Inside the windscreen"
+       ],
+       "why": "The metal roof shields the occupants."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6G1",
+   "topic": "Neighbours and complaints",
+   "levels": {
+    "F": {
+     "note": "Interference can cause neighbour disputes. The RSGB publishes EMC leaflets and its EMC Committee gives advice. Ofcom deals with cases of interference.",
+     "q": [
+      {
+       "text": "Who can give advice on EMC problems?",
+       "choices": [
+        "The RSGB EMC Committee",
+        "The local council's parking department",
+        "The vehicle manufacturer",
+        "Nobody"
+       ],
+       "why": "The RSGB provides EMC advice and leaflets."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Handle complaints courteously and helpfully. Check whether your station is the cause (using logs and tests), check your own installation first, suggest remedies such as filters, and involve the RSGB or Ofcom if needed.",
+     "q": [
+      {
+       "text": "A neighbour complains of interference. What should you do first?",
+       "choices": [
+        "Respond politely and check whether your station is the cause",
+        "Deny it",
+        "Tell them to complain to Ofcom",
+        "Increase power to prove it's not you"
+       ],
+       "why": "A cooperative, systematic approach works best."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "6G2",
+   "topic": "Logs help with complaints",
+   "levels": {
+    "F": {
+     "note": "A log of your transmissions helps enormously with interference complaints. Ideally the complainant keeps a log of when the interference happens too, so the two can be compared.",
+     "q": [
+      {
+       "text": "Why is it helpful for both you and the complainant to keep logs?",
+       "choices": [
+        "The times can be compared to see if you're the cause",
+        "It's legally required for both",
+        "To prove the TV is faulty",
+        "To calculate SWR"
+       ],
+       "why": "Matching times shows whether your transmissions are responsible."
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

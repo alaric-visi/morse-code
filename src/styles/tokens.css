@@ -1,0 +1,193 @@
+/*
+ * Morse Code design tokens — the only place raw colours live (scripts/check-tokens.mjs
+ * enforces it). Direction: "signal room" — warm paper, brass and lacquered wood by
+ * day; a dark bench lit by an amber lamp at night.
+ *
+ * Everything is namespaced --mc-* and scoped to .mc-root so the app can sit inside
+ * another site without its styles leaking either way.
+ */
+
+.mc-root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --mc-paper: #f3ecde;
+  --mc-surface: #fbf7ef;
+  --mc-well: #ebe2cf;
+  --mc-line: #d6c9b0;
+  --mc-line-strong: #8f7c60;
+
+  /* Ink */
+  --mc-ink: #1d1812;
+  --mc-ink-2: #574c3d;
+  --mc-ink-3: #6b5d4a;
+
+  /* Brass: the interactive accent */
+  --mc-brass: #7c5113;
+  --mc-brass-hover: #66420f;
+  --mc-on-brass: #fff8ea;
+  --mc-brass-hi: #c9a04f;
+  --mc-on-brass-hi: #241707;
+  --mc-brass-lo: #8f6a2a;
+  /* Polished brass, for gradients: highlight → body → shadow. */
+  --mc-brass-shine: #fbe7ae;
+  --mc-brass-mid: #b8862c;
+  --mc-brass-deep: #5e3d0c;
+
+  /* Wood: instrument bases and panel trim */
+  --mc-wood: #3d2718;
+  --mc-wood-hi: #6b4528;
+  --mc-wood-ink: #f3e6cf;
+
+  /* Signal */
+  --mc-warn: #a42b1d;
+  /* Highlights drawn on light surfaces (lit pills, ruler, tree path). */
+  --mc-lit-ink: #9a6410;
+  /* Text fields */
+  --mc-input-bg: #fffaf0;
+  --mc-current-bg: rgba(201, 160, 79, 0.24);
+  --mc-done-ink: #8a7a62;
+
+  /* Sequential ramp (mastery, heat map): one hue, light → dark, with ink for each step. */
+  --mc-seq-0: #ebe2cf;
+  --mc-seq-1: #f0dcae;
+  --mc-seq-2: #dcb565;
+  --mc-seq-3: #b8862c;
+  --mc-seq-4: #6f480f;
+  --mc-seq-ink-0: #574c3d;
+  --mc-seq-ink-1: #1d1812;
+  --mc-seq-ink-2: #1d1812;
+  --mc-seq-ink-3: #1d1812;
+  --mc-seq-ink-4: #fff8ea;
+
+  /* Lamp */
+  --mc-lamp: #ffb43f;
+  --mc-lamp-core: #fff3d1;
+  --mc-lamp-glow: rgba(255, 170, 50, 0.55);
+  --mc-lamp-off: #d4c6ab;
+  --mc-lamp-off-core: #e8dcc4;
+
+  /* Paper tape (an inker's strip) */
+  --mc-tape: #fffaf0;
+  --mc-tape-edge: #e0d3b9;
+  --mc-tape-ink: #1e2f4d;
+  --mc-tape-preview: rgba(30, 47, 77, 0.16);
+  --mc-tape-pen: #a42b1d;
+  --mc-tape-text: #3a3a48;
+  --mc-tape-text-dim: #6a6458;
+
+  /* Scope screen — a dark CRT in both themes */
+  --mc-scope-bg: #16130e;
+  --mc-scope-grid: rgba(255, 191, 85, 0.14);
+  --mc-scope-trace: #ffbf55;
+
+  /* Shadows */
+  --mc-shadow-1: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 1px 2px rgba(61, 39, 24, 0.12);
+  --mc-shadow-2: 0 10px 30px -12px rgba(61, 39, 24, 0.35);
+  --mc-shadow-inset: inset 0 2px 4px rgba(61, 39, 24, 0.12);
+  --mc-shadow-thumb: 0 1px 3px rgba(61, 39, 24, 0.35);
+
+  /* Type */
+  --mc-font-display: 'Fraunces Variable', 'Iowan Old Style', Georgia, serif;
+  --mc-font-ui: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mc-font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --mc-text-xs: 0.75rem;
+  --mc-text-sm: 0.875rem;
+  --mc-text-md: 1rem;
+  --mc-text-lg: 1.25rem;
+  --mc-text-xl: 1.75rem;
+  --mc-text-2xl: clamp(2rem, 4vw, 2.75rem);
+
+  /* Space, shape */
+  --mc-space-1: 4px;
+  --mc-space-2: 8px;
+  --mc-space-3: 12px;
+  --mc-space-4: 16px;
+  --mc-space-5: 24px;
+  --mc-space-6: 32px;
+  --mc-space-7: 48px;
+  --mc-radius-sm: 6px;
+  --mc-radius: 10px;
+  --mc-radius-lg: 16px;
+  --mc-radius-pill: 999px;
+
+  /* Motion */
+  --mc-dur-fast: 120ms;
+  --mc-dur: 220ms;
+  --mc-dur-slow: 420ms;
+  --mc-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* A gently under-damped spring, sampled. */
+  --mc-ease-spring: linear(0, 0.06 3%, 0.23 6.5%, 0.73 14%, 0.97 19%, 1.07 23%, 1.1 27%, 1.08 32%, 1.02 40%, 0.99 48%, 0.995 60%, 1);
+  /* Incandescent filament: quick to warm, slower to cool. */
+  --mc-lamp-warm: 28ms;
+  --mc-lamp-cool: 90ms;
+}
+
+.mc-root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --mc-paper: #110e0a;
+  --mc-surface: #1b1712;
+  --mc-well: #0c0a07;
+  --mc-line: #352d22;
+  --mc-line-strong: #7d6c53;
+
+  --mc-ink: #f1e8d7;
+  --mc-ink-2: #bcae96;
+  --mc-ink-3: #8d8069;
+
+  --mc-brass: #e2b766;
+  --mc-brass-hover: #edc985;
+  --mc-on-brass: #1a1206;
+  --mc-brass-hi: #c99a45;
+  --mc-on-brass-hi: #1a1206;
+  --mc-brass-lo: #7d5c25;
+  --mc-brass-shine: #f5d993;
+  --mc-brass-mid: #b48635;
+  --mc-brass-deep: #4a300c;
+
+  --mc-wood: #2b1c11;
+  --mc-wood-hi: #4a311d;
+  --mc-wood-ink: #ead9bb;
+
+  --mc-warn: #ff8b73;
+  --mc-lit-ink: #e9bf6a;
+  --mc-input-bg: #0c0a07;
+  --mc-current-bg: rgba(226, 183, 102, 0.16);
+  --mc-done-ink: #8d8069;
+
+  --mc-seq-0: #201b14;
+  --mc-seq-1: #3b2f1c;
+  --mc-seq-2: #6c5226;
+  --mc-seq-3: #a77f36;
+  --mc-seq-4: #e8c071;
+  --mc-seq-ink-0: #9d907a;
+  --mc-seq-ink-1: #f1e8d7;
+  --mc-seq-ink-2: #f1e8d7;
+  --mc-seq-ink-3: #1a1206;
+  --mc-seq-ink-4: #1a1206;
+  --mc-lamp: #ffbe4d;
+  --mc-lamp-core: #fff4d6;
+  --mc-lamp-glow: rgba(255, 176, 60, 0.6);
+  --mc-lamp-off: #2c251c;
+  --mc-lamp-off-core: #3a3125;
+
+  --mc-tape: #e8dcc5;
+  --mc-tape-edge: #b9a888;
+  --mc-tape-ink: #1a2740;
+  --mc-tape-preview: rgba(26, 39, 64, 0.2);
+  --mc-tape-pen: #a42b1d;
+  --mc-tape-text: #2b2f3d;
+  --mc-tape-text-dim: #5c5446;
+
+  --mc-scope-bg: #0b0906;
+
+  --mc-shadow-1: 0 1px 0 rgba(255, 240, 210, 0.05) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+  --mc-shadow-2: 0 14px 36px -14px rgba(0, 0, 0, 0.8);
+  --mc-shadow-inset: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+  --mc-shadow-thumb: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Standalone page: let the document background follow the app theme. */
+html[data-mc-theme='light'] { background: #f3ecde; }
+html[data-mc-theme='dark'] { background: #110e0a; }

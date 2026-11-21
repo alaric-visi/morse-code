@@ -1,0 +1,512 @@
+{
+ "about": "Callsign prefixes by country, from the ITU allocations, with typical local formats, CQ zone and continent. Countries that span several CQ zones (USA, Canada, Australia) are refined by call-area digit in zones.ts.",
+ "countries": [
+  {
+   "country": "England",
+   "prefixes": [
+    "G",
+    "M",
+    "2E"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "LONDON",
+    "LEEDS",
+    "BRISTOL",
+    "YORK",
+    "OXFORD",
+    "NORWICH",
+    "EXETER"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Scotland",
+   "prefixes": [
+    "GM",
+    "MM"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "GLASGOW",
+    "EDINBURGH",
+    "ABERDEEN",
+    "INVERNESS"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Wales",
+   "prefixes": [
+    "GW",
+    "MW"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "CARDIFF",
+    "SWANSEA",
+    "BANGOR"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Northern Ireland",
+   "prefixes": [
+    "GI",
+    "MI"
+   ],
+   "suffix": [
+    3
+   ],
+   "cities": [
+    "BELFAST",
+    "DERRY"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Isle of Man",
+   "prefixes": [
+    "GD",
+    "MD"
+   ],
+   "suffix": [
+    3
+   ],
+   "cities": [
+    "DOUGLAS"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Ireland",
+   "prefixes": [
+    "EI"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "DUBLIN",
+    "CORK",
+    "GALWAY"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "France",
+   "prefixes": [
+    "F"
+   ],
+   "suffix": [
+    3
+   ],
+   "cities": [
+    "PARIS",
+    "LYON",
+    "NANTES",
+    "BREST"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Germany",
+   "prefixes": [
+    "DL",
+    "DJ",
+    "DK",
+    "DF"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "BERLIN",
+    "MUNICH",
+    "HAMBURG",
+    "BONN"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Netherlands",
+   "prefixes": [
+    "PA",
+    "PD",
+    "PE"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "UTRECHT",
+    "LEIDEN",
+    "DELFT"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Belgium",
+   "prefixes": [
+    "ON"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "GHENT",
+    "BRUGES",
+    "LIEGE"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Spain",
+   "prefixes": [
+    "EA",
+    "EB"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "MADRID",
+    "VALENCIA",
+    "SEVILLE"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Italy",
+   "prefixes": [
+    "I",
+    "IK",
+    "IZ"
+   ],
+   "suffix": [
+    3
+   ],
+   "cities": [
+    "ROME",
+    "MILAN",
+    "TURIN",
+    "GENOA"
+   ],
+   "zone": 15,
+   "continent": "EU"
+  },
+  {
+   "country": "Switzerland",
+   "prefixes": [
+    "HB9"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "noDigit": true,
+   "cities": [
+    "BERN",
+    "ZURICH",
+    "GENEVA"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Denmark",
+   "prefixes": [
+    "OZ"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "AARHUS",
+    "ODENSE"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Sweden",
+   "prefixes": [
+    "SM",
+    "SA"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "UPPSALA",
+    "MALMO",
+    "LUND"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Norway",
+   "prefixes": [
+    "LA",
+    "LB"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "OSLO",
+    "BERGEN",
+    "TROMSO"
+   ],
+   "zone": 14,
+   "continent": "EU"
+  },
+  {
+   "country": "Finland",
+   "prefixes": [
+    "OH"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "HELSINKI",
+    "TURKU",
+    "OULU"
+   ],
+   "zone": 15,
+   "continent": "EU"
+  },
+  {
+   "country": "Poland",
+   "prefixes": [
+    "SP",
+    "SQ"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "KRAKOW",
+    "GDANSK",
+    "POZNAN"
+   ],
+   "zone": 15,
+   "continent": "EU"
+  },
+  {
+   "country": "Czech Republic",
+   "prefixes": [
+    "OK"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "PRAGUE",
+    "BRNO"
+   ],
+   "zone": 15,
+   "continent": "EU"
+  },
+  {
+   "country": "Ukraine",
+   "prefixes": [
+    "UR",
+    "UT",
+    "US"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "KYIV",
+    "LVIV",
+    "ODESA"
+   ],
+   "zone": 16,
+   "continent": "EU"
+  },
+  {
+   "country": "USA",
+   "prefixes": [
+    "K",
+    "W",
+    "N",
+    "AA",
+    "KB",
+    "WA"
+   ],
+   "suffix": [
+    1,
+    2,
+    3
+   ],
+   "cities": [
+    "BOSTON",
+    "DENVER",
+    "AUSTIN",
+    "SEATTLE",
+    "OHIO",
+    "MAINE"
+   ],
+   "zone": 5,
+   "continent": "NA"
+  },
+  {
+   "country": "Canada",
+   "prefixes": [
+    "VE",
+    "VA"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "OTTAWA",
+    "TORONTO",
+    "HALIFAX",
+    "CALGARY"
+   ],
+   "zone": 5,
+   "continent": "NA"
+  },
+  {
+   "country": "Japan",
+   "prefixes": [
+    "JA",
+    "JH",
+    "JR",
+    "JE"
+   ],
+   "suffix": [
+    3
+   ],
+   "cities": [
+    "TOKYO",
+    "OSAKA",
+    "KOBE",
+    "SAPPORO"
+   ],
+   "zone": 25,
+   "continent": "AS"
+  },
+  {
+   "country": "Australia",
+   "prefixes": [
+    "VK"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "SYDNEY",
+    "PERTH",
+    "HOBART"
+   ],
+   "zone": 30,
+   "continent": "OC"
+  },
+  {
+   "country": "New Zealand",
+   "prefixes": [
+    "ZL"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "AUCKLAND",
+    "NELSON"
+   ],
+   "zone": 32,
+   "continent": "OC"
+  },
+  {
+   "country": "South Africa",
+   "prefixes": [
+    "ZS"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "DURBAN",
+    "PRETORIA"
+   ],
+   "zone": 38,
+   "continent": "AF"
+  },
+  {
+   "country": "Brazil",
+   "prefixes": [
+    "PY",
+    "PU"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "RIO",
+    "RECIFE",
+    "SANTOS"
+   ],
+   "zone": 11,
+   "continent": "SA"
+  },
+  {
+   "country": "Argentina",
+   "prefixes": [
+    "LU"
+   ],
+   "suffix": [
+    2,
+    3
+   ],
+   "cities": [
+    "CORDOBA",
+    "ROSARIO"
+   ],
+   "zone": 13,
+   "continent": "SA"
+  }
+ ]
+}

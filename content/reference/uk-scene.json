@@ -1,0 +1,34 @@
+{
+  "about": "Where UK CW operators meet: the contests, the clubs, and the portable schemes. Dates follow each organiser’s usual pattern; check their own pages for this year’s calendar and rules.",
+  "groups": [
+    {
+      "title": "RSGB contests with CW",
+      "items": [
+        { "name": "80 m Club Championship", "when": "February to July, Monday, Wednesday and Thursday evenings", "text": "Ninety-minute evening sessions on 80 m, running since 2004, with separate CW, SSB and data sessions and points for your club. Exchange: report and serial number. Sections for QRP (up to 10 W) and low power (up to 100 W). A friendly first contest.", "try": "contest" },
+        { "name": "Autumn Series", "when": "September to November, evenings", "text": "Nine ninety-minute sessions (three each of SSB, CW and data) running since 2017. The CW sessions include a section for speeds up to 15 WPM. Exchange: report and serial number.", "try": "contest" },
+        { "name": "AFS Team Contest (CW)", "when": "January", "text": "The Affiliated Societies contest on 80 and 40 m, where clubs enter teams. Exchange: report and a three-figure serial number from 001. There’s a slow ‘QRS corral’ for 10 to 20 WPM.", "try": "contest" },
+        { "name": "1.8 MHz contests", "when": "February and November", "text": "Two CW-only Top Band contests on 160 m." },
+        { "name": "Commonwealth Contest (BERU)", "when": "March", "text": "A CW contest between stations in the Commonwealth, on 80 to 10 m, with roots going back to the 1930s." },
+        { "name": "UK/EI DX Contest (CW)", "when": "April", "text": "UK and Irish stations work the world on 80 to 10 m." },
+        { "name": "National Field Day (CW)", "when": "First weekend of June", "text": "Twenty-four hours of portable CW from 160 to 10 m, usually run by club teams in a field.", "try": "contest" },
+        { "name": "IOTA Contest", "when": "End of July", "text": "CW and SSB on 80 to 10 m, working Islands on the Air. Island stations are worth extra." }
+      ]
+    },
+    {
+      "title": "Clubs",
+      "items": [
+        { "name": "FISTS CW Club", "when": "Since 1987", "text": "Founded by George Longden, G3ZQS, to keep Morse alive. Members swap name, QTH, RST and membership number; contacts count toward FISTS awards. The monthly Ladder runs on Sundays (14:00–16:00 and 18:00–20:00 UTC). Activity is often found around 14.058, 7.028 and 3.558 MHz.", "url": "https://fists.co.uk/" },
+        { "name": "G-QRP Club", "when": "Since 1974", "text": "Founded by the Rev. George Dobbs, G3RJV, for low-power operating and home construction. Its quarterly magazine is SPRAT, and the club call is G5LOW.", "url": "https://www.gqrp.com/" },
+        { "name": "CWops", "when": "Worldwide", "text": "A club for keen CW operators. Its free CW Academy teaches Morse online. The weekly CWT sessions are one-hour sprints on Wednesdays at 13:00 and 19:00 UTC and Thursdays at 03:00 and 07:00 UTC; members send name and member number, others send name and location. Activity centres on .028 MHz up from each band edge (7.028, 14.028 and so on).", "url": "https://cwops.org/" }
+      ]
+    },
+    {
+      "title": "Portable",
+      "items": [
+        { "name": "Summits on the Air (SOTA)", "when": "Since 2002", "text": "Began in the UK. Carry a station to a hilltop and work hunters; four contacts make an activation count for points. Separate associations cover England, Scotland, Wales, Northern Ireland, the Isle of Man, Jersey and Guernsey. Most activators use CW and low power.", "url": "https://www.sota.org.uk/", "try": "activations" },
+        { "name": "Parks on the Air (POTA)", "when": "Worldwide", "text": "Operate from a listed park: ten contacts within one UTC day make a valid activation. Hunters work activators from home.", "url": "https://parksontheair.com/", "try": "activations" },
+        { "name": "World Wide Flora and Fauna (WWFF)", "when": "Worldwide", "text": "Similar to POTA, with more than 40,000 areas; an activation needs 44 contacts for the activator award. CW activity is often around 7.024, 10.124 and 14.044 MHz.", "url": "https://wwff.co/", "try": "activations" }
+      ]
+    }
+  ]
+}

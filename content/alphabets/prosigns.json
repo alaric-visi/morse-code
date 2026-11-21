@@ -1,0 +1,13 @@
+[
+  { "name": "AR", "code": ".-.-.", "meaning": "End of message" },
+  { "name": "AS", "code": ".-...", "meaning": "Wait" },
+  { "name": "BK", "code": "-...-.-", "meaning": "Break (back to you)" },
+  { "name": "BT", "code": "-...-", "meaning": "New paragraph / pause" },
+  { "name": "CL", "code": "-.-..-..", "meaning": "Closing station" },
+  { "name": "CT", "code": "-.-.-", "meaning": "Start of transmission (also KA)" },
+  { "name": "HH", "code": "........", "meaning": "Error (correction follows)" },
+  { "name": "KN", "code": "-.--.", "meaning": "Go ahead, named station only" },
+  { "name": "SK", "code": "...-.-", "meaning": "End of contact" },
+  { "name": "SN", "code": "...-.", "meaning": "Understood (also VE)" },
+  { "name": "SOS", "code": "...---...", "meaning": "Distress" }
+]

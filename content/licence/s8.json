@@ -1,0 +1,846 @@
+{
+ "section": 8,
+ "title": "Safety",
+ "items": [
+  {
+   "id": "8A1",
+   "topic": "Electrical hazards",
+   "levels": {
+    "F": {
+     "note": "High voltages can electrocute; high currents can overheat wiring and start fires.",
+     "q": [
+      {
+       "text": "What is the main risk from high currents?",
+       "choices": [
+        "Overheating and fire",
+        "Electrocution only",
+        "Radio interference only",
+        "None"
+       ],
+       "why": "High current heats conductors."
+      }
+     ]
+    },
+    "I": {
+     "note": "Large or high-voltage capacitors can hold a dangerous charge after switch-off. Discharge them before working on equipment. Bleeder resistors across them provide a leakage path.",
+     "q": [
+      {
+       "text": "Why must large capacitors be discharged before you work on a power supply?",
+       "choices": [
+        "They can hold a dangerous charge after switch-off",
+        "To test them",
+        "To reset the fuse",
+        "They can't be discharged"
+       ],
+       "why": "Stored charge can give a severe shock."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Lethal voltages may exist in equipment, and live circuits are exposed as soon as the case is removed.",
+     "q": [
+      {
+       "text": "When can lethal voltages become accessible in equipment?",
+       "choices": [
+        "As soon as the case is removed",
+        "Only when it's switched off",
+        "Only above 1 kW",
+        "Never in amateur equipment"
+       ],
+       "why": "The case is the protection."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A2",
+   "topic": "Earthing and PME",
+   "levels": {
+    "F": {
+     "note": "Never remove a safety earth. Earthing needs special care: consult a competent professional (an electrician) before changing earthing arrangements.",
+     "q": [
+      {
+       "text": "Who should you consult before changing your station's earthing?",
+       "choices": [
+        "A competent electrician",
+        "Ofcom",
+        "A neighbour",
+        "No one"
+       ],
+       "why": "Earthing errors can be dangerous."
+      }
+     ]
+    },
+    "Full": {
+     "note": "With Protective Multiple Earthing (PME), the consumer's main earth terminal is connected to the supply neutral. Under severe fault conditions this can put dangerous voltages on earthed metalwork, including a separately earthed radio station, risking fatal shock or fire. Follow the RSGB guidance and get professional advice before connecting an RF earth in a PME property.",
+     "q": [
+      {
+       "text": "Why is extra care needed with RF earths in a property with PME?",
+       "choices": [
+        "Faults can raise the earth to a dangerous voltage",
+        "PME doesn't use an earth",
+        "PME prevents interference",
+        "It doesn't matter"
+       ],
+       "why": "The earth is tied to neutral, which can rise under fault conditions."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A3",
+   "topic": "Wiring a mains plug",
+   "levels": {
+    "F": {
+     "note": "In a UK 3-pin plug: brown is live (to the fuse), blue is neutral, green-and-yellow is earth (top pin). The cord grip must hold the outer sheath.",
+     "q": [
+      {
+       "text": "In a UK mains plug, which wire goes to the fuse?",
+       "choices": [
+        "Brown (live)",
+        "Blue (neutral)",
+        "Green and yellow (earth)",
+        "Any of them"
+       ],
+       "why": "The fuse is in the live."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A4",
+   "topic": "Fuses",
+   "levels": {
+    "F": {
+     "note": "Fit fuses as the manufacturer says. A fuse is a thin wire that melts and breaks the circuit when too much current flows. If one blows, find out why before replacing it.",
+     "q": [
+      {
+       "text": "A fuse blows. What should you do?",
+       "choices": [
+        "Find the cause before replacing it",
+        "Fit a larger fuse",
+        "Replace it with wire",
+        "Ignore it"
+       ],
+       "why": "The fuse blew for a reason."
+      }
+     ]
+    },
+    "I": {
+     "note": "Fuses may be quick-blow or slow-blow (anti-surge) to cope with an initial surge; fit the type specified. Rate it correctly: without other guidance, just above the normal working current.",
+     "q": [
+      {
+       "text": "Equipment draws 2.5 A. Which fuse is most suitable without other guidance?",
+       "choices": [
+        "3 A",
+        "13 A",
+        "1 A",
+        "30 A"
+       ],
+       "why": "Just above normal current."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A5",
+   "topic": "RCBOs",
+   "levels": {
+    "F": {
+     "note": "An RCBO (residual current breaker with overcurrent protection) gives far better protection against electric shock than a fuse, which only protects against excess current. The RCBO trips if it detects current leaking to earth, such as through a person.",
+     "q": [
+      {
+       "text": "Why does an RCBO protect better against shock than a fuse?",
+       "choices": [
+        "It detects small currents leaking to earth",
+        "It's a bigger fuse",
+        "It limits voltage",
+        "It doesn't"
+       ],
+       "why": "An RCBO trips on an imbalance between live and neutral."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A6",
+   "topic": "Working on equipment",
+   "levels": {
+    "F": {
+     "note": "Only work inside equipment with the power disconnected, and follow the manufacturer's servicing instructions.",
+     "q": [
+      {
+       "text": "What should you do before opening a transceiver to work inside?",
+       "choices": [
+        "Disconnect the power",
+        "Turn the volume down",
+        "Transmit to check it",
+        "Nothing"
+       ],
+       "why": "Work only on unpowered equipment."
+      }
+     ]
+    },
+    "I": {
+     "note": "Only work on live equipment if there's no practical alternative and you fully understand the risks and precautions.",
+     "q": [
+      {
+       "text": "When is it acceptable to work on live equipment?",
+       "choices": [
+        "Only if it's impractical otherwise and the risks are understood",
+        "Whenever convenient",
+        "Always, with gloves",
+        "Never under any circumstances"
+       ],
+       "why": "Live work is a last resort."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Don't work on live equipment unless it isn't practicable to do otherwise, and take suitable precautions against shock (for example, one hand only, insulated tools, someone else present).",
+     "q": [
+      {
+       "text": "Which is a sensible precaution if live work can't be avoided?",
+       "choices": [
+        "Keep one hand away and use insulated tools",
+        "Work alone",
+        "Wear a metal watch",
+        "Stand on a damp floor"
+       ],
+       "why": "Reduce the chance of current crossing your body."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A7",
+   "topic": "Master switch; accidents",
+   "levels": {
+    "F": {
+     "note": "Control all equipment from a clearly marked master switch that others know about. In an electrical accident or fire, first switch off the power. Don't touch the casualty until they're clear of the supply; then call for help. Never use water on an electrical fire.",
+     "q": [
+      {
+       "text": "Someone has an electric shock in your shack. What do you do first?",
+       "choices": [
+        "Switch off the power",
+        "Pull them away by the hand",
+        "Throw water on them",
+        "Call them by name"
+       ],
+       "why": "Cut the supply first so you don't become a casualty too."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8A8",
+   "topic": "Batteries",
+   "levels": {
+    "F": {
+     "note": "Some batteries can supply very high currents, dangerous if short-circuited. Charge them as the manufacturer says. Lithium batteries in particular can catch fire or explode if damaged or charged wrongly. Fuse the battery lead close to the battery.",
+     "q": [
+      {
+       "text": "Which battery type is particularly prone to fire if mistreated?",
+       "choices": [
+        "Lithium",
+        "Alkaline AA",
+        "Zinc-carbon",
+        "Button cell"
+       ],
+       "why": "Lithium cells can go into thermal runaway."
+      }
+     ]
+    },
+    "I": {
+     "note": "Vehicle batteries supply very high currents that can start fires, and their acid is corrosive. Charging gives off explosive hydrogen, so ventilate well.",
+     "q": [
+      {
+       "text": "Why must lead-acid batteries be charged in a well-ventilated place?",
+       "choices": [
+        "They give off explosive hydrogen",
+        "They get cold",
+        "They give off oxygen only",
+        "They need cooling air for the charger"
+       ],
+       "why": "Hydrogen gas can explode."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B1",
+   "topic": "Eye protection with tools",
+   "levels": {
+    "F": {
+     "note": "Wear eye protection when using tools, to stop metal particles (swarf) damaging your eyes.",
+     "q": [
+      {
+       "text": "Why should you wear goggles when drilling metal?",
+       "choices": [
+        "To protect against swarf",
+        "To see better",
+        "To avoid RF burns",
+        "It's not needed"
+       ],
+       "why": "Flying metal particles can damage eyes."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B2",
+   "topic": "Hand and power tools",
+   "levels": {
+    "F": {
+     "note": "All tools, including power tools, can be dangerous: handle them with care and take sensible precautions.",
+     "q": [
+      {
+       "text": "Which tools need careful handling?",
+       "choices": [
+        "All tools, hand and power",
+        "Only power tools",
+        "Only saws",
+        "None"
+       ],
+       "why": "Any tool can cause injury."
+      }
+     ]
+    },
+    "I": {
+     "note": "Take care with screwdrivers, drills, saws and files. Keep your fingers behind the blade.",
+     "q": [
+      {
+       "text": "Where should your fingers be when using a craft knife?",
+       "choices": [
+        "Behind the blade",
+        "In front of the blade",
+        "Under the work",
+        "Anywhere"
+       ],
+       "why": "So a slip doesn't cut you."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B3",
+   "topic": "Securing work",
+   "levels": {
+    "I": {
+     "note": "Hold anything being drilled, sawn or filed securely in a vice or clamp so it can't slip or spin.",
+     "q": [
+      {
+       "text": "Why clamp a metal box before drilling it?",
+       "choices": [
+        "To stop it spinning or slipping",
+        "To make the hole bigger",
+        "To earth it",
+        "It's not needed"
+       ],
+       "why": "A spinning workpiece can injure."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B4",
+   "topic": "Chuck keys",
+   "levels": {
+    "I": {
+     "note": "Always remove chuck keys and locking keys before switching on a power tool, or they can be thrown out at high speed.",
+     "q": [
+      {
+       "text": "What must you do before starting a drill?",
+       "choices": [
+        "Remove the chuck key",
+        "Leave the chuck key in",
+        "Loosen the bit",
+        "Hold the work by hand"
+       ],
+       "why": "A key left in can be flung out."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B5",
+   "topic": "Centre punches",
+   "levels": {
+    "I": {
+     "note": "Mark a hole with a centre punch first, to stop the drill bit wandering.",
+     "q": [
+      {
+       "text": "Why use a centre punch before drilling?",
+       "choices": [
+        "To stop the bit slipping",
+        "To make the hole bigger",
+        "To earth the metal",
+        "To harden the metal"
+       ],
+       "why": "The dimple guides the bit."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B6",
+   "topic": "Pillar drills",
+   "levels": {
+    "I": {
+     "note": "A bench-mounted pillar drill is safer than a hand-held one: it's steadier, the work can be clamped to the table, and the drill can't twist out of your hands.",
+     "q": [
+      {
+       "text": "Why is a pillar drill safer than a hand drill?",
+       "choices": [
+        "It's steady and the work can be clamped",
+        "It's faster",
+        "It needs no guard",
+        "It's smaller"
+       ],
+       "why": "Better control and support."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8B7",
+   "topic": "Soldering safety",
+   "levels": {
+    "F": {
+     "note": "Wear eye protection when soldering, as solder and flux can spit. Keep the iron in its stand when not in use. Work in a well-ventilated area to avoid breathing flux fumes. Some solders contain lead, so wash your hands afterwards.",
+     "q": [
+      {
+       "text": "Why should a soldering area be well ventilated?",
+       "choices": [
+        "To avoid breathing flux fumes",
+        "To cool the iron",
+        "To make the solder flow",
+        "It doesn't need to be"
+       ],
+       "why": "Flux fumes are harmful."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8C1",
+   "topic": "Antenna work: help",
+   "levels": {
+    "F": {
+     "note": "Putting up antennas can be dangerous; have someone to help you. At least one adult should be present.",
+     "q": [
+      {
+       "text": "Why should you have help when putting up an antenna?",
+       "choices": [
+        "The work is potentially hazardous",
+        "It's required by Ofcom",
+        "To read the SWR",
+        "To hold the radio"
+       ],
+       "why": "Someone can assist and raise the alarm."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8C2",
+   "topic": "Ladders",
+   "levels": {
+    "F": {
+     "note": "Use a ladder at the correct angle: 4 up for every 1 out. Secure it so it can't slip, and don't overreach.",
+     "q": [
+      {
+       "text": "A ladder reaches 8 m up a wall. How far from the wall should its foot be?",
+       "choices": [
+        "2 m",
+        "4 m",
+        "1 m",
+        "8 m"
+       ],
+       "why": "4:1 ratio: 8 ÷ 4 = 2 m."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8C3",
+   "topic": "Working at height",
+   "levels": {
+    "F": {
+     "note": "Use a tool belt when working at height, to stop tools falling. Wear a hard hat when working at height or when others are working above you.",
+     "q": [
+      {
+       "text": "Who should wear a hard hat during antenna work?",
+       "choices": [
+        "Everyone, including those below",
+        "Only the person on the ladder",
+        "No one",
+        "Only children"
+       ],
+       "why": "Falling objects endanger people below."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8D1",
+   "topic": "RF exposure",
+   "levels": {
+    "F": {
+     "note": "The main health effect of RF exposure is heating of body tissue. The eyes are particularly vulnerable.",
+     "q": [
+      {
+       "text": "What is the main health effect of exposure to strong RF?",
+       "choices": [
+        "Heating of body tissue",
+        "Radioactivity",
+        "Hair loss",
+        "Magnetism"
+       ],
+       "why": "RF energy is absorbed as heat."
+      }
+     ]
+    },
+    "I": {
+     "note": "At 100 W, especially with a high-gain antenna, the EMF compliance distance can be several metres. When mobile, pedestrians may be within it; if they are, especially when you're stationary, stop transmitting.",
+     "q": [
+      {
+       "text": "You're parked transmitting at 100 W and someone walks right up to your mobile antenna. What should you do?",
+       "choices": [
+        "Stop transmitting",
+        "Increase power",
+        "Carry on",
+        "Tilt the antenna"
+       ],
+       "why": "They may be inside the compliance distance."
+      }
+     ]
+    },
+    "Full": {
+     "note": "ICNIRP publishes guidance on exposure to RF fields. Don't exceed the recommended levels, especially where the public have access.",
+     "q": [
+      {
+       "text": "Which body publishes guidance on RF exposure?",
+       "choices": [
+        "ICNIRP",
+        "IARU",
+        "The RSGB EMC Committee",
+        "ETSI"
+       ],
+       "why": "The International Commission on Non-Ionizing Radiation Protection."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8D2",
+   "topic": "Sources of guidance",
+   "levels": {
+    "F": {
+     "note": "Guidance on safe RF levels is available from government and international bodies: the UK Health Security Agency and ICNIRP.",
+     "q": [
+      {
+       "text": "Which UK body gives guidance on RF exposure?",
+       "choices": [
+        "The UK Health Security Agency",
+        "The DVLA",
+        "The Met Office",
+        "The RSGB contest committee"
+       ],
+       "why": "UKHSA (with ICNIRP)."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8D3",
+   "topic": "Waveguides and dishes",
+   "levels": {
+    "F": {
+     "note": "A waveguide is a metal tube carrying microwaves. Never look into one, or stand in front of a high-gain antenna, as it may be in use.",
+     "q": [
+      {
+       "text": "Why should you never look down a microwave waveguide?",
+       "choices": [
+        "It may be carrying power that can damage your eyes",
+        "It's dark inside",
+        "It's too narrow",
+        "It may be dusty"
+       ],
+       "why": "Eyes are particularly vulnerable to RF heating."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8D4",
+   "topic": "RF burns",
+   "levels": {
+    "F": {
+     "note": "Don't touch antennas or other conductors carrying RF while transmitting: they can cause painful burns. Mount antennas where people can't touch them by accident. (Low-power handhelds are an exception.)",
+     "q": [
+      {
+       "text": "Why should antennas be mounted out of reach?",
+       "choices": [
+        "Touching them while transmitting can cause RF burns",
+        "To improve SWR",
+        "To avoid theft",
+        "To reduce wind load"
+       ],
+       "why": "RF on the element can burn."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8E1",
+   "topic": "Lightning",
+   "levels": {
+    "F": {
+     "note": "Very high antennas may need lightning protection. The local authority's building control department may be able to advise.",
+     "q": [
+      {
+       "text": "Who may be able to advise on lightning protection for a tall mast?",
+       "choices": [
+        "The local authority building department",
+        "Ofcom",
+        "The Met Office",
+        "Your insurer only"
+       ],
+       "why": "Building control can advise."
+      }
+     ]
+    },
+    "I": {
+     "note": "Gas-discharge arrestors, spark gaps and bleed resistors give limited protection against static build-up on antennas. They won't survive a direct strike.",
+     "q": [
+      {
+       "text": "What does a gas-discharge arrestor protect against?",
+       "choices": [
+        "Static build-up on the antenna",
+        "A direct lightning strike",
+        "High SWR",
+        "Mains surges"
+       ],
+       "why": "Limited protection from static charge only."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Thunderclouds carry heavy static charges, which can ionise the air into a low-resistance path to ground: lightning. A strike endangers people, buildings and equipment. Disconnect and earth antennas when storms approach.",
+     "q": [
+      {
+       "text": "What should you do with your antennas when a thunderstorm approaches?",
+       "choices": [
+        "Disconnect them from the equipment and earth them",
+        "Keep operating",
+        "Raise the mast",
+        "Increase power"
+       ],
+       "why": "Reduces the risk to you and the equipment."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F1",
+   "topic": "Overhead power lines",
+   "levels": {
+    "F": {
+     "note": "Site and secure masts, wires and antennas properly. Never put them near overhead power lines: contact, or arcing from a line, can kill.",
+     "q": [
+      {
+       "text": "Why must antennas never be put near overhead power lines?",
+       "choices": [
+        "Contact or arcing can be fatal",
+        "They cause interference",
+        "They block the signal",
+        "It's against the band plan"
+       ],
+       "why": "Power lines carry lethal voltages."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F2",
+   "topic": "Trailing cables",
+   "levels": {
+    "F": {
+     "note": "Don't leave cables trailing across the floor: they're trip hazards and their insulation can fray.",
+     "q": [
+      {
+       "text": "Why avoid cables across the floor?",
+       "choices": [
+        "They're trip hazards and insulation can fray",
+        "They cause SWR",
+        "They pick up RF",
+        "They're untidy only"
+       ],
+       "why": "Safety, not looks."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F3",
+   "topic": "Headphones",
+   "levels": {
+    "F": {
+     "note": "Excessive volume in headphones can damage your hearing.",
+     "q": [
+      {
+       "text": "What risk comes from loud headphones?",
+       "choices": [
+        "Hearing damage",
+        "RF burns",
+        "Electric shock",
+        "None"
+       ],
+       "why": "Prolonged loud audio damages hearing."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F4",
+   "topic": "Portable and outdoor operation",
+   "levels": {
+    "F": {
+     "note": "Operating outdoors or in temporary premises brings new hazards: temporary mains connections, trailing cables, damp ground. Do a risk assessment, route cables safely and use RCD protection.",
+     "q": [
+      {
+       "text": "Which is a sensible precaution when operating portable outdoors?",
+       "choices": [
+        "A risk assessment and RCD protection on mains",
+        "Running cables across paths",
+        "Using indoor extension leads on wet ground",
+        "None needed"
+       ],
+       "why": "Outdoor sites have extra electrical and trip hazards."
+      }
+     ]
+    },
+    "I": {
+     "note": "Hazards include overhead power lines, inadequate supplies, trailing cables, damp ground and high field strengths. Do a site survey and risk assessment, keep antennas away from the public and power lines, and use RCDs.",
+     "q": [
+      {
+       "text": "What should you do first when setting up a field station?",
+       "choices": [
+        "Survey the site and assess the risks",
+        "Raise the mast",
+        "Start the generator",
+        "Call CQ"
+       ],
+       "why": "Identify hazards before starting."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F5",
+   "topic": "Everyone's responsibility; mobile hazards",
+   "levels": {
+    "F": {
+     "note": "Safety is everyone's job. Watch for anything unsafe, warn others and report it, in your own shack and with visitors too.",
+     "q": [
+      {
+       "text": "You spot a frayed mains lead at a club meeting. What should you do?",
+       "choices": [
+        "Warn others and report it",
+        "Ignore it",
+        "Fix it while it's live",
+        "Cover it with a mat"
+       ],
+       "why": "Safety is everyone's responsibility."
+      }
+     ]
+    },
+    "Full": {
+     "note": "Operating mobile or maritime mobile brings hazards: insecure equipment, long or flexible antennas, accidental shorts to earth, and distraction from driving. Secure everything and don't let radio distract you.",
+     "q": [
+      {
+       "text": "Which is a hazard particular to mobile operation?",
+       "choices": [
+        "Distraction from driving",
+        "Overhead power lines in the shack",
+        "Waveguides",
+        "Ladder angle"
+       ],
+       "why": "Driving safely comes first."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F6",
+   "topic": "Risk assessment",
+   "levels": {
+    "Full": {
+     "note": "Carry out a risk assessment whenever an activity could harm you or others: identify the hazards, judge how likely and how severe harm would be, and decide how to reduce the risk.",
+     "q": [
+      {
+       "text": "What does a risk assessment consider?",
+       "choices": [
+        "How likely harm is and how severe it would be",
+        "Only the cost",
+        "Only the weather",
+        "The licence class"
+       ],
+       "why": "Likelihood and severity determine the precautions."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "8F7",
+   "topic": "Generators",
+   "levels": {
+    "Full": {
+     "note": "Generators bring risks: earthing must be correct; fuel must be stored safely away from the generator; never refuel while it's running or hot; keep it in the open because of the exhaust fumes.",
+     "q": [
+      {
+       "text": "When should a generator be refuelled?",
+       "choices": [
+        "When stopped and cooled",
+        "While running",
+        "While hot",
+        "Any time"
+       ],
+       "why": "Fuel on hot parts can ignite."
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

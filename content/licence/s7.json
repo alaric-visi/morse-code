@@ -1,0 +1,86 @@
+{
+  "section": 7,
+  "title": "Good operating practices and procedures",
+  "items": [
+    { "id": "7A1", "topic": "Listen first; split operation", "levels": {
+      "F": { "note": "Always listen before transmitting, then ask if the frequency is in use (on CW, QRL?). Someone may be using it whom you can't hear.",
+        "q": [{ "text": "What should you do before calling CQ on a frequency that sounds clear?", "choices": ["Ask if it's in use", "Call immediately", "Increase power", "Send a long carrier"], "why": "There may be a station you can't hear." }] },
+      "Full": { "note": "Rare DX stations often work split: transmitting on one frequency and listening on another, so the callers don't drown out the DX station.",
+        "q": [{ "text": "Why do DX stations often operate split?", "choices": ["So callers don't cover their transmissions", "To use less power", "Because the band plan requires it", "To confuse other stations"], "why": "Keeping callers off their frequency keeps the DX station readable." }] } } },
+    { "id": "7A2", "topic": "Calling CQ", "levels": {
+      "F": { "note": "A CQ call on SSB: 'CQ CQ CQ, this is M7ABC, M7ABC, M7ABC calling CQ and standing by.' On FM, call on the calling channel, then move to a working frequency once in contact.",
+        "q": [{ "text": "What does 'CQ' mean?", "choices": ["A general call to any station", "A call to one particular station", "Stop transmitting", "Change frequency"], "why": "CQ invites any station to reply." }] } } },
+    { "id": "7A3", "topic": "Calling channels; prefixes", "levels": {
+      "F": { "note": "On VHF/UHF, move off the calling channel once you've made contact, so others can use it. A centre of activity is a frequency where a particular mode or activity tends to gather.",
+        "q": [{ "text": "You've made contact on the 2 m FM calling channel. What next?", "choices": ["Move to a working frequency", "Stay on the calling channel", "Change to SSB", "Close down"], "why": "The calling channel is for making contact only." }] },
+      "I": { "note": "Common prefixes: EI Ireland, F France, I Italy, JA Japan, PA Netherlands, VE Canada, VK Australia, W USA, ZL New Zealand.",
+        "q": [{ "text": "Which country uses the prefix VK?", "choices": ["Australia", "Canada", "New Zealand", "Japan"], "why": "VK is Australia; VE Canada; ZL New Zealand; JA Japan." }] } } },
+    { "id": "7A4", "topic": "Suffixes", "levels": {
+      "F": { "note": "Optional suffixes: /P portable, /M mobile (in a vehicle), /MM maritime mobile (on a ship), /A at an alternative address.",
+        "q": [{ "text": "What does /MM after a call sign mean?", "choices": ["Maritime mobile", "Mobile on a motorbike", "Multiple operators", "Mountain portable"], "why": "MM is maritime mobile." }] } } },
+    { "id": "7A5", "topic": "Phonetics; awards and contests", "levels": {
+      "F": { "note": "Use the international phonetic alphabet: Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, November, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu.",
+        "q": [{ "text": "How would you spell M7ABC phonetically?", "choices": ["Mike Seven Alfa Bravo Charlie", "Mary Seven Apple Bob Charlie", "Mike Seven Able Baker Charlie", "Metro Seven Alpha Beta Gamma"], "why": "Use the international phonetic alphabet." }] },
+      "I": { "note": "Awards recognise working continents, countries, islands, prefixes or locator squares, sometimes on particular bands or at low power. Contests involve exchanging set information, such as a report and serial number or location.",
+        "q": [{ "text": "What is typically exchanged in a contest?", "choices": ["A signal report and serial number (or other set information)", "Full name and address", "Weather details", "Equipment lists"], "why": "Contests have a defined exchange." }] } } },
+    { "id": "7A6", "topic": "Logging", "levels": {
+      "F": { "note": "Keeping a log is good practice. Use UTC so times mean the same everywhere. Record at least date, time, mode, frequency/band and the call sign of the station worked, which is needed for QSL cards and contests.",
+        "q": [{ "text": "Why is UTC used for log times?", "choices": ["It's the same everywhere in the world", "It's required by the radio", "It's the local time in London", "It avoids recording the date"], "why": "A common time standard avoids confusion between time zones." }] } } },
+    { "id": "7A7", "topic": "Music and bad language", "levels": {
+      "F": { "note": "Transmitting music, and offensive or threatening language, are unacceptable. If you hear it, don't respond on air; note the details and report it if appropriate.",
+        "q": [{ "text": "How should you respond to a station using offensive language?", "choices": ["Don't respond on air; note details and report if appropriate", "Argue with them", "Jam them", "Play music over them"], "why": "Engaging only encourages them." }] } } },
+    { "id": "7A8", "topic": "Testing your station", "levels": {
+      "F": { "note": "Carry out tests to make sure your station isn't causing undue interference to other radio users.",
+        "q": [{ "text": "Why should you test your station for interference?", "choices": ["To make sure you aren't causing undue interference", "To set your call sign", "To increase range", "It isn't necessary"], "why": "Avoiding interference is a licence requirement." }] } } },
+    { "id": "7B1", "topic": "Band plans", "levels": {
+      "F": { "note": "Band plans divide each band by mode and use so different activities don't clash. They show calling frequencies and recommended modes. Narrow modes such as CW are at the bottom of most bands. Below 10 MHz LSB is normally used, above it USB.",
+        "q": [{ "text": "Where in most bands are narrow-band modes such as CW found?", "choices": ["At the lower end", "At the top end", "In the middle", "Anywhere"], "why": "Band plans put narrow modes at the bottom." },
+              { "text": "Which sideband is normally used on 40 m?", "choices": ["LSB", "USB", "Both together", "Neither"], "why": "LSB below 10 MHz." }] },
+      "I": { "note": "Band plans are produced by the IARU (and published by the RSGB). They say: no SSB on 10 MHz (30 m); no contests on 5 MHz (60 m), 10, 18 and 24 MHz; avoid terrestrial use of satellite frequencies.",
+        "q": [{ "text": "Which band must not be used for SSB, according to the band plan?", "choices": ["30 m (10 MHz)", "20 m", "40 m", "80 m"], "why": "30 m is for narrow modes only." }] },
+      "Full": { "note": "Read a band plan for centres of activity, bandwidths and recommended modes, particularly the 5 MHz (60 m) and 472 kHz (600 m) bands, which have special rules.",
+        "q": [{ "text": "What does a band plan's 'maximum bandwidth' column tell you?", "choices": ["The widest signal recommended in that segment", "The maximum power", "How long you may transmit", "The antenna size"], "why": "Each segment has a recommended maximum bandwidth." }] } } },
+    { "id": "7B2", "topic": "Allocations and other users", "levels": {
+      "F": { "note": "The spectrum is allocated to services such as broadcasting, aeronautical, maritime and amateur. Some amateur bands are shared with, or next to, other users, so stay in band.",
+        "q": [{ "text": "Why must you take care at the edges of amateur bands?", "choices": ["Other services use the adjacent frequencies", "The edges are reserved for contests", "Power must be higher there", "It doesn't matter"], "why": "Transmitting outside the band interferes with other services." }] },
+      "Full": { "note": "Band plans in other countries and IARU regions may differ from the UK's.",
+        "q": [{ "text": "Why might a US station transmit SSB where the UK band plan expects CW?", "choices": ["Band plans differ between countries and regions", "They're breaking the rules", "US stations can't use CW", "The ionosphere moves signals"], "why": "Allocations and band plans aren't uniform worldwide." }] } } },
+    { "id": "7C1", "topic": "Repeaters", "levels": {
+      "F": { "note": "Repeaters mainly extend the range of mobile stations. They receive on one frequency and retransmit on another (the offset), because they can't do both on the same frequency. A CTCSS tone opens the repeater, and different repeaters use different tones to avoid opening neighbours. A time-out encourages short overs.",
+        "q": [{ "text": "Why does a repeater use different transmit and receive frequencies?", "choices": ["It can't receive and transmit on the same frequency at once", "To save power", "To confuse users", "It's a legal requirement for all stations"], "why": "The offset lets it receive and retransmit simultaneously." },
+              { "text": "What is CTCSS used for on a repeater?", "choices": ["To open the repeater with a sub-audible tone", "To identify the user", "To encrypt speech", "To reduce power"], "why": "The tone keeps other signals from opening it." }] } } },
+    { "id": "7C2", "topic": "FM and digital voice sharing channels", "levels": {
+      "F": { "note": "Analogue FM and digital voice users should check the channel isn't in use by other modes before transmitting; such checks aren't 100% reliable.",
+        "q": [{ "text": "Why should a digital-voice user check a channel before transmitting?", "choices": ["An analogue user may be on it", "Digital voice can't be heard", "It's encrypted", "To set the CTCSS tone"], "why": "Different modes can't always hear each other." }] } } },
+    { "id": "7D1", "topic": "Connecting other devices", "levels": {
+      "F": { "note": "Connecting anything other than the supplied microphone (such as a computer interface) needs the push-to-talk line to work properly and the audio levels set correctly.",
+        "q": [{ "text": "What must you get right when connecting a computer to a transmitter?", "choices": ["The PTT control and audio levels", "The colour of the cable", "The CTCSS tone", "The S-meter"], "why": "Wrong levels cause distortion and splatter." }] } } },
+    { "id": "7E1", "topic": "Q-codes", "levels": {
+      "I": { "note": "QRM man-made interference; QRN natural noise; QRO increase power; QRP reduce power (low power); QRT stop sending; QSB fading; QSL acknowledge receipt (and the card); QSO a contact; QSY change frequency; QTH location.",
+        "q": [{ "text": "What does QSY mean?", "choices": ["Change frequency", "Fading", "Location", "Stop sending"], "why": "QSY: shall I change to another frequency?" },
+              { "text": "Which Q-code means natural noise such as static?", "choices": ["QRN", "QRM", "QSB", "QRT"], "why": "QRN: atmospherics; QRM: man-made." }] } } },
+    { "id": "7E2", "topic": "RST reports", "levels": {
+      "F": { "note": "RST: Readability 1–5, Strength 1–9, Tone 1–9 (Tone is for CW and data only). Higher is better, so 599 is the best CW report and 59 the best voice report.",
+        "q": [{ "text": "In an RST report, what is the highest readability?", "choices": ["5", "9", "1", "10"], "why": "Readability runs from 1 to 5." }] } } },
+    { "id": "7F1", "topic": "Digital voice and data", "levels": {
+      "F": { "note": "There are digital voice (DV) and digital data (DD) modes, and different systems aren't compatible with each other. Each needs suitable equipment. DV radios often embed your call sign, which must be set correctly.",
+        "q": [{ "text": "What must be set correctly in a DV radio that embeds your identity?", "choices": ["Your call sign", "Your CTCSS tone", "The SWR", "The S-meter"], "why": "The embedded call sign identifies you." }] } } },
+    { "id": "7F2", "topic": "Using a computer", "levels": {
+      "I": { "note": "With a PC and an interface you can send and receive many data modes. Set the audio levels carefully to avoid distortion, and stop other programs' sounds (alerts, music) being transmitted.",
+        "q": [{ "text": "Why should system sounds be turned off on a PC used for data modes?", "choices": ["They could be transmitted over the air", "They slow the computer", "They change the frequency", "They raise the SWR"], "why": "Any audio sent to the interface goes out on air." }] } } },
+    { "id": "7G1", "topic": "Satellite frequencies and orbits", "levels": {
+      "F": { "note": "Amateur satellites use allocated frequencies within the amateur bands. Don't make terrestrial (ground-to-ground) contacts on satellite frequencies.",
+        "q": [{ "text": "May you use satellite frequencies for a local contact?", "choices": ["No", "Yes, any time", "Only on FM", "Only at night"], "why": "Satellite segments are for satellite use." }] },
+      "I": { "note": "Satellites orbit above 250 km. Most move relative to the Earth and are only above your horizon at certain times (passes).",
+        "q": [{ "text": "Why can you only work most amateur satellites at certain times?", "choices": ["They're only above the horizon during passes", "They only operate at night", "They're switched off by day", "They only work in summer"], "why": "Low Earth orbits move across the sky." }] } } },
+    { "id": "7G2", "topic": "Uplinks and downlinks", "levels": {
+      "I": { "note": "Satellites usually receive (uplink) on one band and transmit (downlink) on another. Frequencies are published by amateur satellite organisations. You must be able to hear the downlink while you transmit on the uplink.",
+        "q": [{ "text": "Why must you hear the downlink while transmitting?", "choices": ["To check your own signal through the satellite", "It's not needed", "To measure the SWR", "To keep the satellite powered"], "why": "Listening lets you find and adjust your signal." }] } } },
+    { "id": "7G3", "topic": "Doppler shift", "levels": {
+      "I": { "note": "A satellite can only be used while it's above the horizon at both stations. Its movement causes Doppler shift: the received frequency changes during the pass, so you must keep retuning.",
+        "q": [{ "text": "What causes the frequency of a satellite signal to change during a pass?", "choices": ["Doppler shift", "Sporadic E", "D-layer absorption", "Key clicks"], "why": "Relative motion shifts the frequency." }] } } },
+    { "id": "7G4", "topic": "Satellite power", "levels": {
+      "I": { "note": "Satellites have little power, from solar panels. Too much uplink power uses an unfair share of the satellite's power.",
+        "q": [{ "text": "Why should you use only the uplink power you need?", "choices": ["The satellite's limited power is shared among all users", "Higher power is illegal", "It damages your rig", "It changes the orbit"], "why": "A strong uplink hogs the transponder." }] } } }
+  ]
+}

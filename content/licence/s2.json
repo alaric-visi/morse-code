@@ -1,0 +1,198 @@
+{
+  "section": 2,
+  "title": "Technical aspects",
+  "items": [
+    { "id": "2A1", "topic": "Current, conductors and insulators", "levels": {
+      "F": { "note": "Electric current is a flow of electrons, measured in amperes (amps, A). Conductors such as copper, brass and carbon let electrons flow easily. Insulators such as plastic, rubber, glass and ceramic don't, but current can flow across one that's wet. The push that drives the current is the potential difference, measured in volts (V).",
+        "q": [{ "text": "Which of these is a good conductor?", "choices": ["Brass", "Glass", "Rubber", "Dry ceramic"], "why": "Metals such as copper and brass, and carbon, conduct well; the others are insulators." },
+              { "text": "What is the unit of electric current?", "choices": ["The ampere", "The volt", "The ohm", "The watt"], "why": "Current is measured in amperes; potential difference in volts, resistance in ohms, power in watts." }] },
+      "I": { "note": "Real components have tolerances: a 100 Ω resistor marked ±5% may measure anywhere from 95 to 105 Ω, so a measured value won't always match the marking.",
+        "q": [{ "text": "A 1 kΩ resistor with a 10% tolerance could measure…", "choices": ["Anywhere from 900 Ω to 1.1 kΩ", "Exactly 1 kΩ", "Anywhere from 990 Ω to 1.01 kΩ", "Only 1.1 kΩ"], "why": "10% of 1 kΩ is 100 Ω either way." }] },
+      "Full": { "note": "Tolerances add up. In a tuned circuit or filter, components at the edges of their tolerance shift the frequency or response, which is why critical circuits use close-tolerance parts or a trimmer.",
+        "q": [{ "text": "Why might a filter built from 10% components not tune where the design says?", "choices": ["The real values differ from the marked ones, moving the response", "Tolerance only affects power rating", "10% parts are always too high", "Filters don't depend on component values"], "why": "A filter's frequency depends on L and C, so values off by their tolerance move it." }] } } },
+    { "id": "2A2", "topic": "Circuits, series and parallel", "levels": {
+      "F": { "note": "Current only flows round a complete circuit, which needs a source of energy such as a battery. In a series circuit the same current flows through every part. Items connected in parallel all have the same potential difference across them.",
+        "q": [{ "text": "Three bulbs are in series with a battery. What can you say about the current?", "choices": ["It's the same in every bulb", "It's largest in the first bulb", "It's zero in the last bulb", "It splits three ways"], "why": "There's only one path in a series circuit, so the current is the same everywhere." }] } } },
+    { "id": "2B1", "topic": "Power", "levels": {
+      "F": { "note": "Power is measured in watts (W). Current through a resistance turns electrical energy into heat. Power = voltage × current (P = V × I), so 12 V at 2 A is 24 W. Rearranged: I = P ÷ V and V = P ÷ I.",
+        "q": [{ "text": "A 12 V radio draws 2 A. What power does it use?", "choices": ["24 W", "6 W", "14 W", "0.17 W"], "why": "P = V × I = 12 × 2 = 24 W." },
+              { "text": "A 13.8 V supply delivers 69 W. What current flows?", "choices": ["5 A", "0.2 A", "55 A", "952 A"], "why": "I = P ÷ V = 69 ÷ 13.8 = 5 A." }] },
+      "Full": { "note": "Combine Ohm's law with the power formulae to solve networks: P = V²/R and P = I²R. Work out the combined resistance first, then the current, then each voltage and power.",
+        "q": [{ "text": "What power is dissipated in a 50 Ω load with 10 V across it?", "choices": ["2 W", "500 W", "5 W", "0.2 W"], "why": "P = V²/R = 100 ÷ 50 = 2 W." },
+              { "text": "2 A flows through a 10 Ω resistor. What power does it dissipate?", "choices": ["40 W", "20 W", "5 W", "200 W"], "why": "P = I²R = 4 × 10 = 40 W." }] } } },
+    { "id": "2C1", "topic": "Resistance and Ohm's law", "levels": {
+      "F": { "note": "Resistance opposes the flow of current and is measured in ohms (Ω). The current through a resistor is proportional to the voltage across it: Ohm's law, V = I × R. Given any two you can find the third: I = V ÷ R, R = V ÷ I.",
+        "q": [{ "text": "What current flows when 12 V is applied to a 6 Ω resistor?", "choices": ["2 A", "72 A", "0.5 A", "18 A"], "why": "I = V ÷ R = 12 ÷ 6 = 2 A." }] },
+      "I": { "note": "Resistors in series add: R = R1 + R2 + R3. In parallel, 1/R = 1/R1 + 1/R2 (+ 1/R3); two equal resistors in parallel give half the value. Watch the prefixes: 1 kΩ = 1000 Ω, 1 mA = 0.001 A.",
+        "q": [{ "text": "Two 100 Ω resistors are in parallel, in series with a 50 Ω resistor. What's the total?", "choices": ["100 Ω", "250 Ω", "150 Ω", "33 Ω"], "why": "The parallel pair is 50 Ω; add the 50 Ω in series: 100 Ω." },
+              { "text": "What current flows through a 2.2 kΩ resistor with 11 V across it?", "choices": ["5 mA", "0.5 A", "200 mA", "24 A"], "why": "11 ÷ 2200 = 0.005 A = 5 mA." }] } } },
+    { "id": "2C2", "topic": "Voltages in series; potential dividers", "levels": {
+      "F": { "note": "The voltages across resistors in series add up to the supply voltage.",
+        "q": [{ "text": "Two resistors in series across 12 V have 4 V across the first. What's across the second?", "choices": ["8 V", "4 V", "12 V", "16 V"], "why": "The voltages in series add to the supply: 12 − 4 = 8 V." }] },
+      "I": { "note": "Two resistors in series make a potential divider: Vout = Vin × R2 ÷ (R1 + R2), where Vout is taken across R2.",
+        "q": [{ "text": "A 10 V supply feeds 3 kΩ (top) and 2 kΩ (bottom) in series. What's across the 2 kΩ?", "choices": ["4 V", "6 V", "5 V", "2 V"], "why": "10 × 2 ÷ (3 + 2) = 4 V." }] } } },
+    { "id": "2C3", "topic": "EMF, PD and source resistance", "levels": {
+      "I": { "note": "EMF is the voltage a source produces with no load. Every real source has some internal (source) resistance, so as current is drawn some voltage is lost inside it and the terminal PD falls.",
+        "q": [{ "text": "Why does a battery's terminal voltage drop when a heavy load is connected?", "choices": ["Current through its internal resistance loses some voltage inside it", "Its EMF increases", "The load creates extra EMF", "Batteries have no resistance"], "why": "PD at the terminals = EMF − (current × internal resistance)." }] } } },
+    { "id": "2C4", "topic": "Polarity", "levels": {
+      "F": { "note": "Electronic circuits must be connected the right way round. Reverse the supply polarity and the equipment may not work, or may be damaged.",
+        "q": [{ "text": "What could happen if you connect a radio to its 12 V supply the wrong way round?", "choices": ["It won't work and may be damaged", "It works backwards", "It transmits on a lower band", "Nothing at all"], "why": "Polarity must be correct or damage may be caused." }] } } },
+    { "id": "2D1", "topic": "Capacitors", "levels": {
+      "I": { "note": "A capacitor is two conducting plates separated by an insulator (the dielectric). It stores electric charge. Capacitance, in farads, increases with bigger plates, closer spacing and a better dielectric. Practical values are µF, nF and pF.",
+        "q": [{ "text": "How can you increase a capacitor's capacitance?", "choices": ["Move the plates closer together", "Move the plates further apart", "Make the plates smaller", "Remove the dielectric"], "why": "Capacitance rises with plate area and falls with separation." }] },
+      "Full": { "note": "C = k × A ÷ d, where k is the dielectric's permittivity, A the plate area and d the separation. Charge Q (coulombs) = current × time, and the charge stored on a capacitor is Q = V × C.",
+        "q": [{ "text": "What charge is stored on a 10 µF capacitor charged to 100 V?", "choices": ["1 mC", "10 C", "0.1 µC", "1 C"], "why": "Q = V × C = 100 × 10 × 10⁻⁶ = 10⁻³ C." }] } } },
+    { "id": "2D2", "topic": "Capacitors in series and parallel", "levels": {
+      "I": { "note": "Capacitors in parallel add: C = C1 + C2. In series, 1/C = 1/C1 + 1/C2; two equal capacitors in series give half the value. (That's the opposite way round to resistors.)",
+        "q": [{ "text": "What's the total of two 100 pF capacitors in series?", "choices": ["50 pF", "200 pF", "100 pF", "10,000 pF"], "why": "Equal capacitors in series halve: 50 pF." }] },
+      "Full": { "note": "Different dielectrics suit different jobs: air for variable capacitors and high voltage, ceramic and mica for RF, polyester for audio and general use. With some dielectrics losses rise with frequency, so they're unsuitable at RF.",
+        "q": [{ "text": "Which dielectric would suit a capacitor in an RF tuned circuit?", "choices": ["Mica or ceramic", "Polyester at VHF", "Electrolytic", "Paper"], "why": "Mica and ceramic have low losses at radio frequencies." }] } } },
+    { "id": "2D3", "topic": "Polarised capacitors; voltage ratings", "levels": {
+      "I": { "note": "Electrolytic (and tantalum) capacitors are polarised. Connected the wrong way round they can overheat, burst or explode, causing injury or damage.",
+        "q": [{ "text": "Which capacitor must be connected the right way round?", "choices": ["Electrolytic", "Ceramic disc", "Air-spaced variable", "Mica"], "why": "Electrolytics are polarised." }] },
+      "Full": { "note": "Every capacitor has a maximum working (breakdown) voltage. Exceed it and the dielectric fails. Choose a rating well above the peak voltage it will see.",
+        "q": [{ "text": "A capacitor will see 50 V peak. Which rating is sensible?", "choices": ["100 V", "25 V", "50 V exactly", "Any rating"], "why": "Use a rating comfortably above the peak voltage." }] } } },
+    { "id": "2D4", "topic": "Magnetism and inductors", "levels": {
+      "I": { "note": "Current in a wire makes a magnetic field round it, and moving a conductor through a magnetic field induces a voltage. An inductor is a coil that concentrates the field and stores energy in it. Inductance is measured in henries (H); practical values are mH and µH.",
+        "q": [{ "text": "In what is an inductor's energy stored?", "choices": ["Its magnetic field", "Its electric field", "Its dielectric", "Its resistance"], "why": "Inductors store energy magnetically; capacitors store it electrically." }] },
+      "Full": { "note": "Self-inductance: when the current in a coil changes, the changing field induces a voltage in the coil itself that opposes the change (back EMF). That's why switching off an inductive load can produce a large voltage spike.",
+        "q": [{ "text": "Why is a diode often fitted across a relay coil?", "choices": ["To absorb the back-EMF spike when the coil switches off", "To make the relay faster", "To rectify the supply", "To set the coil's resonance"], "why": "Interrupting coil current produces a back EMF that can damage transistors." }] } } },
+    { "id": "2D5", "topic": "Inductors in series and parallel", "levels": {
+      "I": { "note": "Inductors (with no coupling between them) combine like resistors: in series they add; in parallel 1/L = 1/L1 + 1/L2.",
+        "q": [{ "text": "What's the total of a 10 µH and a 15 µH inductor in series?", "choices": ["25 µH", "6 µH", "150 µH", "5 µH"], "why": "Inductors in series add." }] } } },
+    { "id": "2D6", "topic": "What sets inductance", "levels": {
+      "I": { "note": "A coil's inductance increases with more turns, a larger diameter and closer turn spacing. A high-permeability core (ferrite or iron) increases it a lot; screwing a ferrite slug in or out of a coil tunes it.",
+        "q": [{ "text": "Which change increases a coil's inductance?", "choices": ["Adding more turns", "Spacing the turns further apart", "Using a smaller diameter", "Removing the ferrite core"], "why": "More turns, larger diameter, closer spacing and a magnetic core all increase inductance." }] } } },
+    { "id": "2D7", "topic": "Time constants", "levels": {
+      "Full": { "note": "A capacitor charging through a resistor, or the current building in an inductor, follows a curve. The time constant is t = C × R (capacitor) or t = L ÷ R (inductor). After one time constant it reaches about 63% of its final value; after about five it's effectively complete.",
+        "q": [{ "text": "What's the time constant of 100 µF charging through 10 kΩ?", "choices": ["1 second", "0.1 second", "10 seconds", "1 millisecond"], "why": "t = C × R = 100 × 10⁻⁶ × 10⁴ = 1 s." }] } } },
+    { "id": "2E1", "topic": "DC and AC", "levels": {
+      "F": { "note": "Direct current (DC) flows one way only, as from a battery. Alternating current (AC) keeps reversing direction, as in the mains.",
+        "q": [{ "text": "Which supplies direct current?", "choices": ["A car battery", "The household mains", "A radio transmitter's output", "A microphone"], "why": "Batteries give DC; the mains is AC." }] },
+      "I": { "note": "A capacitor can't pass DC (the dielectric is an insulator), but it passes AC by repeatedly charging and discharging in alternate directions.",
+        "q": [{ "text": "Why does a capacitor block DC but pass AC?", "choices": ["It charges and discharges with AC, but once charged no DC flows", "Its plates conduct only AC", "DC is too weak", "AC has no current"], "why": "The alternating charge and discharge carries AC through; DC stops once it's charged." }] } } },
+    { "id": "2E2", "topic": "Frequencies and waveforms", "levels": {
+      "F": { "note": "A sine wave shows an alternating current or voltage rising and falling over time. Useful figures: mains is 50 Hz; human hearing is about 20 Hz to 15 kHz; speech needs about 300 Hz to 3 kHz; radio runs from below 30 kHz to beyond 3000 MHz. HF is 3–30 MHz, VHF 30–300 MHz and UHF 300–3000 MHz.",
+        "q": [{ "text": "What range of audio frequencies is needed for speech communication?", "choices": ["300 Hz to 3 kHz", "20 Hz to 20 kHz", "3 kHz to 30 kHz", "50 Hz to 500 Hz"], "why": "Communications audio is limited to about 300 Hz–3 kHz." },
+              { "text": "Which band is 144 MHz in?", "choices": ["VHF", "HF", "UHF", "SHF"], "why": "VHF is 30–300 MHz." }] },
+      "I": { "note": "To describe an AC signal you need both frequency and amplitude. The time for one cycle is the period: T = 1 ÷ f, so f = 1 ÷ T. Two waves of the same frequency can be out of step: that's phase difference. A square wave switches abruptly between two levels.",
+        "q": [{ "text": "What's the period of a 1 kHz signal?", "choices": ["1 ms", "1 s", "1 µs", "10 ms"], "why": "T = 1 ÷ f = 1 ÷ 1000 = 0.001 s." }] } } },
+    { "id": "2E3", "topic": "RMS and reactance", "levels": {
+      "I": { "note": "In a resistor, voltage and current are in phase. The RMS value of an AC voltage is the DC voltage that gives the same heating; for a sine wave Vrms = 0.707 × Vpeak. Reactance is the opposition to AC of a pure inductance or capacitance, measured in ohms; unlike resistance, it stores energy rather than turning it into heat.",
+        "q": [{ "text": "What's the RMS value of a sine wave of 100 V peak?", "choices": ["70.7 V", "141 V", "100 V", "50 V"], "why": "Vrms = 0.707 × Vpeak." }] },
+      "Full": { "note": "In an inductor current lags the voltage by 90°; in a capacitor current leads by 90°. Reactances: XL = 2πfL and XC = 1 ÷ (2πfC).",
+        "q": [{ "text": "What's the reactance of a 10 µH inductor at 1.59 MHz (roughly)?", "choices": ["100 Ω", "10 Ω", "1 kΩ", "16 Ω"], "why": "XL = 2π × 1.59×10⁶ × 10×10⁻⁶ ≈ 100 Ω." },
+              { "text": "In a capacitor, the current…", "choices": ["Leads the voltage by 90°", "Lags the voltage by 90°", "Is in phase with the voltage", "Is 180° out of phase"], "why": "Capacitor current leads; inductor current lags." }] } } },
+    { "id": "2E4", "topic": "Capacitive reactance", "levels": {
+      "I": { "note": "A capacitor's reactance falls as the frequency rises. Plotted against frequency, it starts high and falls steeply, then levels off.",
+        "q": [{ "text": "What happens to a capacitor's reactance as frequency increases?", "choices": ["It falls", "It rises", "It stays the same", "It becomes resistance"], "why": "XC = 1 ÷ (2πfC): higher f, lower reactance." }] },
+      "Full": { "note": "Because they pass AC and block DC, capacitors couple signals between stages (DC blocking), and decouple (bypass) RF or AC to ground on supply lines.",
+        "q": [{ "text": "What's a decoupling capacitor on a supply rail for?", "choices": ["To pass RF or AC to ground while leaving the DC", "To block the DC supply", "To raise the supply voltage", "To tune the stage"], "why": "Its low reactance at RF shunts unwanted AC to ground." }] } } },
+    { "id": "2E5", "topic": "Inductive reactance", "levels": {
+      "I": { "note": "An inductor takes time to store and release energy in its magnetic field. Its reactance rises as the frequency rises.",
+        "q": [{ "text": "What happens to an inductor's reactance as frequency increases?", "choices": ["It rises", "It falls", "It's unchanged", "It becomes zero"], "why": "XL = 2πfL: proportional to frequency." }] },
+      "Full": { "note": "An inductor passes DC easily but blocks AC and RF, so an RF choke can feed DC to a stage while stopping RF getting into the supply.",
+        "q": [{ "text": "What does an RF choke in a supply lead do?", "choices": ["Passes DC while blocking RF", "Blocks DC while passing RF", "Rectifies the supply", "Raises the voltage"], "why": "High reactance at RF, near-zero at DC." }] } } },
+    { "id": "2E6", "topic": "Impedance", "levels": {
+      "I": { "note": "In a circuit with resistance and reactance, energy is both turned to heat (in the resistance) and stored and released (in the reactance). The overall ratio of voltage to current is its impedance, Z, in ohms.",
+        "q": [{ "text": "What is impedance?", "choices": ["The combined opposition of resistance and reactance to AC", "Resistance at DC only", "The power in a circuit", "A type of capacitor"], "why": "Impedance combines both kinds of opposition." }] },
+      "Full": { "note": "In a series CR or LR circuit, Z = √(R² + X²). The current is then I = V ÷ Z.",
+        "q": [{ "text": "A 30 Ω resistor is in series with a reactance of 40 Ω. What's the impedance?", "choices": ["50 Ω", "70 Ω", "10 Ω", "1200 Ω"], "why": "√(30² + 40²) = √2500 = 50 Ω." }] } } },
+    { "id": "2E7", "topic": "Frequency and wavelength", "levels": {
+      "F": { "note": "The higher the frequency, the shorter the wavelength. Frequency is in hertz (Hz), wavelength in metres (m). Radio waves travel at the speed of light, 300,000,000 m/s.",
+        "q": [{ "text": "As the frequency of a radio wave goes up, its wavelength…", "choices": ["Gets shorter", "Gets longer", "Stays the same", "Doubles"], "why": "Frequency and wavelength are inversely related." }] },
+      "I": { "note": "v = f × λ, with v = 3 × 10⁸ m/s. So λ (m) ≈ 300 ÷ f (MHz).",
+        "q": [{ "text": "What's the wavelength of a 7 MHz signal (approximately)?", "choices": ["43 m", "21 m", "70 m", "2.1 m"], "why": "λ = 300 ÷ 7 ≈ 43 m." },
+              { "text": "A signal has a wavelength of 2 m. What's its frequency?", "choices": ["150 MHz", "600 MHz", "15 MHz", "1.5 MHz"], "why": "f = 300 ÷ 2 = 150 MHz." }] } } },
+    { "id": "2E8", "topic": "RF along a conductor", "levels": {
+      "I": { "note": "When a conductor is comparable in length to the wavelength it carries, the current and voltage aren't the same all along it: they vary sinusoidally along its length. That's the basis of how antennas work.",
+        "q": [{ "text": "On a wire about a wavelength long carrying RF, the current…", "choices": ["Varies along its length", "Is the same everywhere", "Is zero everywhere", "Only flows at the ends"], "why": "At lengths comparable to a wavelength, current and voltage vary along the conductor." }] } } },
+    { "id": "2F1", "topic": "Analogue and digital signals", "levels": {
+      "F": { "note": "Analogue signals vary continuously in amplitude, frequency or both. Digital signals are a stream of numbers taken at fixed sampling intervals, which a computer with the right software can process.",
+        "q": [{ "text": "What is a digital signal?", "choices": ["A stream of values taken at regular sampling intervals", "A continuously varying voltage", "A signal only on VHF", "A Morse signal"], "why": "Digital signals are finite values at a sampling interval." }] },
+      "I": { "note": "More bits per sample and a higher sampling rate give a more faithful copy. The error from sampling is a kind of distortion. The sampling rate must be more than twice the highest frequency you want to capture.",
+        "q": [{ "text": "What's the minimum sampling rate for audio up to 3 kHz?", "choices": ["More than 6 kHz", "3 kHz", "1.5 kHz", "Exactly 3.1 kHz"], "why": "Sample at more than twice the highest frequency." }] },
+      "Full": { "note": "Frequencies above half the sampling rate (the Nyquist frequency) appear as false lower-frequency images called aliases. An anti-aliasing low-pass filter before the ADC removes them.",
+        "q": [{ "text": "What does an anti-aliasing filter do?", "choices": ["Removes frequencies above half the sampling rate before conversion", "Boosts weak signals", "Removes DC", "Converts digital to analogue"], "why": "It stops out-of-range frequencies folding back as aliases." }] } } },
+    { "id": "2F2", "topic": "ADCs, DACs and Fourier", "levels": {
+      "F": { "note": "An analogue-to-digital converter (ADC) samples an analogue signal and turns it into numbers. A digital-to-analogue converter (DAC) does the reverse. A computing device processes the numbers in between.",
+        "q": [{ "text": "What does a DAC do?", "choices": ["Turns a digital signal into an analogue one", "Turns analogue into digital", "Amplifies RF", "Filters audio"], "why": "DAC = digital-to-analogue converter." }] },
+      "Full": { "note": "A Fourier transform takes a signal in the time domain and works out the frequencies and amplitudes it's made of: the frequency domain. SDRs use it for filtering and for spectrum and waterfall displays.",
+        "q": [{ "text": "What does a Fourier transform produce from a time-domain signal?", "choices": ["The frequencies and amplitudes it contains", "A louder copy", "A delayed copy", "Its RMS value only"], "why": "It moves from the time domain to the frequency domain." }] } } },
+    { "id": "2G1", "topic": "Transformers", "levels": {
+      "I": { "note": "A transformer is two coils sharing a magnetic field, often on an iron core (ferrite at RF and IF). Alternating current in one coil induces a voltage in the other; it doesn't work on DC. The voltage ratio follows the turns ratio: more turns on the secondary gives a higher voltage.",
+        "q": [{ "text": "A transformer has 10 times as many turns on its secondary as its primary. With 23 V AC in, what comes out?", "choices": ["230 V", "2.3 V", "23 V", "0 V"], "why": "Voltage follows the turns ratio." },
+              { "text": "Why won't a transformer work on DC?", "choices": ["Only a changing field induces a voltage", "DC is too high a voltage", "DC overheats the core instantly", "It will, at lower efficiency"], "why": "Induction needs a changing magnetic field." }] },
+      "Full": { "note": "Vs ÷ Vp = Ns ÷ Np, and current goes the other way: Is ÷ Ip = Np ÷ Ns. The impedance ratio is the square of the turns ratio: Zp ÷ Zs = (Np ÷ Ns)². Core materials are chosen for the frequency in use.",
+        "q": [{ "text": "A 3:1 turns-ratio transformer has 50 Ω on the secondary. What impedance does the primary present?", "choices": ["450 Ω", "150 Ω", "17 Ω", "5.6 Ω"], "why": "Impedance ratio = 3² = 9; 9 × 50 = 450 Ω." }] } } },
+    { "id": "2H1", "topic": "Tuned circuits", "levels": {
+      "I": { "note": "An inductor and capacitor together, in series or parallel, form a tuned circuit. At the resonant frequency their reactances are equal: XL = XC.",
+        "q": [{ "text": "At resonance in a tuned circuit…", "choices": ["XL equals XC", "XL is twice XC", "The resistance is zero", "The frequency is zero"], "why": "Resonance is where the inductive and capacitive reactances are equal." }] },
+      "Full": { "note": "f = 1 ÷ (2π√(LC)). Be ready to rearrange it to find L or C.",
+        "q": [{ "text": "Roughly what's the resonant frequency of 25 µH with 100 pF?", "choices": ["3.2 MHz", "32 MHz", "320 kHz", "1 MHz"], "why": "1 ÷ (2π√(25×10⁻⁶ × 100×10⁻¹²)) ≈ 3.18 MHz." }] } } },
+    { "id": "2H2", "topic": "Series and parallel resonance; crystals", "levels": {
+      "I": { "note": "At resonance a series tuned circuit has a low impedance; a parallel tuned circuit has a high impedance.",
+        "q": [{ "text": "At resonance, a parallel tuned circuit presents…", "choices": ["A high impedance", "A low impedance", "Zero impedance", "A short circuit"], "why": "Parallel: high; series: low." }] },
+      "Full": { "note": "A quartz crystal behaves like a very high-Q tuned circuit with both a series and a parallel resonance close together. Crystals are cut for one mode and are only on their marked frequency when used that way.",
+        "q": [{ "text": "Why might a crystal oscillator be slightly off its marked frequency?", "choices": ["It was cut for series resonance but used in parallel mode (or vice versa)", "Crystals drift by design", "The supply is too steady", "The crystal is too accurate"], "why": "A crystal is only correct when used in the mode it was made for." }] } } },
+    { "id": "2H3", "topic": "What sets the resonant frequency", "levels": {
+      "I": { "note": "In a tuned circuit energy swaps back and forth between the capacitor and inductor at the resonant frequency. Increasing L or C lowers that frequency; decreasing either raises it.",
+        "q": [{ "text": "You increase the capacitance in a tuned circuit. The resonant frequency…", "choices": ["Falls", "Rises", "Doesn't change", "Doubles"], "why": "More L or more C means a lower resonant frequency." }] } } },
+    { "id": "2H4", "topic": "Selectivity and Q", "levels": {
+      "I": { "note": "Selectivity is how well a tuned circuit accepts the wanted frequencies and rejects others. The Q factor indicates it: a higher Q gives a narrower, sharper response.",
+        "q": [{ "text": "A tuned circuit with a higher Q is…", "choices": ["More selective", "Less selective", "Wider in bandwidth", "Unable to resonate"], "why": "Higher Q, narrower bandwidth, better selectivity." }] },
+      "Full": { "note": "Q = f ÷ bandwidth, where the bandwidth is between the half-power (−3 dB) points. In a high-Q circuit the voltages and circulating currents can be many times the input, so components must be rated for them.",
+        "q": [{ "text": "A circuit resonant at 7 MHz has a 3 dB bandwidth of 70 kHz. What's its Q?", "choices": ["100", "10", "1000", "490"], "why": "Q = 7000 ÷ 70 = 100." }] } } },
+    { "id": "2H5", "topic": "Filters", "levels": {
+      "I": { "note": "A low-pass filter passes frequencies below its cut-off; high-pass passes those above; band-pass passes a range; band-stop (notch) removes a range. The cut-off is where the response has fallen by 3 dB.",
+        "q": [{ "text": "Which filter would you fit to an HF transmitter to reduce harmonics?", "choices": ["Low-pass", "High-pass", "Notch at the fundamental", "None"], "why": "Harmonics are above the wanted frequency, so pass the low and cut the high." }] },
+      "Full": { "note": "A parallel tuned circuit at resonance looks like a pure resistance, its dynamic resistance RD = L ÷ (C × R), where R is the coil's loss resistance.",
+        "q": [{ "text": "What is the dynamic resistance of a parallel tuned circuit?", "choices": ["Its purely resistive impedance at resonance", "Its DC resistance", "Its reactance off resonance", "Its resistance when cold"], "why": "At resonance the reactances cancel, leaving RD = L/CR." }] } } },
+    { "id": "2I1", "topic": "Diodes", "levels": {
+      "I": { "note": "A diode conducts in one direction only. It needs a small forward voltage (about 0.6 V for silicon) to overcome the depletion layer. Using diodes to turn AC into DC is rectification.",
+        "q": [{ "text": "What is rectification?", "choices": ["Using diodes to turn AC into DC", "Amplifying a signal", "Filtering harmonics", "Tuning a circuit"], "why": "Diodes pass one half of the cycle, producing DC." }] },
+      "Full": { "note": "A Zener diode is designed to conduct in reverse once the voltage reaches its rated value, holding the voltage steady. Its characteristic curve shows a sharp knee at that reverse voltage.",
+        "q": [{ "text": "What's a Zener diode mainly used for?", "choices": ["Holding a voltage steady (regulation)", "Producing RF", "Detecting light", "Storing charge"], "why": "It conducts in reverse at a set voltage." }] } } },
+    { "id": "2I2", "topic": "Variable-capacitance diodes", "levels": {
+      "I": { "note": "A reverse-biased diode acts like a small capacitor. Its capacitance changes with the reverse voltage (more voltage, less capacitance), so a varicap can tune a circuit or produce FM.",
+        "q": [{ "text": "What changes the capacitance of a varicap diode?", "choices": ["The reverse-bias voltage", "The forward current", "Its temperature only", "Nothing; it's fixed"], "why": "The depletion layer widens with reverse voltage, reducing capacitance." }] } } },
+    { "id": "2I3", "topic": "Transistors", "levels": {
+      "I": { "note": "A bipolar transistor has an emitter, base and collector. A small base current controls a much larger collector current, so it can amplify. The current gain β (hFE) = IC ÷ IB. With a large enough base current it switches fully on, acting as a switch.",
+        "q": [{ "text": "A transistor with a base current of 20 µA has a collector current of 2 mA. What's its gain?", "choices": ["100", "10", "1000", "40"], "why": "β = 2 mA ÷ 20 µA = 100." }] },
+      "Full": { "note": "Transistors need biasing to set their working point. NPN and PNP bipolar types are biased with opposite polarities; FETs (including dual-gate types) are voltage-controlled and have very high input impedance.",
+        "q": [{ "text": "How does a FET differ from a bipolar transistor?", "choices": ["Its gate controls current by voltage, with very high input impedance", "It needs more base current", "It can't amplify", "It only works at DC"], "why": "FETs are voltage-controlled." }] } } },
+    { "id": "2I4", "topic": "Amplifiers", "levels": {
+      "I": { "note": "The common-emitter amplifier is the basic transistor amplifier. Semiconductors need the correct DC voltages and currents (bias) to work properly.",
+        "q": [{ "text": "What is biasing?", "choices": ["Setting the DC conditions a transistor needs to work", "Feeding the RF output back", "Measuring the gain", "Adding a heatsink"], "why": "Bias sets the working point." }] },
+      "Full": { "note": "Common emitter: voltage and current gain, phase inversion. Emitter follower: voltage gain about 1, high input and low output impedance. Common base: low input impedance, good at high frequencies. Classes: A (linear, inefficient), B (half cycle each, push-pull), AB (a compromise), C (efficient, non-linear, for CW and FM).",
+        "q": [{ "text": "Which amplifier class is unsuitable for SSB?", "choices": ["Class C", "Class A", "Class AB", "Class A linear"], "why": "Class C isn't linear; SSB needs linear amplification." }] } } },
+    { "id": "2I5", "topic": "Oscillators", "levels": {
+      "I": { "note": "An oscillator is an amplifier that keeps a tuned (or crystal) circuit oscillating. A crystal oscillator is very stable but fixed; a VFO tunes but drifts more. The Colpitts oscillator is a common design.",
+        "q": [{ "text": "What's the advantage of a crystal oscillator over a VFO?", "choices": ["Better stability", "Easier tuning across a band", "No power needed", "More harmonics"], "why": "Crystals are stable but fixed in frequency." }] },
+      "Full": { "note": "To sustain oscillation, feedback must be positive (in phase) and the loop gain at least 1.",
+        "q": [{ "text": "What's needed to keep an oscillator running?", "choices": ["Positive feedback with a loop gain of at least 1", "Negative feedback", "A gain of less than 1", "No feedback"], "why": "In-phase feedback with enough gain sustains oscillation." }] } } },
+    { "id": "2I6", "topic": "Integrated circuits", "levels": {
+      "I": { "note": "Many transistors and other parts can be built on one chip of silicon, an integrated circuit, which may be a complete amplifier, oscillator, voltage regulator or digital processor.",
+        "q": [{ "text": "Which could be found as a single integrated circuit?", "choices": ["A voltage regulator", "A coaxial cable", "A dipole", "A crystal earpiece"], "why": "ICs provide complete functions such as regulators and amplifiers." }] } } },
+    { "id": "2J1", "topic": "Cells and batteries", "levels": {
+      "F": { "note": "A battery is a group of cells, usually in series, turning stored chemical energy into electrical energy. Rechargeable (secondary) batteries have a reversible chemical process. Dispose of unwanted batteries properly.",
+        "q": [{ "text": "What makes a battery rechargeable?", "choices": ["Its chemical process can be reversed", "It contains a capacitor", "It has more cells", "It's made of lead"], "why": "Secondary cells use a reversible reaction." }] },
+      "I": { "note": "Different cell types give different voltages (for example about 1.2 V NiMH, 1.5 V alkaline, 2 V lead-acid, 3.6–3.7 V lithium-ion). Capacity is measured in ampere-hours (Ah).",
+        "q": [{ "text": "Roughly how long will a 7 Ah battery run a radio drawing 1.4 A?", "choices": ["5 hours", "10 hours", "1 hour", "9.8 hours"], "why": "7 ÷ 1.4 = 5 hours (in theory)." }] } } },
+    { "id": "2J2", "topic": "Rectifiers and stabilisers", "levels": {
+      "I": { "note": "A half-wave rectifier uses one diode and passes half of each cycle. A full-wave rectifier uses two diodes and a centre-tapped transformer; a bridge rectifier uses four diodes. Both full-wave types use both halves of the cycle.",
+        "q": [{ "text": "How many diodes does a bridge rectifier use?", "choices": ["Four", "One", "Two", "Six"], "why": "A bridge uses four diodes." }] },
+      "Full": { "note": "A stabiliser holds the output voltage steady despite changes in load or input. Simple ones use a Zener; adding a pass transistor handles more current; IC regulators combine the lot.",
+        "q": [{ "text": "Why add a pass transistor to a Zener stabiliser?", "choices": ["So it can supply more current", "To lower the voltage", "To rectify AC", "To smooth ripple only"], "why": "The transistor carries the load current while the Zener sets the voltage." }] } } },
+    { "id": "2J3", "topic": "Smoothing and PIV", "levels": {
+      "I": { "note": "A reservoir capacitor charges during the conducting part of each cycle and discharges between, smoothing the pulsing DC from the rectifier into a steadier supply.",
+        "q": [{ "text": "What does a reservoir capacitor do in a power supply?", "choices": ["Smooths the rectified DC", "Rectifies the AC", "Raises the frequency", "Stabilises the mains"], "why": "It fills in the gaps between rectified pulses." }] },
+      "Full": { "note": "A rectifier diode must withstand the peak inverse voltage (PIV). With a reservoir capacitor, a half-wave rectifier sees about twice the peak voltage in reverse.",
+        "q": [{ "text": "A half-wave rectifier with a reservoir capacitor runs from 20 V peak. What PIV must the diode stand?", "choices": ["About 40 V", "About 20 V", "About 14 V", "About 10 V"], "why": "The capacitor holds +20 V while the input swings to −20 V: 40 V across the diode." }] } } },
+    { "id": "2J4", "topic": "Linear and switched-mode supplies", "levels": {
+      "I": { "note": "A linear supply (transformer, rectifier, smoothing, regulator) is simple and quiet but heavy and wastes power as heat. A switched-mode supply is small, light and efficient but can radiate RF interference.",
+        "q": [{ "text": "What's a disadvantage of a switched-mode power supply?", "choices": ["It can cause RF interference", "It's heavier than a linear supply", "It's less efficient", "It needs a bigger transformer"], "why": "Fast switching produces RF noise." }] },
+      "Full": { "note": "A switched-mode supply rectifies the mains, chops it at high frequency, transforms it with a small high-frequency transformer, then rectifies and filters it, with feedback adjusting the switching to regulate the output.",
+        "q": [{ "text": "Why can a switched-mode supply use a much smaller transformer?", "choices": ["It works at a high switching frequency", "It runs at 50 Hz", "It needs no transformer", "It uses DC"], "why": "Higher frequency means a smaller core for the same power." }] } } }
+  ]
+}

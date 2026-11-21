@@ -1,0 +1,67 @@
+{
+  "section": 9,
+  "title": "Measurements and construction",
+  "items": [
+    { "id": "9A1", "topic": "Multimeters", "levels": {
+      "I": { "note": "A multimeter measures voltage, current and resistance. Before connecting it, set the right function and a range above the expected value, and observe polarity.",
+        "q": [{ "text": "You expect about 12 V DC. What range should you select?", "choices": ["The next range above 12 V, such as 20 V DC", "2 V DC", "200 mA", "20 V AC"], "why": "A range above the expected value, on the right function." }] },
+      "Full": { "note": "An analogue voltmeter is a sensitive meter with a series multiplier resistor; an ammeter has a shunt resistor in parallel. Any meter slightly changes the circuit it measures.",
+        "q": [{ "text": "How is an analogue ammeter's range extended?", "choices": ["With a shunt resistor in parallel", "With a series resistor", "With a capacitor", "With a diode"], "why": "The shunt carries most of the current." }] } } },
+    { "id": "9A2", "topic": "Voltmeters and ammeters", "levels": {
+      "I": { "note": "A voltmeter has a high resistance and is connected in parallel with what it measures. An ammeter has a low resistance and is connected in series.",
+        "q": [{ "text": "How is an ammeter connected?", "choices": ["In series", "In parallel", "Across the supply", "Either way"], "why": "Current must pass through it." }] } } },
+    { "id": "9A3", "topic": "Displays; measurement accuracy", "levels": {
+      "I": { "note": "Analogue meters show trends and changes well; digital meters are easier to read precisely. Be able to read both.",
+        "q": [{ "text": "What's an advantage of an analogue meter?", "choices": ["It shows changes and trends easily", "It's always more accurate", "It needs no range setting", "It has no internal resistance"], "why": "A moving needle shows changes at a glance." }] },
+      "Full": { "note": "Frequency measurements have uncertainties from tolerance, calibration and drift. Allow for these and your signal's bandwidth when operating near a band edge.",
+        "q": [{ "text": "Your counter is accurate to ±1 kHz and your LSB signal is 3 kHz wide. What's the lowest safe dial reading at the bottom of a band starting at 7.000 MHz?", "choices": ["7.004 MHz", "7.000 MHz", "7.001 MHz", "7.003 MHz"], "why": "LSB extends 3 kHz below the dial; add 1 kHz for accuracy." }] } } },
+    { "id": "9A4", "topic": "Source and load impedance in test gear", "levels": {
+      "Full": { "note": "A signal generator has a source impedance (usually 50 Ω); its output level depends on the load. Not every instrument has a 50 Ω input: an oscilloscope is usually 1 MΩ. The choice of instrument can affect the measurement.",
+        "q": [{ "text": "A 50 Ω generator is set for 1 V into 50 Ω. What do you see on a 1 MΩ scope input?", "choices": ["About 2 V", "1 V", "0.5 V", "0 V"], "why": "Unloaded, the generator's EMF is twice its matched output." }] } } },
+    { "id": "9A5", "topic": "Measuring power; PEP", "levels": {
+      "I": { "note": "DC power in a circuit = voltmeter reading × ammeter reading.",
+        "q": [{ "text": "A transmitter's PA draws 8 A at 13 V. What is the DC input power?", "choices": ["104 W", "21 W", "1.6 W", "52 W"], "why": "P = V × I = 104 W." }] },
+      "Full": { "note": "Steady RF power can be found from the RF voltage across a dummy load: P = Vrms² ÷ R. AM and SSB power measurements need a steady audio tone. Peak envelope power (PEP) is the average power during the highest peak of the modulation envelope. For a single tone on SSB, PEP equals the average power.",
+        "q": [{ "text": "What's the RF power with 50 V RMS across a 50 Ω dummy load?", "choices": ["50 W", "2500 W", "1 W", "100 W"], "why": "50² ÷ 50 = 50 W." }] } } },
+    { "id": "9A6", "topic": "Frequency standards", "levels": {
+      "Full": { "note": "Crystal calibrators give markers at fixed intervals but need checking against a standard. Digital frequency counters are only as good as their reference. Standard-frequency transmissions (such as MSF at 60 kHz) give a highly accurate reference.",
+        "q": [{ "text": "What limits a frequency counter's accuracy?", "choices": ["The accuracy of its internal reference", "The number of digits only", "Its display colour", "Its input impedance"], "why": "Every reading depends on the timebase." }] } } },
+    { "id": "9A7", "topic": "SWR meters", "levels": {
+      "Full": { "note": "An SWR meter samples the line with either a sense wire alongside the inner conductor or a current transformer and capacitive voltage tap. It separates forward and reflected signals, shown on one switched meter, two meters, or a cross-needle meter that shows both at once.",
+        "q": [{ "text": "What does a cross-needle SWR meter show?", "choices": ["Forward and reflected power at once, with SWR where the needles cross", "Only the SWR", "Only frequency", "Only reflected power"], "why": "Two needles; the crossing point reads SWR." }] } } },
+    { "id": "9A8", "topic": "Oscilloscopes", "levels": {
+      "Full": { "note": "An oscilloscope draws voltage against time. Frequency = 1 ÷ period: count the divisions for one cycle and multiply by the timebase setting. Voltage = divisions × volts per division.",
+        "q": [{ "text": "One cycle spans 4 divisions at 0.5 ms/div. What's the frequency?", "choices": ["500 Hz", "2 kHz", "200 Hz", "125 Hz"], "why": "Period = 2 ms; f = 1 ÷ 0.002 = 500 Hz." }] } } },
+    { "id": "9A9", "topic": "Spectrum analysers", "levels": {
+      "Full": { "note": "A spectrum analyser shows amplitude against frequency. The tallest line is the fundamental; harmonics appear at whole multiples of it.",
+        "q": [{ "text": "On a spectrum analyser, a 7 MHz transmitter shows smaller lines at 14 and 21 MHz. What are they?", "choices": ["Harmonics", "Sidebands", "Noise", "Images"], "why": "Whole-number multiples of the fundamental." }] } } },
+    { "id": "9B1", "topic": "Decibels", "levels": {
+      "I": { "note": "Decibels express power ratios: +3 dB doubles the power, +10 dB is ten times; −3 dB halves it. Add decibels to combine gains and losses. dBW is relative to 1 W: 25 W ≈ 14 dBW.",
+        "q": [{ "text": "What power ratio is 13 dB?", "choices": ["20 times", "13 times", "30 times", "6.5 times"], "why": "10 dB = ×10, plus 3 dB = ×2: ×20." },
+              { "text": "A 10 W signal goes through an amplifier with 6 dB gain. What comes out?", "choices": ["40 W", "60 W", "16 W", "20 W"], "why": "6 dB = two doublings = ×4." }] },
+      "Full": { "note": "dB = 10 log(P2 ÷ P1). dBW is relative to 1 W; dBm to 1 mW. For voltages, dB = 20 log(V2 ÷ V1).",
+        "q": [{ "text": "What is 100 W in dBm?", "choices": ["50 dBm", "20 dBm", "100 dBm", "30 dBm"], "why": "100 W = 100,000 mW = 50 dBm." },
+              { "text": "A voltage doubles. How many dB is that?", "choices": ["6 dB", "3 dB", "2 dB", "10 dB"], "why": "20 log 2 ≈ 6 dB." }] } } },
+    { "id": "9C1", "topic": "Component values and markings", "levels": {
+      "I": { "note": "Resistor colour code: black 0, brown 1, red 2, orange 3, yellow 4, green 5, blue 6, violet 7, grey 8, white 9; gold as a multiplier is ×0.1. Tolerance: gold 5%, silver 10%. Four-band: two digits, multiplier, tolerance; five-band: three digits, multiplier, tolerance. Capacitors are often marked with three digits: 103 = 10 × 10³ pF = 10 nF.",
+        "q": [{ "text": "What is a resistor banded yellow, violet, red, gold?", "choices": ["4.7 kΩ ±5%", "47 Ω ±5%", "470 Ω ±10%", "47 kΩ ±5%"], "why": "4, 7, ×100 = 4700 Ω; gold 5%." },
+              { "text": "What value is a capacitor marked 104?", "choices": ["100 nF", "104 pF", "10 nF", "1 µF"], "why": "10 × 10⁴ pF = 100,000 pF = 100 nF." }] },
+      "Full": { "note": "Temperature changes component values: positive-coefficient parts increase with heat, negative ones decrease. In a tuned circuit this causes drift; cures include using components with opposite coefficients to compensate, or temperature-stable types such as NP0 ceramic capacitors.",
+        "q": [{ "text": "How can temperature drift in a VFO be reduced?", "choices": ["Combine components with opposite temperature coefficients", "Use higher-tolerance resistors", "Increase the supply voltage", "Add more turns"], "why": "Opposing coefficients cancel the drift." }] } } },
+    { "id": "9D1", "topic": "Screening", "levels": {
+      "I": { "note": "Thin metal sheet screening reduces unwanted radiation from equipment and coupling between its stages.",
+        "q": [{ "text": "Why are stages in a transmitter often screened with metal boxes?", "choices": ["To reduce unwanted radiation and coupling", "To keep them warm", "For decoration", "To raise the gain"], "why": "Screens contain RF fields." }] } } },
+    { "id": "9E1", "topic": "Soldering", "levels": {
+      "I": { "note": "Soldering joins wires and components using molten solder from a hot iron.",
+        "q": [{ "text": "What is soldering?", "choices": ["Joining metals with molten solder", "Welding steel", "Gluing plastic", "Crimping"], "why": "Solder melts at a low temperature and bonds the joint." }] } } },
+    { "id": "9E2", "topic": "Solder and flux", "levels": {
+      "I": { "note": "Solder is an alloy with a low melting point. Most contains flux, which helps it flow and prevents oxide forming on the surfaces being joined.",
+        "q": [{ "text": "What does flux do?", "choices": ["Helps solder flow and stops oxide forming", "Cools the joint", "Insulates the joint", "Makes it stronger than steel"], "why": "Clean, oxide-free metal takes solder." }] } } },
+    { "id": "9E3", "topic": "Solderability", "levels": {
+      "I": { "note": "Some metals solder more easily than others: copper and tinned surfaces are easy; aluminium and stainless steel are difficult.",
+        "q": [{ "text": "Which metal is hardest to solder?", "choices": ["Aluminium", "Copper", "Tinned copper", "Brass"], "why": "Aluminium's oxide layer forms instantly." }] } } },
+    { "id": "9E4", "topic": "Cleaning and tinning", "levels": {
+      "I": { "note": "Clean the iron's tip to remove oxide, then tin it with fresh solder to stop oxide re-forming and to conduct heat well. Tin wires before soldering them for a better joint.",
+        "q": [{ "text": "Why tin the iron's tip?", "choices": ["To prevent oxide and improve heat transfer", "To make it cooler", "To insulate it", "To change its colour"], "why": "A tinned tip transfers heat efficiently." }] } } }
+  ]
+}

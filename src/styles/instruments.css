@@ -1,0 +1,170 @@
+/* Instruments: code pills, lamp, tape, scope, ruler, tree, key. Tokens only. */
+
+/* ------------------------------------------------------------------ code pills */
+.mc-code { display: inline-flex; align-items: center; max-width: 100%; line-height: 1; }
+/* Shrinks to fit narrow containers, keeping the 1:3 proportions. */
+.mc-code svg { height: auto; max-width: 100%; aspect-ratio: var(--mc-units) / 1; overflow: visible; }
+.mc-pill { fill: currentColor; transition: fill var(--mc-dur-fast) var(--mc-ease); }
+
+/* ------------------------------------------------------------------ lamp */
+.mc-lamp { position: relative; display: inline-grid; place-items: center; flex: none; }
+.mc-lamp-sm { width: 22px; height: 22px; }
+.mc-lamp-lg { width: 76px; height: 76px; }
+.mc-lamp-bezel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 12%;
+  background:
+    radial-gradient(circle at 32% 24%, var(--mc-brass-shine), transparent 30%),
+    conic-gradient(
+      from 200deg,
+      var(--mc-brass-deep),
+      var(--mc-brass-mid) 18%,
+      var(--mc-brass-shine) 30%,
+      var(--mc-brass-mid) 45%,
+      var(--mc-brass-deep) 60%,
+      var(--mc-brass-mid) 78%,
+      var(--mc-brass-shine) 88%,
+      var(--mc-brass-deep)
+    );
+  box-shadow: var(--mc-shadow-thumb);
+}
+.mc-lamp-glass {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--mc-lamp-off-core), var(--mc-lamp-off) 70%);
+  box-shadow: var(--mc-shadow-inset);
+  transition: background var(--mc-lamp-cool) var(--mc-ease), box-shadow var(--mc-lamp-cool) var(--mc-ease);
+}
+.mc-lamp-filament {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(circle, var(--mc-lamp-core), transparent 70%);
+  transition: opacity var(--mc-lamp-cool) var(--mc-ease);
+}
+.mc-lamp-bloom {
+  position: absolute;
+  inset: -45%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--mc-lamp-glow), transparent 62%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--mc-lamp-cool) var(--mc-ease);
+}
+.mc-lamp.on .mc-lamp-glass {
+  background: radial-gradient(circle at 45% 40%, var(--mc-lamp-core), var(--mc-lamp) 62%);
+  box-shadow: 0 0 0 1px var(--mc-lamp) inset;
+  transition-duration: var(--mc-lamp-warm);
+}
+.mc-lamp.on .mc-lamp-filament,
+.mc-lamp.on .mc-lamp-bloom { opacity: 1; transition-duration: var(--mc-lamp-warm); }
+.mc-lamp-sm .mc-lamp-bloom { inset: -80%; }
+
+/* ------------------------------------------------------------------ tape */
+.mc-tape {
+  border-radius: var(--mc-radius);
+  overflow: hidden;
+  box-shadow: var(--mc-shadow-2);
+  background: var(--mc-tape);
+}
+.mc-tape canvas { display: block; width: 100%; height: 72px; }
+
+/* ------------------------------------------------------------------ scope */
+.mc-scope {
+  border-radius: var(--mc-radius);
+  overflow: hidden;
+  padding: 6px;
+  background: linear-gradient(var(--mc-wood-hi), var(--mc-wood));
+  box-shadow: var(--mc-shadow-1);
+}
+.mc-scope canvas { display: block; width: 100%; height: 96px; border-radius: calc(var(--mc-radius) - 4px); }
+
+/* ------------------------------------------------------------------ timing ruler */
+.mc-ruler { display: flex; flex-direction: column; gap: var(--mc-space-2); }
+.mc-ruler svg { width: 100%; max-height: 92px; overflow: visible; }
+.mc-ruler-tick { stroke: var(--mc-line); stroke-width: 0.04; }
+.mc-ruler rect { fill: var(--mc-line-strong); transition: fill var(--mc-dur-fast) var(--mc-ease); }
+.mc-ruler-dit rect,
+.mc-ruler-dah rect { fill: var(--mc-ink-3); }
+.mc-ruler-dit.lit rect,
+.mc-ruler-dah.lit rect { fill: var(--mc-lit-ink); }
+.mc-ruler-letter-gap rect,
+.mc-ruler-word-gap rect { fill: var(--mc-brass); }
+.mc-ruler text { font-family: var(--mc-font-mono); font-size: 0.85px; fill: var(--mc-ink-2); text-anchor: middle; }
+.mc-ruler-empty { min-height: 60px; display: grid; place-items: center; text-align: center; }
+
+/* ------------------------------------------------------------------ tree */
+.mc-tree { display: flex; flex-direction: column; gap: var(--mc-space-2); }
+.mc-tree svg { width: 100%; height: auto; overflow: visible; }
+.mc-tree-edge {
+  fill: none;
+  stroke: var(--mc-line-strong);
+  stroke-width: 1.5;
+  transition: stroke var(--mc-dur-fast) var(--mc-ease), stroke-width var(--mc-dur-fast) var(--mc-ease);
+}
+.mc-tree-edge.dah { stroke-dasharray: 6 3; }
+.mc-tree-edge.lit { stroke: var(--mc-lit-ink); stroke-width: 4; stroke-dasharray: none; }
+.mc-tree-node circle {
+  fill: var(--mc-surface);
+  stroke: var(--mc-line-strong);
+  stroke-width: 1.5;
+  transition: fill var(--mc-dur-fast) var(--mc-ease), stroke var(--mc-dur-fast) var(--mc-ease);
+}
+.mc-tree-node text {
+  font-family: var(--mc-font-display);
+  font-weight: 600;
+  font-size: 16px;
+  text-anchor: middle;
+  fill: var(--mc-ink);
+  pointer-events: none;
+}
+.mc-tree-node.empty circle { fill: transparent; stroke-dasharray: 2 3; stroke: var(--mc-line); }
+.mc-tree-node.ext text { fill: var(--mc-ink-2); font-style: italic; }
+.mc-tree-node.lit circle { fill: var(--mc-current-bg); stroke: var(--mc-lit-ink); stroke-width: 2.5; }
+.mc-tree-node.head circle { fill: var(--mc-lamp); stroke: var(--mc-brass-lo); }
+.mc-tree-node.head text { fill: var(--mc-on-brass); }
+.mc-tree-root { fill: var(--mc-brass-hi); }
+.mc-tree-legend text { font-size: 13px; font-weight: 700; fill: var(--mc-ink-2); letter-spacing: 0.04em; }
+.mc-tree-node.pickable { cursor: pointer; }
+.mc-tree-node.pickable:hover circle { stroke: var(--mc-brass); stroke-width: 2.5; }
+.mc-tree-node.pickable:focus-visible { outline: none; }
+.mc-tree-node.pickable:focus-visible circle { stroke: var(--mc-brass); stroke-width: 3.5; }
+
+/* ------------------------------------------------------------------ straight key */
+.mc-key {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.mc-key svg { display: block; width: 100%; height: auto; }
+.mc-stop-shine { stop-color: var(--mc-brass-shine); }
+.mc-stop-mid { stop-color: var(--mc-brass-mid); }
+.mc-stop-deep { stop-color: var(--mc-brass-deep); }
+.mc-stop-wood-hi { stop-color: var(--mc-wood-hi); }
+.mc-stop-wood { stop-color: var(--mc-wood); }
+.mc-key-shadow { fill: var(--mc-wood); opacity: 0.18; }
+.mc-key-base-top { fill: var(--mc-wood-hi); opacity: 0.8; }
+.mc-key-screw { fill: var(--mc-brass-deep); }
+.mc-key-knob-top { fill: var(--mc-wood-ink); opacity: 0.18; }
+.mc-key-lever {
+  transform-box: view-box;
+  transform-origin: 51px 58px;
+  transition: transform 60ms var(--mc-ease);
+}
+.mc-key.down .mc-key-lever { transform: rotate(4deg); transition-duration: 25ms; }
+.mc-key-spark { fill: var(--mc-lamp); opacity: 0; transition: opacity 60ms var(--mc-ease); }
+.mc-key.down .mc-key-spark { opacity: 0.9; transition-duration: 15ms; }
+.mc-key:disabled { cursor: not-allowed; opacity: 0.6; }

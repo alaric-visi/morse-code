@@ -1,0 +1,81 @@
+/* Shack: band, contests, nets, logbook, decoder. Tokens only. */
+
+.mc-shack { display: flex; flex-direction: column; gap: var(--mc-space-4); max-width: 1280px; margin: 0 auto; }
+.mc-shack-head { display: flex; flex-direction: column; gap: var(--mc-space-1); }
+.mc-shack-sim { margin: 0; max-width: none; grid-template-areas: 'main' 'side'; }
+@media (min-width: 1000px) {
+  .mc-shack-sim { grid-template-areas: 'main side'; }
+}
+
+/* Dial and band map */
+.mc-dial { display: flex; flex-direction: column; gap: var(--mc-space-2); }
+.mc-bandmap {
+  position: relative;
+  height: 64px;
+  border-radius: var(--mc-radius);
+  background: linear-gradient(var(--mc-scope-bg), var(--mc-scope-bg));
+  box-shadow: var(--mc-shadow-inset);
+  overflow: hidden;
+}
+.mc-bandmap-sig {
+  position: absolute;
+  bottom: 6px;
+  width: 3px;
+  height: 34px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: var(--mc-scope-trace);
+  box-shadow: 0 0 6px var(--mc-scope-trace);
+}
+.mc-bandmap-sig.worked { background: var(--mc-scope-grid); box-shadow: none; }
+.mc-bandmap-label {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-30deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  font-family: var(--mc-font-mono);
+  font-size: 10px;
+  color: var(--mc-scope-trace);
+}
+.mc-bandmap-dial { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--mc-tape-pen); }
+.mc-smeter { font-size: var(--mc-text-xl); font-family: var(--mc-font-mono); color: var(--mc-brass); min-width: 6ch; }
+
+/* Contest */
+.mc-contest { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-contest-head { display: flex; align-items: center; gap: var(--mc-space-3); }
+.mc-contest-title { font-size: var(--mc-text-xl); flex: 1; }
+.mc-contest-clock { font-family: var(--mc-font-mono); color: var(--mc-ink-2); }
+.mc-contest-score { gap: var(--mc-space-4); }
+.mc-entry { display: grid; grid-template-columns: minmax(120px, 2fr) repeat(auto-fit, minmax(70px, 1fr)); gap: var(--mc-space-2); align-items: end; }
+.mc-entry .mc-field span { font-size: var(--mc-text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mc-ink-2); }
+.mc-entry .mc-text { width: 100%; font-size: var(--mc-text-lg); }
+.mc-fkeys { display: flex; flex-wrap: wrap; gap: var(--mc-space-2); }
+.mc-contest-log tr[data-ok='false'] td:last-child { color: var(--mc-warn); }
+
+/* Etiquette */
+.mc-etiquette { display: flex; flex-direction: column; gap: var(--mc-space-3); max-width: 70ch; }
+.mc-etiquette-q { font-size: var(--mc-text-xl); }
+.mc-etiquette-choices { display: flex; flex-direction: column; gap: var(--mc-space-2); }
+.mc-root .mc-style-card[data-result='right'] { border-color: var(--mc-brass); background: var(--mc-current-bg); }
+.mc-root .mc-style-card[data-result='wrong'] { border-color: var(--mc-warn); color: var(--mc-warn); }
+
+/* Radiogram form */
+.mc-radiogram { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-radiogram-form { display: grid; gap: var(--mc-space-2); grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+.mc-radiogram-form .wide { grid-column: 1 / -1; }
+.mc-radiogram-form .mc-field span { font-size: var(--mc-text-xs); font-weight: 700; color: var(--mc-ink-2); }
+.mc-radiogram-form .mc-field[data-ok='false'] .mc-text { border-color: var(--mc-warn); }
+.mc-radiogram-form .mc-field[data-ok='true'] .mc-text { border-color: var(--mc-brass); }
+
+/* Logbook */
+.mc-logbook { display: flex; flex-direction: column; gap: var(--mc-space-4); }
+.mc-table-scroll { overflow-x: auto; max-height: 60vh; overflow-y: auto; }
+.mc-logtable td,
+.mc-logtable th { white-space: nowrap; }
+
+/* Off-air decoder */
+.mc-offair { display: flex; flex-direction: column; gap: var(--mc-space-3); }
+.mc-offair-meter { flex: 1; min-width: 120px; height: 8px; border-radius: var(--mc-radius-pill); background: var(--mc-well); box-shadow: var(--mc-shadow-inset); overflow: hidden; }
+.mc-offair-meter span { display: block; height: 100%; background: var(--mc-brass-mid); transition: width 80ms linear; }

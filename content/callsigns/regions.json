@@ -1,0 +1,7 @@
+{
+  "about": "US states, Canadian provinces and ARRL/RAC sections, for contest exchanges and awards.",
+  "states": ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],
+  "provinces": ["NS","QC","ON","MB","SK","AB","BC","NB","NL","PE"],
+  "sections": ["CT","EMA","ME","NH","RI","VT","WMA","ENY","NLI","NNJ","NNY","SNJ","WNY","DE","EPA","MDC","WPA","AL","GA","KY","NC","NFL","SC","SFL","WCF","TN","VA","PR","VI","AR","LA","MS","NM","NTX","OK","STX","WTX","EB","LAX","ORG","SB","SCV","SDG","SF","SJV","SV","PAC","AZ","EWA","ID","MT","NV","OR","UT","WWA","WY","AK","MI","OH","WV","IL","IN","WI","CO","IA","KS","MN","MO","NE","ND","SD","MAR","NL","QC","ONE","ONN","ONS","GTA","MB","SK","AB","BC","NT"],
+  "fieldDayClasses": ["1A","2A","3A","4A","5A","1B","1D","2D","1E","2E","3F"]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "morse-code",
+  "description": "Morse Code: translate, learn, send and operate.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && node scripts/check-tokens.mjs && vite build && node scripts/check-size.mjs",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test --grep-invert @long",
+    "check": "npm run typecheck && npm run lint:tokens && npm run test",
+    "test:all": "npm run check && playwright test --grep-invert @long",
+    "lint:tokens": "node scripts/check-tokens.mjs",
+    "test:visual": "playwright test e2e/visual.spec.ts",
+    "test:long": "playwright test --grep @long --project=desktop --output=test-results-long",
+    "size": "node scripts/check-size.mjs",
+    "build:lib": "tsc --noEmit && vite build --config vite.lib.config.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource/atkinson-hyperlegible": "^5.3.0",
+    "@preact/signals": "^2.11.4",
+    "idb-keyval": "^6.3.0",
+    "preact": "^11.2.0",
+    "ts-fsrs": "^5.4.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.6",
+    "vitest": "^4.1.12"
+  }
+}

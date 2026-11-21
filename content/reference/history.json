@@ -1,0 +1,149 @@
+{
+ "about": "Key dates in the story of Morse code and amateur radio.",
+ "events": [
+  {
+   "year": "1832",
+   "title": "An idea at sea",
+   "text": "Returning from Europe on the packet ship Sully, the painter Samuel Morse sketches his first ideas for an electric telegraph.",
+   "icon": "ship"
+  },
+  {
+   "year": "1837",
+   "title": "Two telegraphs",
+   "text": "In Britain, William Cooke and Charles Wheatstone patent their needle telegraph. In the USA, Morse files a caveat for his recording telegraph.",
+   "icon": "needle"
+  },
+  {
+   "year": "1838",
+   "title": "Morse and Vail’s demonstration",
+   "text": "Morse and Alfred Vail demonstrate their telegraph at the Speedwell Ironworks in Morristown, New Jersey. Vail’s work shaped the dot-and-dash code that followed.",
+   "icon": "key"
+  },
+  {
+   "year": "1844",
+   "title": "What hath God wrought",
+   "text": "On 24 May 1844 Morse sends the first message on the experimental line from Washington to Baltimore.",
+   "icon": "line"
+  },
+  {
+   "year": "1848",
+   "title": "Gerke’s revision",
+   "text": "Friedrich Clemens Gerke rewrites the code for German telegraph lines, dropping the internal gaps and long dashes. His version becomes the basis of International Morse.",
+   "icon": "book"
+  },
+  {
+   "year": "1851",
+   "title": "A European standard",
+   "text": "The German-Austrian Telegraph Union adopts Gerke’s code for its lines.",
+   "icon": "line"
+  },
+  {
+   "year": "1858",
+   "title": "The first Atlantic cable",
+   "text": "The first transatlantic telegraph cable carries messages in August 1858, then fails within weeks.",
+   "icon": "cable"
+  },
+  {
+   "year": "1865",
+   "title": "The International Telegraph Union",
+   "text": "Twenty states meet in Paris and found the International Telegraph Union (today’s ITU), standardising the international code.",
+   "icon": "globe"
+  },
+  {
+   "year": "1866",
+   "title": "A cable that lasts",
+   "text": "The Great Eastern lays a working transatlantic cable, and messages cross the Atlantic in minutes instead of days.",
+   "icon": "cable"
+  },
+  {
+   "year": "1870",
+   "title": "The Post Office takes over",
+   "text": "Under the Telegraph Act 1868, Britain’s private telegraph companies pass to the Post Office in 1870. Telegraph counters open in post offices and railway stations across the country.",
+   "icon": "line"
+  },
+  {
+   "year": "1896",
+   "title": "Wireless arrives in Britain",
+   "text": "Guglielmo Marconi brings his wireless telegraph to Britain, demonstrates it to the Post Office, and applies for a patent.",
+   "icon": "mast"
+  },
+  {
+   "year": "1901",
+   "title": "Across the Atlantic",
+   "text": "On 12 December 1901 Marconi, at Signal Hill in Newfoundland, hears the letter S sent from Poldhu in Cornwall.",
+   "icon": "mast"
+  },
+  {
+   "year": "1904",
+   "title": "CQD, and the bug",
+   "text": "The Marconi company introduces CQD as its distress call. In the USA, Horace Martin patents the semi-automatic key later sold as the Vibroplex. Britain’s Wireless Telegraphy Act 1904 makes transmitting a licensed activity.",
+   "icon": "key"
+  },
+  {
+   "year": "1906",
+   "title": "SOS",
+   "text": "The Berlin International Radiotelegraph Convention adopts SOS as the distress signal. It comes into force in 1908.",
+   "icon": "sos"
+  },
+  {
+   "year": "1912",
+   "title": "Titanic",
+   "text": "On 15 April 1912 Titanic’s operators send CQD and SOS. The disaster leads to rules for round-the-clock radio watches at sea, and in the USA to the Radio Act, which licenses amateurs.",
+   "icon": "ship"
+  },
+  {
+   "year": "1913",
+   "title": "The London Wireless Club",
+   "text": "The club that becomes the Radio Society of Great Britain is founded in London.",
+   "icon": "club"
+  },
+  {
+   "year": "1914",
+   "title": "The First World War",
+   "text": "British amateur transmitting licences are withdrawn when war begins, and many amateurs’ skills go to the armed forces. Intercepted enemy wireless traffic, much of it in Morse, is decoded by the Admiralty’s Room 40.",
+   "icon": "war"
+  },
+  {
+   "year": "1925",
+   "title": "The IARU",
+   "text": "Amateurs from many countries meet in Paris and found the International Amateur Radio Union.",
+   "icon": "globe"
+  },
+  {
+   "year": "1936",
+   "title": "The Koch method",
+   "text": "The German psychologist Ludwig Koch publishes his method of learning Morse at full speed from the first lesson.",
+   "icon": "book"
+  },
+  {
+   "year": "1939",
+   "title": "The Second World War",
+   "text": "Amateur licences are withdrawn again. Many British amateurs become Voluntary Interceptors for the Radio Security Service, copying enemy Morse at home; their logs help feed the codebreakers at Bletchley Park. Others serve as wireless operators in the forces and with the Special Operations Executive.",
+   "icon": "war"
+  },
+  {
+   "year": "1999",
+   "title": "The end of Morse at sea",
+   "text": "On 1 February 1999 the Global Maritime Distress and Safety System fully replaces Morse for distress at sea.",
+   "icon": "satellite"
+  },
+  {
+   "year": "2003",
+   "title": "No more Morse test",
+   "text": "The ITU World Radiocommunication Conference drops the international requirement for a Morse test to use the HF bands. Countries, the UK among them, soon remove the test.",
+   "icon": "licence"
+  },
+  {
+   "year": "2004",
+   "title": "A new character",
+   "text": "The ITU adds @ to the code (·−−·−·), the first new character for decades.",
+   "icon": "at"
+  },
+  {
+   "year": "2024",
+   "title": "New UK licences",
+   "text": "Ofcom’s overhaul of UK amateur licensing raises power limits to 25 W, 100 W and 1 kW, makes regional locators optional, and introduces M8 and M9 Intermediate call signs.",
+   "icon": "licence"
+  }
+ ]
+}

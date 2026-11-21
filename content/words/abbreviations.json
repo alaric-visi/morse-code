@@ -1,0 +1,261 @@
+{
+ "about": "Common CW abbreviations with their meanings.",
+ "items": [
+  [
+   "ABT",
+   "about"
+  ],
+  [
+   "AGN",
+   "again"
+  ],
+  [
+   "ANT",
+   "antenna"
+  ],
+  [
+   "BCNU",
+   "be seeing you"
+  ],
+  [
+   "BK",
+   "break, back to you"
+  ],
+  [
+   "B4",
+   "before"
+  ],
+  [
+   "CFM",
+   "confirm"
+  ],
+  [
+   "CL",
+   "closing station"
+  ],
+  [
+   "CPY",
+   "copy"
+  ],
+  [
+   "CQ",
+   "calling any station"
+  ],
+  [
+   "CUL",
+   "see you later"
+  ],
+  [
+   "DE",
+   "from, this is"
+  ],
+  [
+   "DR",
+   "dear"
+  ],
+  [
+   "DX",
+   "distance, a far-away station"
+  ],
+  [
+   "ES",
+   "and"
+  ],
+  [
+   "FB",
+   "fine business, excellent"
+  ],
+  [
+   "FER",
+   "for"
+  ],
+  [
+   "GA",
+   "good afternoon, go ahead"
+  ],
+  [
+   "GE",
+   "good evening"
+  ],
+  [
+   "GM",
+   "good morning"
+  ],
+  [
+   "GN",
+   "good night"
+  ],
+  [
+   "GL",
+   "good luck"
+  ],
+  [
+   "GUD",
+   "good"
+  ],
+  [
+   "HI",
+   "laughter"
+  ],
+  [
+   "HR",
+   "here, hear"
+  ],
+  [
+   "HW",
+   "how, how copy?"
+  ],
+  [
+   "K",
+   "over, go ahead"
+  ],
+  [
+   "KN",
+   "go ahead, named station only"
+  ],
+  [
+   "LID",
+   "poor operator"
+  ],
+  [
+   "NR",
+   "number, near"
+  ],
+  [
+   "NW",
+   "now"
+  ],
+  [
+   "OM",
+   "old man, any male operator"
+  ],
+  [
+   "OP",
+   "operator"
+  ],
+  [
+   "PSE",
+   "please"
+  ],
+  [
+   "PWR",
+   "power"
+  ],
+  [
+   "R",
+   "received, roger"
+  ],
+  [
+   "RCVR",
+   "receiver"
+  ],
+  [
+   "RIG",
+   "station equipment"
+  ],
+  [
+   "RPT",
+   "repeat, report"
+  ],
+  [
+   "RST",
+   "signal report: readability, strength, tone"
+  ],
+  [
+   "SIG",
+   "signal"
+  ],
+  [
+   "SK",
+   "end of contact"
+  ],
+  [
+   "SRI",
+   "sorry"
+  ],
+  [
+   "TKS",
+   "thanks"
+  ],
+  [
+   "TNX",
+   "thanks"
+  ],
+  [
+   "TU",
+   "thank you"
+  ],
+  [
+   "UR",
+   "your, you are"
+  ],
+  [
+   "VY",
+   "very"
+  ],
+  [
+   "WX",
+   "weather"
+  ],
+  [
+   "XYL",
+   "wife"
+  ],
+  [
+   "YL",
+   "young lady, any female operator"
+  ],
+  [
+   "73",
+   "best regards"
+  ],
+  [
+   "88",
+   "love and kisses"
+  ],
+  [
+   "5NN",
+   "599 report (cut numbers)"
+  ],
+  [
+   "TEMP",
+   "temperature"
+  ],
+  [
+   "WKD",
+   "worked"
+  ],
+  [
+   "WID",
+   "with"
+  ],
+  [
+   "XMTR",
+   "transmitter"
+  ],
+  [
+   "YRS",
+   "years"
+  ],
+  [
+   "AGE",
+   "age"
+  ],
+  [
+   "HPE",
+   "hope"
+  ],
+  [
+   "NAME",
+   "name"
+  ],
+  [
+   "QTH",
+   "location"
+  ],
+  [
+   "SOLID",
+   "fully copied"
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+[
+  { "id": "listen-dont-count", "lesson": 1 },
+  { "id": "koch-method", "lesson": 1 },
+  { "id": "farnsworth", "lesson": 2 },
+  { "id": "copying", "lesson": 3 },
+  { "id": "telegraph-1844", "lesson": 5 },
+  { "id": "international-code", "lesson": 10 },
+  { "id": "punctuation", "lesson": 13 },
+  { "id": "sos", "lesson": 16 },
+  { "id": "numbers", "lesson": 23 },
+  { "id": "end-of-maritime-cw", "lesson": 30 },
+  { "id": "whats-next", "lesson": 40 }
+]
